@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import Page from './Page';
-import Info from './Info';
+import Post from './Post';
+import About from './About';
+import Previews from './Previews';
+import Header from './Header';
+import Filterwork from './Header/Filterwork';
 import './App.css';
 
-const category = [
+const categories = [
   {
     name: 'Design',
     objectID: 0,
@@ -60,7 +63,7 @@ const info = [
     constructor(props) {
       super(props);
       this.state = {
-        category,
+        categories,
         projects,
         info,
       };
@@ -71,26 +74,10 @@ const info = [
     const { category, projects, info } = this.state;
     return( 
       <div className="App">
-        <header>
-          <nav>
-            Kristoffer Larberg
-          </nav>
-            {category.map(function (item) {
-              return <div class='button'>{item.name}</div>;
-            })}
-          <nav>
-            Info
-          </nav>
-        </header>
-        <main>
-          <div className='preview-all'>
-            {projects.map(function (item) {
-              return <div className='preview-project'><img src={item.img} className='preview-project' alt='Project'></img></div>;
-            })}
-          </div>
-        </main>
-        <Page projects={this.state.projects} />
-        <Info info={this.state.info} />
+        <Header />
+        <Previews projects={this.state.projects} />
+        <Post projects={this.state.projects} />
+        <About info={this.state.info} />
       </div>
     );
   }

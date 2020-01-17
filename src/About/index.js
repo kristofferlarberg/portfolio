@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const Info = (props) =>
+const About = (props) =>
   <main style={{ backgroundColor: 'yellow' }}>
     <article>
       {props.info.map(function (item) {
@@ -11,4 +11,4 @@ const Info = (props) =>
   </main>
  
 
-export default Info;
+export default About;
