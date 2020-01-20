@@ -1,23 +1,26 @@
 .App {
   text-align: left;
-  margin: 2rem;
+  margin: 0;
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  padding: 1rem;
 }
 
 main {
-  margin-top: 4rem;
+  margin: 1rem;
+  display: grid;
+  justify-content: center;
 }
 
 article {
   margin: 0px;
+  width: 80vw;
 }
 
 section {
-
 }
 
 footer {
@@ -37,18 +40,28 @@ p {
  font-size: 1.5rem;
 }
 
-img {
-  width: 50rem;
-}
-
-nav {
-  font-size: 2rem;
-  letter-spacing: -0.02rem;
+a {
+  color: black;
+  text-decoration: none;
 }
 
 figure {
-  width: 40rem;
-  margin: 1rem;
+  padding: 0.02rem 1rem 0.02rem 1rem;
+}
+
+.preview {
+  width: 80vw;
+  margin-bottom: 2rem;
+}
+
+img {
+  width: inherit;
+}
+
+nav {
+  display: flex;
+  font-size: 2rem;
+  letter-spacing: -0.02rem;
 }
 
 .button {
@@ -58,11 +71,14 @@ figure {
   border: 1px solid white;
   border-radius: 10px;
   padding: 0.4rem 1rem 0.5rem 1rem;
-  
+  margin-left: 0.5rem; 
 }
+
 
 
 .preview-all {
   display: grid;
+  justify-content: center;
+  width: 100vw;
 }
 

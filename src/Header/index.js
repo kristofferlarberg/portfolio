@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
-import Filterwork from './Filterwork';
+import Filterwork from '../Filterwork';
+import Post from '../Post';
+import About from '../About';
+import Previews from '../Previews';
+import {
+  Link
+} from "react-router-dom";
 
-const Header = (props) =>
+
+const Header = ({ categories, info }) =>
   <header>
     <nav>
-      Kristoffer Larberg
+      <Link to="/">Kristoffer Larberg</Link>
     </nav>
-    <Filterwork />
+    {/* <Filterwork categories={categories} /> */}
     <nav>
-      Info
+      <Link to="/about"><div class='button'>Info</div></Link>
     </nav>
   </header>
+
+
+
+
 
 
 
