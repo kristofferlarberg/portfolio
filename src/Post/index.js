@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import Previews from '../Previews';
 
+let selectedPostId = localStorage.getItem("selectedPost");
+// you can get this cardId anywhere in the component as per your requirement
 
 const Post = ({ projects }) =>
-
-
   <main>
     <article>
       {projects.map(function (item) {

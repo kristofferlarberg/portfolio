@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Post from './Post';
 import About from './About';
 import Previews from './Previews';
 import Header from './Header';
@@ -31,7 +30,7 @@ const projects = [
     team: 'Per Sturesson',
     format: 'Portfolio Website',
     method: ['Layout', 'Typography', 'UI'],
-    objectID: 100,
+    objectID: 1,
   },
   {
     title: 'konsthallc.se',
@@ -41,7 +40,7 @@ const projects = [
     team: 'Sanna Frese',
     format: 'Website',
     method: ['Layout', 'Typography', 'UI'],
-    objectID: 0,
+    objectID: 2,
   },
   {
     title: 'podpoesipress.se',
@@ -51,13 +50,13 @@ const projects = [
     team: '',
     format: 'Portfolio Website',
     method: ['Layout', 'Typography', 'Javascript', 'HTML', 'CSS', 'PHP'],
-    objectID: 1,
+    objectID: 3,
   },
 ];
 
 const info = [
   {
-    description: 'I am a Developer and graphic designer based in Stockholm, Sweden. Interested in visual information structures and how they are influenced by digital tools.This site is a work in process and will change and grow over time.',
+    description: `I'm a developer and graphic designer based in Stockholm, Sweden and I'm interested in visual information structures such as content management, infographics and typography, among other things. This site is a work in progress and will change over time.`,
     email: 'mail@kristofferlarberg.se',
     github: 'https://github.com/kristofferlarberg',
     objectID: 0,
@@ -72,8 +71,15 @@ class App extends Component {
       projects,
       info,
     };
-    //Bind here
+    this.goToPost = this.goToPost.bind(this);
   }
+
+  goToPost = (objectID) => {
+    localStorage.setItem("selectedPost", objectID);
+    this.props.history.push('/post-details');
+    // you can manage here to pass the clicked card id to the card details page if needed
+  }
+
 
   render() {
     const { categories, projects, info } = this.state;
