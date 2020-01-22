@@ -17,7 +17,7 @@ const categories = [
   },
   {
     name: 'Development',
-    objectID: 1,
+    id: 1,
   },
 ];
 
@@ -29,8 +29,8 @@ const projects = [
     category: 'design',
     team: 'Per Sturesson',
     format: 'Portfolio Website',
-    method: ['Layout', 'Typography', 'UI'],
-    objectID: 1,
+    method: ['Layout, ', 'Typography, ', 'UI'],
+    id: 1,
   },
   {
     title: 'konsthallc.se',
@@ -39,8 +39,8 @@ const projects = [
     category: 'design',
     team: 'Sanna Frese',
     format: 'Website',
-    method: ['Layout', 'Typography', 'UI'],
-    objectID: 2,
+    method: ['Layout, ', 'Typography, ', 'UI'],
+    id: 2,
   },
   {
     title: 'podpoesipress.se',
@@ -49,17 +49,18 @@ const projects = [
     category: ['development', 'design'],
     team: '',
     format: 'Portfolio Website',
-    method: ['Layout', 'Typography', 'Javascript', 'HTML', 'CSS', 'PHP'],
-    objectID: 3,
+    method: ['Layout', ', ', 'Typography', ', ', 'Javascript', ', ', 'HTML', ', ', 'CSS', ', ', 'PHP'],
+    id: 3,
   },
 ];
 
+
 const info = [
   {
-    description: `I'm a developer and graphic designer based in Stockholm, Sweden and I'm interested in visual information structures such as content management, infographics and typography, among other things. This site is a work in progress and will change over time.`,
+    description: `I'm a developer and graphic designer based in Stockholm, Sweden and I'm interested in visual information structures such as in content management, infographics and typography. This site is a work in progress and will change over time.`,
     email: 'mail@kristofferlarberg.se',
     github: 'https://github.com/kristofferlarberg',
-    objectID: 0,
+    id: 0,
   },
 ];
 
@@ -70,33 +71,29 @@ class App extends Component {
       categories,
       projects,
       info,
+      showDetails: null
     };
-    this.goToPost = this.goToPost.bind(this);
   }
+  // showDetails == 1, 2, 3, 4
 
-  goToPost = (objectID) => {
-    localStorage.setItem("selectedPost", objectID);
-    this.props.history.push('/post-details');
-    // you can manage here to pass the clicked card id to the card details page if needed
+  toggleShowDetails = (id) => {
+    this.setState({
+      showDetails: id
+    })
   }
-
 
   render() {
-    const { categories, projects, info } = this.state;
+    const { categories, projects, info, showDetails } = this.state;
     return (
       <Router>
         <div className="App">
           <Header categories={categories} />
-
           <Switch>
             <Route path='/about'>
               <About info={info} />
             </Route>
-            <Route path='/previews'>
-              <Previews projects={projects} />
-            </Route>
             <Route path='/'>
-              <Previews projects={projects} />
+              <Previews showDetails={showDetails} toggleShowDetails={this.toggleShowDetails.bind(this)} projects={projects} />
             </Route>
           </Switch>
 

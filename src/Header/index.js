@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import Filterwork from '../Filterwork';
-import Post from '../Post';
-import About from '../About';
-import Previews from '../Previews';
+
 import {
   Link
 } from "react-router-dom";
@@ -11,11 +8,11 @@ import {
 const Header = ({ categories, info }) =>
   <header>
     <nav>
-      <Link to="/">Kristoffer Larberg</Link>
+      <Link to="/"><h2>Studio Kristoffer Larberg</h2></Link>
     </nav>
     {/* <Filterwork categories={categories} /> */}
     <nav>
-      <Link to="/about"><div class='button'>Info</div></Link>
+      <Link to="/about"><button>Info</button></Link>
     </nav>
   </header>
 

@@ -1,13 +1,31 @@
 import React, { Component } from 'react';
+import Post from '../Post';
 
-const Previews = ({ projects }) =>
+
+const Previews = ({ projects, toggleShowDetails, showDetails }) =>
   <main>
+    {showDetails ? <Post projects={projects} showDetails={showDetails} /> : null}
+
+
+
+
     <div className='preview-all'>
+
+
       {projects.map(function (item) {
-        return <div onClick={(item) => this.goToPost(item.objectID)}><div className={`preview${item.objectID}`} id={item.objectID}><img src={item.img} className='preview-img' alt='Project'></img></div></div>
+        return <div className={`preview${item.id}`} id={item.id} key={item.id} onClick={() => toggleShowDetails(item.id)}><img src={item.img} className='preview-img' alt='Project'></img></div>
+
       })}
+
+
+
     </div>
+
+
+
   </main >
+
+
 
 
 export default Previews;

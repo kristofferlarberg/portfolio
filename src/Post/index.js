@@ -1,20 +1,31 @@
 import React, { Component } from 'react';
 import Previews from '../Previews';
 
-let selectedPostId = localStorage.getItem("selectedPost");
-// you can get this cardId anywhere in the component as per your requirement
+const Post = ({ projects, showDetails }) => {
+  let item = projects.find(item => item.id == showDetails);
 
-const Post = ({ projects }) =>
-  <main>
+  if (!item) {
+    return
+  }
+  return (
+
     <article>
-      {projects.map(function (item) {
-        return <section> <h1>{item.title}</h1><figure><img src={item.img} alt='Documentation'></img></figure><p>{item.description}</p>
-          <footer><h3>Team: {item.team}</h3><h3>Format: {item.format}</h3><h3>Method: {item.method}</h3></footer>
-        </section>
-      })}
-    </article>
-  </main>
 
+      <section> <h1>{item.title}</h1><figure><img src={item.img} alt='Documentation'></img></figure><p>{item.description}</p>
+
+      </section>
+      <footer><h3>{item.team ? `Team: ${item.team}` : null}</h3><h3>Format: {item.format}</h3><h3>Method: {item.method}</h3></footer>
+
+
+    </article>
+
+  )
+
+}
 export default Post;
+
+
+
+
 
 
