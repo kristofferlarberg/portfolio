@@ -68,6 +68,7 @@ const info = [
     description: `The last three years I’ve made a shift from working solely with design for print towards working with digital design and development, specifically of websites. I’m especially interested in new different ways of communicating content through publishing on online platforms. `,
     email: 'mail@kristofferlarberg.se',
     github: 'https://github.com/kristofferlarberg',
+    linkedin: 'https://se.linkedin.com/in/kristofferlarberg',
     id: 0,
   },
 ];
@@ -84,6 +85,7 @@ class App extends Component {
       intervalId: 0,
       thePosition: false,
       weather: '',
+      condition: '',
     };
   }
   // showDetails == 1, 2, 3, 4
@@ -126,7 +128,7 @@ class App extends Component {
   }
 
   render() {
-    const { categories, projects, info, showDetails, weather } = this.state;
+    const { categories, projects, info, showDetails, weather, condition } = this.state;
     return (
       <Router>
         <div className="App">

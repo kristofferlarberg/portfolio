@@ -7,7 +7,7 @@ import {
 const Header = ({ categories, info, showDetails, projects, toggleShowDetails }) =>
   <header>
     <nav>
-      <Link to="/"  ><h2 onClick={() => toggleShowDetails(null)}>Studio Kristoffer Larberg</h2></Link>
+      <Link to="/"><h2 onClick={() => toggleShowDetails(null)}>Studio Kristoffer Larberg</h2></Link>
     </nav>
     {/* <Filterwork categories={categories} /> */}
     <nav>
