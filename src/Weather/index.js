@@ -1,28 +1,44 @@
 import React from 'react';
 
-const Weather = ({ weather, condition }) => {
+const Weather = (props) => {
 
-  const Condition = condition;
-  const weatherColours = [
-    [281.86, 281.86, 'broken clouds'],
-    [281.86, 281.86, 'clouds'],
-    [281.86, 281.86, 'clouds'],
-    [281.86, 281.86, 'clear sky'],
-    [281.86, 281.86, 'mist'],
-    [281.86, 281.86, 'snow'],
-    [281.86, 281.86, 'heavy rain'],
-    [281.86, 281.86, 'rain'],
-    [281.86, 281.86, 'rain'],
-    [281.86, 281.86, 'drizzle'],
-    [281.86, 281.86, 'thunder']
-  ];
+  const weather = props.weather;
+  /*   const weatherColours = [
+      [-10, -1, 'broken clouds'],
+      [-1, 10, 'clouds'],
+      [10, 20, 'clouds'],
+      [20, 30, 'clear sky'],
+  
+    ];
+  
+    let output = ''; */
 
-  let output = '';
+  /*  weatherColours.forEach(function (el) {
+     if (weather >= el[0] && weather <= el[1]) output = el[2]
+   }); 
+ 
+ 
+ return <p>{output ? output : 'error'}</p>
+ 
+  */
 
-  weatherColours.forEach(function (el) {
-    if (condition >= el[0] && condition <= el[1]) output = el[2]
-  });
 
-  return <p>{output ? output : 'error'}</p>
+  if (weather >= -10 && weather <= -1) {
+    return <div className='dot1'></div>
+  }
+  else if (weather >= -1 && weather <= 10) {
+    return <div className='dot2'></div>
+  }
+  else if (weather >= 10 && weather <= 20) {
+    return <div className='dot3'></div>
+  }
+  else if (weather >= 20 && weather <= 30) {
+    return <div className='dot4'></div>
+  }
+  else {
+    return <div className='dot4'></div>
+  }
+
 }
+
 export default Weather;

@@ -81,11 +81,9 @@ class App extends Component {
       projects,
       info,
       showDetails: null,
-
       intervalId: 0,
       thePosition: false,
       weather: '',
-      condition: '',
     };
   }
   // showDetails == 1, 2, 3, 4
@@ -128,7 +126,7 @@ class App extends Component {
   }
 
   render() {
-    const { categories, projects, info, showDetails, weather, condition } = this.state;
+    const { categories, projects, info, showDetails, weather, } = this.state;
     return (
       <Router>
         <div className="App">
