@@ -11,10 +11,9 @@ const Header = ({ categories, info, showDetails, projects, toggleShowDetails, we
     <nav>
       <Link to="/"><h2 onClick={() => toggleShowDetails(null)}>Studio Kristoffer Larberg</h2></Link>
     </nav>
-    <Weather weather={weather} />
     {/* <Filterwork categories={categories} /> */}
     <nav>
-      <Link to="/about"><button>Info</button></Link>
+      <Weather weather={weather} />
     </nav>
   </header>
 

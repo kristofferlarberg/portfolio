@@ -9,6 +9,16 @@
 }
 
 @font-face {
+  font-family: 'hk_grotesksemibold';
+  src: url('fonts/hkgrotesk-semibold.eot');
+  src: url('fonts/hkgrotesk-semibold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/hkgrotesk-semibold.woff2') format('woff2'),
+        url('fonts/hkgrotesk-semibold.woff') format('woff');
+  font-weight: bold;
+  font-style: bold;
+}
+
+@font-face {
     font-family: 'IBM Plex Mono';
     src: url('fonts/IBMPlexMono-Light.ttf');
     font-weight: normal;
@@ -20,7 +30,7 @@ body {
   font-family: 'hk_groteskregular', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #cccccc;
+  background-color: white;
 }
 
 code {
