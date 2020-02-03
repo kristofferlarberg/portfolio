@@ -22,12 +22,12 @@ const Post = ({ projects, showDetails }) => {
         <h3>Role: {item.role}</h3>
         <h3>{item.team ? `Team: ${item.team}` : null}</h3>
         <h3>Format: {item.format}</h3><h3>Method: {item.method}</h3>
-        //läggin githublogga
-        <h3>{item.github ? ['Github:', <a href={item.github}>{item.github}</a>] : null} </h3>
+        <h3>{item.github ? <a href={item.github}><img src='img/github.svg' height='50px' width='auto' text-align='left'></img></a> : null}</h3>
+        {/* <h3>{item.github ? ['Github:', <a href={item.github}>{item.github}</a>] : null} </h3> */}
       </footer>
 
 
-    </article>
+    </article >
 
   )
 
