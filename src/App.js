@@ -102,6 +102,7 @@ const info = [
     email: 'mail@kristofferlarberg.se',
     github: 'https://github.com/kristofferlarberg',
     linkedin: 'https://se.linkedin.com/in/kristofferlarberg',
+    link: 'https://www.are.na/kristoffer-larberg',
     img: '/img/portrait.jpg',
     id: 0,
   },
