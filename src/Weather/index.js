@@ -27,40 +27,40 @@ const Weather = (props) => {
 
 
   if (weather >= -20 && weather <= -15) {
-    return <Link to="/about"><button class="one">Info</button></Link>
+    return <Link to="/about" className='buttonlink'><button className="one">Info</button></Link>
   }
   else if (weather >= -15 && weather <= -10) {
-    return <Link to="/about"><button class="two">Info</button></Link>
+    return <Link to="/about" className='buttonlink'><button className="two">Info</button></Link>
   }
   else if (weather >= -10 && weather <= -5) {
-    return <Link to="/about"><button class="three">Info</button></Link>
+    return <Link to="/about" className='buttonlink'><button className="three">Info</button></Link>
   }
   else if (weather >= -5 && weather <= 0) {
-    return <Link to="/about"><button class="four">Info</button></Link>
+    return <Link to="/about" className='buttonlink'><button className="four">Info</button></Link>
   }
   else if (weather >= 0 && weather <= 5) {
-    return <Link to="/about"><button class="five">Info</button></Link>
+    return <Link to="/about" className='buttonlink'><button class="five">Info</button></Link>
   }
   else if (weather >= 5 && weather <= 10) {
-    return <Link to="/about"><button class="six">Info</button></Link>
+    return <Link to="/about" className='buttonlink'><button className="six">Info</button></Link>
   }
   else if (weather >= 10 && weather <= 15) {
-    return <Link to="/about"><button class="seven">Info</button></Link>
+    return <Link to="/about" className='buttonlink'><button className="seven">Info</button></Link>
   }
   else if (weather >= 15 && weather <= 20) {
-    return <Link to="/about"><button class="eight">Info</button></Link>
+    return <Link to="/about" className='buttonlink'><button class="eight">Info</button></Link>
   }
   else if (weather >= 20 && weather <= 25) {
-    return <Link to="/about"><button class="nine">Info</button></Link>
+    return <Link to="/about" className='buttonlink'><button class="nine">Info</button></Link>
   }
   else if (weather >= 25 && weather <= 30) {
-    return <Link to="/about"><button class="ten">Info</button></Link>
+    return <Link to="/about" className='buttonlink'><button class="ten">Info</button></Link>
   }
   else if (weather >= 30 && weather <= 35) {
-    return <Link to="/about"><button class="eleven">Info</button></Link>
+    return <Link to="/about" className='buttonlink'><button class="eleven">Info</button></Link>
   }
   else {
-    return <Link to="/about"><button class="twelve">Info</button></Link>
+    return <Link to="/about" className='buttonlink'><button class="twelve">Info</button></Link>
   }
 
 }
