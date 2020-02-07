@@ -8,6 +8,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import styled from 'styled-components';
 
 const DEFAULT_QUERY = 'redux';
 const PATH_BASE = 'https://hn.algolia.com/api/v1';
@@ -108,6 +109,10 @@ const info = [
   },
 ];
 
+const PreviewImg = styled.img`
+  box-shadow: none;
+`;
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -159,6 +164,7 @@ class App extends Component {
     })
 
   }
+  
 
   render() {
     const { categories, projects, info, showDetails, weather, } = this.state;

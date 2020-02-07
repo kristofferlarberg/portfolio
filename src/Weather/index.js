@@ -5,7 +5,7 @@ import {
 
 const Weather = (props) => {
 
-  const weather = props.weather;
+const weather = props.weather;
   /*   const weatherColours = [
       [-10, -1, 'broken clouds'],
       [-1, 10, 'clouds'],
