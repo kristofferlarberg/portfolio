@@ -50,11 +50,19 @@ section {
   flex-direction: column;
   align-items: center;
   width: 75%;
+  margin: 3rem 0 3rem 0;
+}
 
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  margin: 3rem 0 1.7rem 0;
 }
 
 footer {
-  width: 100%;
+  width: 75%;
   background-color: #cccccc;
   padding: 0;
   margin-top: 3rem;
@@ -429,9 +437,16 @@ a:hover {
     font-size: 2.2rem;
   }
 
+  
+  .title {
+    width: 100%;
+  }
+  
   .description {
     width: 100%;
   }
+
+  
 
   figure {
     width: 100%;
@@ -512,6 +527,7 @@ a:hover {
   footer {
   margin-top: 2rem;
   margin-bottom: 4rem;
+  width: 100%;
 }
 
 

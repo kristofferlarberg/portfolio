@@ -10,7 +10,7 @@ const Post = ({ projects, showDetails }) => {
 
     <article>
 
-      <section className="description">
+      <section className="title">
         <h1>{item.title}</h1>
       </section>
         <figure><img src={item.img} alt='Documentation'></img></figure>
