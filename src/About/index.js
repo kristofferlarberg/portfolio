@@ -7,8 +7,13 @@ const About = ({ info }) =>
         return <section>
           <figure>
             <img class='portrait' src={item.img} alt='Portrait photography by Anna Drvnik.'></img>
+            <figcaption>
+              Photo: Anna Drvnik
+            </figcaption>
           </figure>
-          <p>{item.description}</p>
+          <section>
+            <p>{item.description}</p>
+          </section>
           <ul>
             <li>
               <a href={`mailto:${item.email}`}>mail@kristofferlarberg.se</a>

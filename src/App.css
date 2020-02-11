@@ -57,6 +57,7 @@ footer {
   padding: 0;
   margin-top: 3rem;
   margin-bottom: 8rem;
+  padding: 0 1rem 0 1rem;
 }
 
 h1 {
@@ -84,7 +85,6 @@ h3 {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 1.3rem;
   font-weight: 700;
-  padding: 0 1rem 0 1rem;
 }
 
 p {
@@ -111,6 +111,15 @@ figure {
   width: 80vw;
   padding: 0;
   margin: 0 0 1.7rem 0;
+}
+
+figcaption {
+  margin-top: 0;
+  width: 100%;
+  color: black;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 ul {
