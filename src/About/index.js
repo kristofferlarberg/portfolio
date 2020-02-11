@@ -6,7 +6,7 @@ const About = ({ info }) =>
       {info ? info.map(function (item) {
         return <section>
           <figure>
-            <img class="portrait" src={item.img} alt='Portrait'></img>
+            <img class='portrait' src={item.img} alt='Portrait photography by Anna Drvnik.'></img>
           </figure>
           <p>{item.description}</p>
           <ul>
