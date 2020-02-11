@@ -8,7 +8,8 @@ Run `npm install` and `create react app` to view this website.
 
 ## Screenshots
 
-![Image of homepage]()
+![Image of homepage](https://github.com/kristofferlarberg/portfolio/raw/develop/1.png)
+![Image of page](https://github.com/kristofferlarberg/portfolio/raw/develop/2.png)
 
 ## License
 MIT License
