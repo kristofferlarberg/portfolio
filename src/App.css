@@ -23,6 +23,12 @@ header {
   border-bottom: solid black 1px;
 }
 
+nav {
+  display: flex;
+  font-size: 2rem;
+  letter-spacing: -0.02rem;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -45,22 +51,6 @@ section {
   margin: 3rem 0 3rem 0;
 }
 
-.description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 75%;
-  margin: 3rem 0 3rem 0;
-}
-
-.title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 75%;
-  margin: 3rem 0 1.7rem 0;
-}
-
 footer {
   width: 75%;
   background-color: #cccccc;
@@ -68,7 +58,6 @@ footer {
   margin-top: 3rem;
   margin-bottom: 8rem;
 }
-
 
 h1 {
   font-size: 3rem;
@@ -136,6 +125,35 @@ img {
   -webkit-box-shadow: 0px 0px 6px 1px #ccc;
   -moz-box-shadow: 0px 0px 6px 1px #ccc;
   box-shadow: 0px 0px 6px 1px #ccc;
+}
+
+button {
+  font-family: 'hk_groteskregular', sans-serif;
+  font-size: 3rem;
+  letter-spacing: -0.02rem;
+  font-weight: 400;
+  background-color: white;
+  border: solid white 1px;
+  border-radius: 10px;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  cursor: pointer;
+  background: none;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  margin: 3rem 0 1.7rem 0;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  margin: 3rem 0 3rem 0;
 }
 
 .portrait {
@@ -260,26 +278,6 @@ img {
   -moz-box-shadow: 0px 0px 6px 1px #ccc;
   box-shadow: 0px 0px 6px 1px #ccc;
   background-color: #cccccc;
-
-}
-
-nav {
-  display: flex;
-  font-size: 2rem;
-  letter-spacing: -0.02rem;
-}
-
-button {
-  font-family: 'hk_groteskregular', sans-serif;
-  font-size: 3rem;
-  letter-spacing: -0.02rem;
-  font-weight: 400;
-  background-color: white;
-  border: solid white 1px;
-  border-radius: 10px;
-  padding: 1rem 1.5rem 1rem 1.5rem;
-  cursor: pointer;
-  background: none;
 }
 
 .buttonlink, .buttonlink::after, .buttonlink:active, .buttonlink:hover, .buttonlink:hover::after, .buttonlink:visited {
@@ -335,13 +333,12 @@ background-color: rgba(255, 0, 0, 1);
 }
 
 .twelve {
-background-color: rgba(255, 0, 255, 1);
+background-color: rgba(255, 0, 0, 1);
 }
 
 .github {
   box-shadow: inset 0 0 0 0 blue;
 }
-
 
 @media only screen and (max-width: 1300px) {
 
@@ -375,34 +372,19 @@ background-color: rgba(255, 0, 255, 1);
   grid-row: 3 / 4;
 }
 
-
-
 }
-
-
-
 
 @media only screen and (max-width: 1000px) {
 
-
- article {
-   width: 90vw;
-   font-size: 1.7rem;
-   margin-bottom: 4rem;
+  article {
+    width: 90vw;
+    font-size: 1.7rem;
+    margin-bottom: 4rem;
   }
 
   section {
-  width: 100%;
-  margin: 2rem 0 2rem 0;
-}
-
-  img {
     width: 100%;
-  }
-
-  .preview-img {
-  width: 100%;
-  height: auto;
+    margin: 2rem 0 2rem 0;
   }
 
   h1 {
@@ -413,44 +395,56 @@ background-color: rgba(255, 0, 255, 1);
     font-size: 2.2rem;
   }
 
-h3 {
+  h3 {
     font-size: 1.1rem;
   }
 
-p {
+  p {
     width: 100%;
     margin-top: 0.8rem;
     margin-bottom: 0.8rem;
   }
 
-a {
-  box-shadow: inset 0 -0.25rem 0 0 blue;
-}
+  a {
+    box-shadow: inset 0 -0.25rem 0 0 blue;
+  }
 
-a:hover {
-  color: blue; 
-  box-shadow: inset 0 -0.25rem 0 0 blue;  
-  transition: box-shadow 0s;
-}
+  a:hover {
+    color: blue; 
+    box-shadow: inset 0 -0.25rem 0 0 blue;  
+    transition: box-shadow 0s;
+  }
 
   button {
     font-size: 2.2rem;
   }
 
-  
+  img {
+    width: 100%;
+  }
+
+  figure {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+
+  footer {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    width: 100%;
+  }
+
+  .preview-img {
+  width: 100%;
+  height: auto;
+  }
+
   .title {
     width: 100%;
   }
   
   .description {
     width: 100%;
-  }
-
-  
-
-  figure {
-    width: 100%;
-    margin: 0 0 1rem 0;
   }
 
   .preview-all {
@@ -465,8 +459,6 @@ a:hover {
     justify-content: center;
     height: 100%;
     width: auto;
-/*     grid-column: 2 / 3;  
-    grid-row: 1 / 2; */
     justify-self: center;
     align-self: start;
     margin: 0 2rem 4rem 2rem;
@@ -477,8 +469,6 @@ a:hover {
     justify-content: center;
     height: 100%;
     width: auto;
-  /*   grid-column: 2 / 3;  
-    grid-row: 2 / 3; */
     justify-self: center;
     align-self: start;
     margin: 0 2rem 4rem 2rem;
@@ -489,8 +479,6 @@ a:hover {
     justify-content: center;
     height: 100%;
     width: auto;
- /*    grid-column: 2 / 3;  
-    grid-row: 3 / 4; */
     justify-self: center;
     align-self: start;
     margin: 0 2rem 4rem 2rem;
@@ -501,8 +489,6 @@ a:hover {
     justify-content: center;
     height: 100%;
     width: auto;
-   /*  grid-column: 2 / 3;  
-    grid-row: 4 / 5; */
     justify-self: center;
     align-self: start;
     margin: 0 2rem 4rem 2rem;
@@ -513,8 +499,6 @@ a:hover {
     justify-content: center;
     height: 100%;
     width: auto;
-/*     grid-column: 2 / 3;  
-    grid-row: 5 / 6; */
     justify-self: center;
     align-self: start;
     margin: 0 2rem 4rem 2rem;
@@ -523,13 +507,6 @@ a:hover {
   .portrait {
     width: 100%;
   }
-
-  footer {
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-  width: 100%;
-}
-
 
 }
 

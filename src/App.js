@@ -8,15 +8,8 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import styled from 'styled-components';
-
-const DEFAULT_QUERY = 'redux';
-const PATH_BASE = 'https://hn.algolia.com/api/v1';
-const PATH_SEARCH = 'feels_like';
-const PARAM_SEARCH = 'main';
 
 const API = 'http://api.openweathermap.org/data/2.5/weather?q=stockholm,se&APPID=f8384513fad5f91ea04d07a2cbf916ec&units=metric';
-
 
 const categories = [
   {
@@ -109,10 +102,6 @@ const info = [
   },
 ];
 
-const PreviewImg = styled.img`
-  box-shadow: none;
-`;
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -126,8 +115,6 @@ class App extends Component {
       weather: '',
     };
   }
-  // showDetails == 1, 2, 3, 4
-
 
   componentDidMount() {
     document.addEventListener("scroll", () => {
@@ -164,7 +151,6 @@ class App extends Component {
     })
 
   }
-  
 
   render() {
     const { categories, projects, info, showDetails, weather, } = this.state;
@@ -184,9 +170,7 @@ class App extends Component {
       </Router>
     );
   }
-
 }
-
 
 export default App;
 
