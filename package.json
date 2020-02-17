@@ -2,10 +2,12 @@
   "name": "2.portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kristofferlarberg.se/beta",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.3",
     "@testing-library/user-event": "^7.1.2",
+    "hash-router": "^0.4.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",

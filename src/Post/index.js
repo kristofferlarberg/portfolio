@@ -19,9 +19,8 @@ const Post = ({ projects, showDetails }) => {
         <h3>Role: {item.role}</h3>
         <h3>{item.team ? `Team: ${item.team}` : null}</h3>
         <h3>Format: {item.format}</h3><h3>Method: {item.method}</h3>
-        <h3>{item.github ? <a href={item.github} className='github'><img src='img/github.svg' alt='Project documentation' span style={{ width: '50px' }}></img></a> : null}</h3>
+        <h3>{item.github ? <a href={item.github} className='github'><img src='img/github.svg' alt='Project documentation' className='github' ></img></a> : null}</h3>
       </footer>
-      <div style={{ width: '100%', borderBottom: '1px solid black'}}></div>
     </article >
   )
 }

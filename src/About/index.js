@@ -2,35 +2,37 @@ import React from 'react';
 
 const About = ({ info }) =>
   <main>
-    <article>
+    
       {info ? info.map(function (item) {
-        return <section>
-          <figure>
+        return <article>
+          <figure className="description">
             <img class='portrait' src={item.img} alt='Portrait photography by Anna Drvnik.'></img>
             <figcaption>
               Photo: Anna Drvnik
             </figcaption>
           </figure>
-          <section>
+          <section className="description">
             <p>{item.description}</p>
           </section>
-          <ul>
-            <li>
-              <a href={`mailto:${item.email}`}>mail@kristofferlarberg.se</a>
-            </li>
-            <li>
-              <a href={item.github} target='_blank' rel='noopener noreferrer'>github.com/kristofferlarberg</a>
-            </li>
-            <li>
-              <a href={item.link} target='_blank' rel='noopener noreferrer'>are.na/kristoffer-larberg</a>
-            </li>
-            <li>
-              <a href={item.linkedin} target='_blank' rel='noopener noreferrer'>linkedin.com/in/kristofferlarberg</a>
-            </li>
-          </ul>
-        </section>
+          <section className="description">
+            <ul>
+              <li>
+                <a href={`mailto:${item.email}`}>mail@kristofferlarberg.se</a>
+              </li>
+              <li>
+                <a href={item.github} target='_blank' rel='noopener noreferrer'>github.com/kristofferlarberg</a>
+              </li>
+              <li>
+                <a href={item.link} target='_blank' rel='noopener noreferrer'>are.na/kristoffer-larberg</a>
+              </li>
+              <li>
+                <a href={item.linkedin} target='_blank' rel='noopener noreferrer'>linkedin.com/in/kristofferlarberg</a>
+              </li>
+            </ul>
+          </section>
+        </article>
       }) : null}
-    </article>
+    
   </main>
 
 export default About;
