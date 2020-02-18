@@ -9,7 +9,7 @@ import {
   Route
 } from "react-router-dom";
 
-const API = 'http://api.openweathermap.org/data/2.5/weather?q=stockholm,se&APPID=f8384513fad5f91ea04d07a2cbf916ec&units=metric';
+const API = 'https://api.openweathermap.org/data/2.5/weather?q=stockholm,se&APPID=f8384513fad5f91ea04d07a2cbf916ec&units=metric';
 
 const categories = [
   {
