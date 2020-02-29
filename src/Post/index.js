@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Footer';
 
 const Post = ({ projects, showDetails }) => {
   let item = projects.find(item => item.id === showDetails);
@@ -10,17 +11,17 @@ const Post = ({ projects, showDetails }) => {
       <section className='title'>
         <h1>{item.title}</h1>
       </section>
-        <figure><img src={item.img} alt='Documentation'></img></figure>
+        <figure>
+          <img src={item.img} alt='Documentation'></img>
+        </figure>
+        <figcaption>
+        {item.credits[0]}<span style={{ paddingLeft: '1em', boxShadow: 'none' }}><a href={item.credits[1]}>{item.credits[1]}</a></span>
+        </figcaption>
       <section className='description'>
         <p>{item.description}</p>
         <p>{item.url ? <a href={item.url}>{item.url}</a> : null}</p>
       </section>
-      <footer>
-        <h3>Role: {item.role}</h3>
-        <h3>{item.team ? `Team: ${item.team}` : null}</h3>
-        <h3>Format: {item.format}</h3><h3>Method: {item.method}</h3>
-        <h3>{item.github ? <a href={item.github} className='github'><img src='img/github.svg' alt='Project documentation' className='github' ></img></a> : null}</h3>
-      </footer>
+        {item.role ? <Footer /> : null}
     </article >
   )
 }
