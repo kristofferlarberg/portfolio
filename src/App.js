@@ -25,9 +25,9 @@ const categories = [
 const projects = [
 
   {
-    title: 'Crawl',
+    title: 'Front crawl',
     description: '"The face-down swimming position allows for a good range of motion of the arm in the water, as compared to the backstroke, where the hands cannot be moved easily along the back of the spine. The above-water recovery of the stroke reduces drag, compared to the underwater recovery of breaststroke. The alternating arms also allow some rolling movement of the body for an easier recovery compared to, for example, butterfly. Finally, the alternating arm stroke makes for a relatively constant speed throughout the cycle."',
-    img: './img/01.gif',
+    img: './img/01.png',
     url: 'https://en.wikipedia.org/wiki/Front_crawl',
     role: '',
     category: '',
@@ -35,12 +35,12 @@ const projects = [
     format: '',
     method: '',
     github: '',
-    credits: [['Fxqf (https://commons.wikimedia.org/wiki/File:Freestyle_swimming2.gif)'], ['https://creativecommons.org/licenses/by-sa/4.0/']],
+    credits: [['Photo: Chris Lawton'], ['https://unsplash.com/@chrislawton?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText']],
     id: 1,
   },
   
   {
-    title: 'Fender Jaguar',
+    title: `The story behind Kurt Cobain's Fender Jaguar`,
     description: '"By 30 August 1992, Nirvana were headlining at Reading Festival and had arguably become the biggest band in the world. In the 11 months since its release, Nevermind had established itself as the rallying cry of youth culture, and those honest, punk- infused 43 minutes had changed lives, music and attitudes.They had reclaimed rock from the clutches of hair metal and elevated a conflicted Cobain to the reluctant position of spokesperson for a generation. Nirvana had also played Reading the year before. Back then, the band appeared sixth on Friday’s bill, but this time they would close the main stage on the last night of the festival.Speculations about Cobain’s health and heroin addiction were rife, and many were questioning whether the frontman would even show. He did, but in reaction Kurt was pushed onstage in a wheelchair by journalist Everett True, stood to address the crowd and feigned a collapse. When he returned to his feet, Cobain was handed his 1965 Fender Jaguar."',
     img: './img/02.png',
     url: 'https://www.musicradar.com/news/the-story-behind-kurt-cobains-fender-jaguar',
@@ -55,7 +55,7 @@ const projects = [
   },
 
   {
-    title: 'The Octopus',
+    title: 'The Sucker, the Sucker!',
     description: '"Peter Godfrey-Smith is a philosopher and diver who has been studying octopuses and other cephalopods in the wild, mostly off the coast of his native Sydney, for years. The alienness of octopuses, in his view, provides an opportunity to reflect on the nature of cognition and consciousness without simply projecting from the human example. Because of their evolutionary distance from us, octopuses are an ‘independent experiment in the evolution of large brains and complex behaviour’. Insofar as we are able to make intelligent contact with them – to understand octopuses and have them understand us – it is ‘not because of a shared history, not because of kinship, but because evolution built minds twice over’. The potential worry is that the evolutionary chasm between us and the octopus is too great to make mutual intelligibility possible. In that case the octopus will have something to teach us about the limits of our own understanding."',
     img: './img/03.png',
     url: 'https://www.lrb.co.uk/the-paper/v39/n17/amia-srinivasan/the-sucker-the-sucker',
@@ -69,7 +69,7 @@ const projects = [
     id: 4,
   },
   {
-    title: 'Bildning',
+    title: `This Is How Scandinavia Got Great`,
     description: '"The 19th-century Nordic elites did something we haven’t been able to do in this country recently. They realized that if their countries were to prosper they had to create truly successful “folk schools” for the least educated among them. They realized that they were going to have to make lifelong learning a part of the natural fabric of society."',
     img: './img/04.png',
     url: 'https://www.nytimes.com/2020/02/13/opinion/scandinavia-education.html',

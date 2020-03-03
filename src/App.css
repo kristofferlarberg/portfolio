@@ -20,7 +20,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  border-bottom: solid black 1px;
 }
 
 nav {
@@ -36,16 +35,17 @@ main {
 }
 
 article {
+  width: 100%;
   font-size: 2.2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80vw;
   margin-bottom: 10rem;
-  margin-top: 3rem;
+  border-top: solid black 1px;
 }
 
 section {
+  width: 60%;
   margin-bottom: none;
   margin: 2rem 0 2rem 0;
 }
@@ -88,6 +88,12 @@ h3 {
   padding: 0 1rem 0 1rem;
 }
 
+h3.top {
+    z-index: 2;
+    position: absolute;
+    color: white;
+}
+
 p {
   width: 100%;
   margin-top: 1.7rem;
@@ -98,25 +104,38 @@ a {
   color: blue;
   text-decoration: none;
   font-weight: 700;
-  box-shadow: inset 0 -0.3rem 0 0 blue;
+  box-shadow: inset 0 0 0 0 blue;  
   transition: box-shadow 0.1s;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 a:hover {
-  color: blue; 
-  box-shadow: inset 0 0 0 0 blue;  
+  color: blue;
+  box-shadow: inset 0 -0.3rem 0 0 blue;
   transition: box-shadow 0s;
 }
 
+  a.caption, a.caption:hover, a.caption:visited,  a.caption:visited {
+    color: black;
+    box-shadow: inset 0 -0.15rem 0 0 black;
+  }
+
 figure {
-  width: 80vw;
+  width: 80%;
   padding: 0;
   margin: 0 0 0 0;
 }
 
 figcaption {
   margin-top: 0;
-  width: 100%;
+  width: 80%;
   color: black;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 1.3rem;
@@ -155,8 +174,7 @@ button {
 .title {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 75%;
+  width: 60%;
   margin: 3rem 0 1.7rem 0;
 }
 
@@ -164,7 +182,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 75%;
+  width: 60%;
   margin: 4rem 0 2.5rem 0;
 }
 
@@ -183,8 +201,8 @@ button {
 .preview-all {
   width: 100%;
   display: inline-grid;
-  grid-template-columns: auto 40rem 40rem 40rem auto;
-  grid-template-rows: 44.4rem 44.4rem;
+  grid-template-columns: 0 auto auto auto 0;
+  /* grid-template-rows: 44.4rem 44.4rem; */
   grid-row-gap: 2rem;
   grid-column-gap: 2rem;
   margin-top: 3rem;
@@ -201,13 +219,13 @@ button {
 
 .preview1 {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: inherit;
   height: inherit;
   grid-column: 2 / 3;  
   grid-row: 1 / 2;
-  align-self: stretch;
+/*   align-self: stretch; */
   cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -220,13 +238,12 @@ button {
 
 .preview2 {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: inherit;
   height: inherit;
   grid-column: 3 / 4;  
   grid-row: 1 / 2;
-  align-self: stretch;
   cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -240,13 +257,12 @@ button {
 
 .preview3 {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: inherit;
   height: inherit;
   grid-column: 4 / 5;  
   grid-row: 1 / 2;
-  align-self: stretch;
   cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -260,13 +276,12 @@ button {
 
 .preview4 {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: inherit;
   height: inherit;
   grid-column: 2 / 3;  
   grid-row: 2 / 3;
-  align-self: stretch;
   cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -280,13 +295,12 @@ button {
 
 .preview5 {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: inherit;
   height: inherit;
   grid-column: 3 / 4;  
   grid-row: 2 / 3;
-  align-self: stretch;
   cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -299,13 +313,12 @@ button {
 
 .preview100 {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: inherit;
   height: inherit;
   grid-column: 4 / 5;  
   grid-row: 2 / 3;
-  align-self: stretch;
   cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -413,14 +426,13 @@ background-color: rgba(255, 0, 0, 1);
 @media only screen and (max-width: 1000px) {
 
   article {
-    width: 90vw;
+    width: 100%;
     font-size: 1.7rem;
-    margin-bottom: 4rem;
   }
 
   section {
     width: 100%;
-    margin: 2.5rem 0 2.5rem 0;
+    margin: 2.5rem 2rem 2.5rem 2rem;
   }
 
   h1 {
@@ -460,8 +472,14 @@ background-color: rgba(255, 0, 0, 1);
   }
 
   figure {
-    width: 100%;
-    margin: 0 0 1rem 0;
+    width: auto;
+    margin: 0 2rem 1rem 2rem;
+  }
+
+  figcaption {
+    width: auto;
+    width: 0 0 1rem 0;
+    margin: 0 2rem 1rem 2rem;
   }
 
   footer {
@@ -470,17 +488,19 @@ background-color: rgba(255, 0, 0, 1);
     width: 100%;
   }
 
+  .title {
+    width: 100%;
+    margin: 3rem 2rem 1.7rem 2rem;
+  }
+
   .preview-img {
   width: 100%;
   height: auto;
   }
-
-  .title {
-    width: 100%;
-  }
   
   .description {
-    width: 100%;
+    width: auto;
+    margin: 4rem 2rem 0rem 2rem;
   }
 
   .preview-all {
@@ -495,7 +515,6 @@ background-color: rgba(255, 0, 0, 1);
     justify-content: center;
     height: 100%;
     width: auto;
-    justify-self: center;
     align-self: start;
     margin: 0 2rem 4rem 2rem;
   }
@@ -505,7 +524,6 @@ background-color: rgba(255, 0, 0, 1);
     justify-content: center;
     height: 100%;
     width: auto;
-    justify-self: center;
     align-self: start;
     margin: 0 2rem 4rem 2rem;
   }
@@ -515,7 +533,6 @@ background-color: rgba(255, 0, 0, 1);
     justify-content: center;
     height: 100%;
     width: auto;
-    justify-self: center;
     align-self: start;
     margin: 0 2rem 4rem 2rem;
   }
@@ -525,7 +542,6 @@ background-color: rgba(255, 0, 0, 1);
     justify-content: center;
     height: 100%;
     width: auto;
-    justify-self: center;
     align-self: start;
     margin: 0 2rem 4rem 2rem;
   }
@@ -535,7 +551,6 @@ background-color: rgba(255, 0, 0, 1);
     justify-content: center;
     height: 100%;
     width: auto;
-    justify-self: center;
     align-self: start;
     margin: 0 2rem 4rem 2rem;
   }

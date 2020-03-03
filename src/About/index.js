@@ -14,7 +14,7 @@ const About = ({ info }) =>
           <section className="description">
             <p>{item.description}</p>
           </section>
-          <section className="description">
+          <section>
             <ul>
               <li>
                 <a href={`mailto:${item.email}`}>mail@kristofferlarberg.se</a>
