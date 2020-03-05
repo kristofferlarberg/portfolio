@@ -8,7 +8,7 @@ const Header = ({ toggleShowDetails, weather, }) =>
   <header>
     <nav>
       <Link to='/' className='headerlink'><h2 onClick={() => toggleShowDetails(null)}>Kristoffer Larberg</h2></Link>
-    </nav>
+    </nav> 
     <nav>
       <Weather weather={weather} />
     </nav>

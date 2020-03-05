@@ -25,10 +25,10 @@ const categories = [
 const projects = [
 
   {
-    title: 'Front crawl',
-    description: '"The face-down swimming position allows for a good range of motion of the arm in the water, as compared to the backstroke, where the hands cannot be moved easily along the back of the spine. The above-water recovery of the stroke reduces drag, compared to the underwater recovery of breaststroke. The alternating arms also allow some rolling movement of the body for an easier recovery compared to, for example, butterfly. Finally, the alternating arm stroke makes for a relatively constant speed throughout the cycle."',
+    title: `Crawl - en kunskapsimport från kolonierna`,
+    description: '"Simstilen crawl existerade i det antika Grekland och Rom. Det var inte så konstigt. Det hade crawlats i Medelhavet alltsedan dynastiernas Egypten och längs mesopotamiska floder under assyriernas imperier. Och det var långt fler runt om i världen som nyttjade tekniken som gick ut på att ligga på magen och föra armarna alternerade över huvudet för att sedan fortsätta den vevande armrörelsen under vattnet. Benen hjälpte till att hålla fart och styra den hjulångare överkroppen blivit. I Polynesien crawlades det och även bland nordamerikanska urbefolkningar. Kulturer längs den afrikanska västkusten crawlade så bra att kunskapen var eftertraktad i slavhandeln. Afrikaners simkunskaper blev även till redskap i ett otal flyktförsök. I dessa kulturer och fler fanns det en crawlhistoria kvar i kropparna. Det fanns det inte i Väst. Och Sid Cavill fick sin livs match på Samoa."',
     img: './img/01.png',
-    url: 'https://en.wikipedia.org/wiki/Front_crawl',
+    url: 'https://sverigesradio.se/sida/avsnitt/702087?programid=503',
     role: '',
     category: '',
     team: '',
@@ -51,7 +51,7 @@ const projects = [
     method: '',
     github: '',
     credits: [[], []],
-    id: 2,
+    id: 6,
   },
 
   {
@@ -82,6 +82,34 @@ const projects = [
     credits: [['Matthias Stom, "Young man reading by candlelight"'], []],
     id: 3,
   },
+  {
+    title: 'Remembering Andrew Weatherall, A Lifelong Maverick',
+    description: `"Optimo's JD Twitch pays tribute to the beloved DJ and producer, who died at the age of 56."`,
+    img: './img/05.png',
+    url: 'https://www.residentadvisor.net/features/3621?fbclid=IwAR0X8K3JNWZFbuoIW8jGi7mbjIVCDL8TpAMrwgWmLjNUr1it6KHcp_yQwEI',
+    role: '',
+    category: '',
+    team: '',
+    format: '',
+    method: '',
+    github: '',
+    credits: [['Photo: Tom McShane'], ['https://creativecommons.org/licenses/by/2.0/']],
+    id: 2,
+  },
+  {
+    title: `Anni Albers and Ancient American Textiles`,
+    description: '"At the time Anni Albers wrote On Weaving in 1965, few discussions of Andean textiles “as art” had appeared in weaving textbooks, but there were numerous publications, many of which were German books published between 1880 and 1929, that documented and described their visual and technical properties. Albers almost single-handedly introduced weaving students to this ancient textile art through her writing and her artistic work."',
+    img: './img/06.png',
+    url: 'http://www.bauhaus-imaginista.org/articles/771/anni-albers-and-ancient-american-textiles',
+    role: '',
+    category: '',
+    team: '',
+    format: '',
+    method: '',
+    github: '',
+    credits: [['Photo: Steve Bowbrick'], ['https://creativecommons.org/licenses/by/2.0/']],
+    id: 5,
+  },
 
 ];
 
@@ -94,7 +122,7 @@ const info = [
     linkedin: 'https://se.linkedin.com/in/kristofferlarberg',
     link: 'https://www.are.na/kristoffer-larberg',
     img: './img/portrait.jpg',
-    credits: 'Photo: Anna Drvnik',
+    credits: [['Photo: Anna Drvnik'], ['']],
     id: 0,
   },
 ];

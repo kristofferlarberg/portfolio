@@ -5,16 +5,16 @@ const About = ({ info }) =>
     
       {info ? info.map(function (item) {
         return <article>
-          <figure className="description">
-            <img class='portrait' src={item.img} alt='Portrait photography by Anna Drvnik.'></img>
+          <figure className="portrait">
+            <img className='portrait' src={item.img} alt='Portrait photography by Anna Drvnik.'></img>
             <figcaption>
-              Photo: Anna Drvnik
+              {item.credits[0]}<span style={{ paddingLeft: '1em' }}><a href={item.credits[1]} className='caption'>{item.credits[1]}</a></span>
             </figcaption>
           </figure>
-          <section className="description">
+          <section>
             <p>{item.description}</p>
           </section>
-          <section>
+          <section className='links'>
             <ul>
               <li>
                 <a href={`mailto:${item.email}`}>mail@kristofferlarberg.se</a>
