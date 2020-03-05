@@ -4,7 +4,7 @@ import {
 } from 'react-router-dom';
 
 const Weather = (props) => {
-const weather = props.weather;
+  const weather = props.weather;
   if (weather >= -20 && weather <= -15) {
     return <Link to='/about' className='buttonlink'><button className='one'>Info</button></Link>
   }

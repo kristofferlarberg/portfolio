@@ -6,15 +6,13 @@ const Footer = ({ projects, showDetails }) => {
     return
   }
   return (
-    <article>
-        <footer>
-          <h3>{item.role ? `Role: ${item.role}` : null}</h3>
-          <h3>{item.team ? `Team: ${item.team}` : null}</h3>
-          <h3>{item.format ? `Format: ${item.format}` : null}</h3>
-          <h3>{item.method ? `Method: ${item.method}` : null}</h3>
-          <h3>{item.github ? <a href={item.github} className='github'><img src='img/github.svg' alt='Project documentation' className='github' ></img></a> : null}</h3>
-        </footer>
-    </article >
+    <footer>
+      <h3>{item.role ? `Role: ${item.role}` : null}</h3>
+      <h3>{item.team ? `Team: ${item.team}` : null}</h3>
+      <h3>{item.format ? `Format: ${item.format}` : null}</h3>
+      <h3>{item.method ? `Method: ${item.method}` : null}</h3>
+      <h3>{item.github ? <a target='_blank' rel="noopener noreferrer" href={item.github} className='github'><img src='img/github.svg' alt='Project documentation' className='github' ></img></a> : null}</h3>
+    </footer>
   )
 }
 
