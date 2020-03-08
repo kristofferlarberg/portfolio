@@ -1,15 +1,15 @@
-# Studio Kristoffer Larberg
+# kristofferlarberg.se
 
 ## Description
-Portfolio website for my freelance practice and other projects.
+Portfolio website for freelance work and other projects.
 
 ## Install
 Run `npm install` and `create react app` to view this website.
 
-## Screenshots
+<!-- ## Screenshots
 
 ![Image of homepage](https://github.com/kristofferlarberg/portfolio/raw/develop/1.png)
-![Image of page](https://github.com/kristofferlarberg/portfolio/raw/develop/2.png)
+![Image of page](https://github.com/kristofferlarberg/portfolio/raw/develop/2.png) -->
 
 ## License
 MIT License
