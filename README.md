@@ -1,10 +1,10 @@
-# kristofferlarberg.se
+# Kristoffer Larberg
 
 ## Description
-Portfolio website for freelance work and other projects.
+Portfolio website for freelance work and other projects. [this](http://kristofferlarberg.se)
 
 ## Install
-Run `npm install` and `create react app` to view this website.
+Run `npm install` to download package and dependencies. This project was bootstrapped with `create react app`.
 
 <!-- ## Screenshots
 
