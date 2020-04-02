@@ -92,6 +92,7 @@ const info = [
     github: 'https://github.com/kristofferlarberg',
     linkedin: 'https://se.linkedin.com/in/kristofferlarberg',
     link: 'https://www.are.na/kristoffer-larberg',
+    tech: 'https://www.kristoffer-larberg.surge',
   },
 ];
 

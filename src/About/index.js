@@ -4,7 +4,7 @@ const About = ({ info }) =>
   <main>
     {info ? info.map((item, i) => {
       return <article key={i}>
-        <figure className="portrait">
+        <figure className='portrait'>
           <img className='portrait' src={item.img} alt='Portrait photography by Anna Drvnik.'></img>
           <figcaption>
             <h3 className='caption'>
@@ -29,6 +29,13 @@ const About = ({ info }) =>
               <a target='_blank' rel="noopener noreferrer" href={item.link}>are.na/kristoffer-larberg</a>
             </li>
           </ul>
+        </section>
+        <section>
+          <a target='_blank' rel="noopener noreferrer" href={item.tech}>
+            <div className='sticker'>
+              Technical portfolio
+            </div>
+          </a>
         </section>
       </article>
     }) : null}
