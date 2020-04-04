@@ -9,7 +9,7 @@ html {
 .App {
   text-align: left;
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-family: 'hk_groteskregular', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -36,7 +36,6 @@ main {
 
 article {
   width: 100vw;
-  font-size: 2.2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,8 +49,7 @@ section {
 }
 
 section.links {
-  width: 60%;
-  margin: 0 1rem 4.3rem 1rem;
+  margin: 0rem 1rem 4.3rem 1rem;
 }
 
 footer {
@@ -75,8 +73,6 @@ h2, .headerlink, .headerlink:hover, .headerlink:active, .headerlink:visited, .he
   font-size: 2.5rem;
   letter-spacing: -0.02rem;
   font-weight: 400;
-  margin: inherit;
-  padding: inherit;
   cursor: pointer;  
   color: black;
   text-decoration: none;
@@ -85,21 +81,26 @@ h2, .headerlink, .headerlink:hover, .headerlink:active, .headerlink:visited, .he
 }
 
 h3 {
-  color: black;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+h4 {
   font-family: 'Space Mono', monospace;
   font-size: 1.3rem;
   font-weight: 400;
   padding: 0 1rem 0 1rem;
 }
 
-h3.top {
+h4.top {
   z-index: 2;
   position: absolute;
   color: white;
   font-weight: 700;
 }
 
-h3.caption {  
+h4.caption {  
   font-weight: 400;
   padding: 0;
   margin: 0;
@@ -209,17 +210,8 @@ button {
 .grid {
   margin: 6rem 2rem 6rem 2rem;
   display: inline-grid;
-  /* grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr)); */
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
-}
-
-.preview-img {
-  height: auto;
-  width: 120rem;
-  padding: 0;
-  margin: 0;
-  box-shadow: none;
 }
 
 .grid > div {
@@ -236,6 +228,34 @@ button {
   -moz-box-shadow: 0px 0px 6px 1px #ccc;
   box-shadow: 0px 0px 6px 1px #ccc;
 }
+
+.preview-img {
+  height: auto;
+  width: 120rem;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+.infogrid {
+  background-color: white;   
+  border: solid 1px black;
+  margin-top: 0;
+  margin-bottom: 6rem;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: 1fr 1fr;
+}
+
+.infogrid > div {
+  margin: 2rem;      
+}
+
+
+
+
+
+
 
 .buttonlink, .buttonlink::after, .buttonlink:active, .buttonlink:hover, .buttonlink:hover::after, .buttonlink:visited {
   cursor: pointer;  
@@ -295,30 +315,6 @@ background-color: rgba(255, 0, 0, 1);
 
 .github {
   box-shadow: inset 0 0 0 0 blue;
-}
-
-.sticker {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 200px;
-  border: solid 1px black;
-  background-color:  white;
-  border-radius: 100px;
-  animation-name: spin;
-  animation-duration: 5000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(150deg);
-    }
 }
 
 @media only screen and (max-width: 2100px) {

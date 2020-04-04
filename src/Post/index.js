@@ -13,11 +13,18 @@ const Post = ({ projects, showDetails }) => {
       </section>
       <figure>
         <img src={item.img} alt='Documentation'></img>
-        <figcaption>
-          <h3 className="caption">
-            {item.credits[0]}<span style={{ paddingLeft: '1em' }}><a href={item.credits[1]} className='caption'>{item.credits[1]}</a></span>
-          </h3>
-        </figcaption>
+        {item.credits ?
+          <figcaption>
+            <h4 className="caption">
+              {item.credits[0]}
+              <span style={{ paddingLeft: '1em' }}>
+                <a target='_blank' rel="noopener noreferrer" href={item.credits[1]} className='caption'>
+                  {item.credits[1]}
+                </a>
+              </span>
+            </h4>
+          </figcaption>
+          : null}
       </figure>
       <section>
         <p>{item.description}</p>

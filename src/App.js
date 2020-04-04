@@ -23,19 +23,18 @@ const categories = [
 ];
 
 const projects = [
-
   {
-    title: `Crawl - en kunskapsimport från kolonierna`,
-    description: '"Simstilen crawl existerade i det antika Grekland och Rom. Det var inte så konstigt. Det hade crawlats i Medelhavet alltsedan dynastiernas Egypten och längs mesopotamiska floder under assyriernas imperier. Och det var långt fler runt om i världen som nyttjade tekniken som gick ut på att ligga på magen och föra armarna alternerade över huvudet för att sedan fortsätta den vevande armrörelsen under vattnet. Benen hjälpte till att hålla fart och styra den hjulångare överkroppen blivit. I Polynesien crawlades det och även bland nordamerikanska urbefolkningar. Kulturer längs den afrikanska västkusten crawlade så bra att kunskapen var eftertraktad i slavhandeln. Afrikaners simkunskaper blev även till redskap i ett otal flyktförsök. I dessa kulturer och fler fanns det en crawlhistoria kvar i kropparna. Det fanns det inte i Väst. Och Sid Cavill fick sin livs match på Samoa."',
-    img: './img/01.png',
-    url: 'https://sverigesradio.se/sida/avsnitt/702087?programid=503',
-    role: '',
-    category: '',
-    team: '',
-    format: '',
-    method: '',
+    title: 'Konsthall C',
+    description: 'Konsthall C is a gallery is located in the suburb of Hökarängen in Stockholm with an artistic direction and theme that changes every two years, in addition to certain fixed formats and events. The filtering function makes it easy to take part of all past events, an important aspect of the previous website. The design also builds upon previous use of colours and the typeface Georgia.',
+    img: './img/konsthallc.png',
+    url: 'https://konsthallc.se/',
+    role: 'Designer',
+    category: 'Design',
+    team: 'Sanna Frese (Development)',
+    format: 'Website',
+    method: ['Layout', ', ', 'Typography', ', ', 'UI'],
     github: '',
-    credits: [['Photo: Chris Lawton'], ['https://unsplash.com/@chrislawton?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText']],
+    /* credits: [], */
     id: 1,
   },
   {
@@ -92,7 +91,31 @@ const info = [
     github: 'https://github.com/kristofferlarberg',
     linkedin: 'https://se.linkedin.com/in/kristofferlarberg',
     link: 'https://www.are.na/kristoffer-larberg',
-    tech: 'https://www.kristoffer-larberg.surge',
+  },
+];
+
+const tech = [
+  {
+    language01: 'Javascript ES6',
+    language02: 'HTML 5',
+    language03: 'CSS',
+    language04: 'Dart',
+    language05: 'PHP',
+  },
+  {
+    framework01: 'React',
+    framework02: 'Flutter',
+    framework03: 'Node.js',
+  },
+  {
+    tool01: 'Git',
+    tool02: 'npm',
+  },
+  {
+    software01: 'VS Code',
+    software02: 'Adobe CC',
+    software03: 'Figma',
+    software04: 'Glyphs',
   },
 ];
 
@@ -162,6 +185,7 @@ class App extends Component {
             <Route path='/about'>
               <About
                 info={info}
+                tech={tech}
               />
             </Route>
             <Route path='/'>

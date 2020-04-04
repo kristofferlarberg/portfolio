@@ -13,7 +13,7 @@ const Previews = ({ projects, toggleShowDetails, showDetails, scrollToTop }) =>
         return <div id={i} key={i} onClick={() => { toggleShowDetails(item.id); scrollToTop() }
         }>
           <img src={item.img} className='preview-img' alt='Project'></img>
-          <h3 className='top'>{item.title}</h3>
+          <h4 className='top'>{item.title}</h4>
         </div>
       })}
     </div>
