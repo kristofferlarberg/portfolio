@@ -10,7 +10,7 @@ const Previews = ({ projects, toggleShowDetails, showDetails, scrollToTop }) =>
     </p>
     <div className='grid'>
       {projects.map((item, i) => {
-        return <div id={i} key={i} onClick={() => { toggleShowDetails(item.id); scrollToTop() }
+        return <div id={i} key={item.id} onClick={() => { toggleShowDetails(item.id); scrollToTop() }
         }>
           <img src={item.img} className='preview-img' alt='Project'></img>
           <h4 className='top'>{item.title}</h4>

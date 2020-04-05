@@ -27,19 +27,19 @@ const Weather = (props) => {
     return <Link to='/about' className='buttonlink'><button className='seven'>Info</button></Link>
   }
   else if (weather >= 15 && weather <= 20) {
-    return <Link to='/about' className='buttonlink'><button class='eight'>Info</button></Link>
+    return <Link to='/about' className='buttonlink'><button className='eight'>Info</button></Link>
   }
   else if (weather >= 20 && weather <= 25) {
-    return <Link to='/about' className='buttonlink'><button class='nine'>Info</button></Link>
+    return <Link to='/about' className='buttonlink'><button className='nine'>Info</button></Link>
   }
   else if (weather >= 25 && weather <= 30) {
-    return <Link to='/about' className='buttonlink'><button class='ten'>Info</button></Link>
+    return <Link to='/about' className='buttonlink'><button className='ten'>Info</button></Link>
   }
   else if (weather >= 30 && weather <= 35) {
-    return <Link to='/about' className='buttonlink'><button class='eleven'>Info</button></Link>
+    return <Link to='/about' className='buttonlink'><button className='eleven'>Info</button></Link>
   }
   else {
-    return <Link to='/about' className='buttonlink'><button class='twelve'>Info</button></Link>
+    return <Link to='/about' className='buttonlink'><button className='twelve'>Info</button></Link>
   }
 }
 

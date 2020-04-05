@@ -14,11 +14,11 @@ const API = 'https://api.openweathermap.org/data/2.5/weather?q=stockholm,se&APPI
 const categories = [
   {
     name: 'Design',
-    objectID: 0,
+    objectID: 10,
   },
   {
     name: 'Development',
-    id: 1,
+    id: 11,
   },
 ];
 
@@ -32,7 +32,7 @@ const projects = [
     category: 'Design',
     team: 'Sanna Frese (Development)',
     format: 'Website',
-    method: ['Layout', ', ', 'Typography', ', ', 'UI'],
+    method: [['Layout'], ['Typography'], ['UI']],
     github: '',
     /* credits: [], */
     id: 1,
@@ -86,7 +86,7 @@ const info = [
     description: `I’m a Stockholm based front-end developer and graphic designer who has been active as a graphic designer since 2014, often in close collaboration with clients. The last few years I’ve started making a shift from working solely with design towards focusing more on web development. What I like to do most is thorough research and conceptual development executed with attention to detail as well as overall functionality. `,
     img: './img/portrait.jpg',
     credits: [['Photo: Anna Drvnik'], ['']],
-    id: 0,
+    id: 5,
     email: 'mail@kristofferlarberg.se',
     github: 'https://github.com/kristofferlarberg',
     linkedin: 'https://se.linkedin.com/in/kristofferlarberg',
@@ -101,21 +101,25 @@ const tech = [
     language03: 'CSS',
     language04: 'Dart',
     language05: 'PHP',
+    id: 6,
   },
   {
     framework01: 'React',
     framework02: 'Flutter',
     framework03: 'Node.js',
+    id: 7,
   },
   {
     tool01: 'Git',
     tool02: 'npm',
+    id: 8,
   },
   {
     software01: 'VS Code',
     software02: 'Adobe CC',
     software03: 'Figma',
     software04: 'Glyphs',
+    id: 9,
   },
 ];
 
@@ -170,7 +174,7 @@ class App extends Component {
   }
 
   render() {
-    const { categories, projects, info, showDetails, weather, } = this.state;
+    const { categories, projects, info, showDetails, intervalId, thePosition, weather, } = this.state;
     return (
       <Router>
         <div className="App">
