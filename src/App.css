@@ -10,7 +10,7 @@ html {
   text-align: left;
   margin: 0;
   font-size: 2.2rem;
-  font-family: 'hk_groteskregular', sans-serif;
+  font-family: "hk_groteskregular", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -66,14 +66,19 @@ h1 {
   font-size: 3rem;
   font-weight: 400;
   width: 100%;
-  margin: 0
+  margin: 0;
 }
 
-h2, .headerlink, .headerlink:hover, .headerlink:active, .headerlink:visited, .headerlink::after {
+h2,
+.headerlink,
+.headerlink:hover,
+.headerlink:active,
+.headerlink:visited,
+.headerlink::after {
   font-size: 2.5rem;
   letter-spacing: -0.02rem;
   font-weight: 400;
-  cursor: pointer;  
+  cursor: pointer;
   color: black;
   text-decoration: none;
   background: none;
@@ -87,20 +92,21 @@ h3 {
 }
 
 h4 {
-  font-family: 'Space Mono', monospace;
-  font-size: 1.3rem;
+  font-family: "Space Mono", monospace;
+  font-size: 1.4rem;
   font-weight: 400;
   padding: 0 1rem 0 1rem;
 }
 
 h4.top {
+  font-size: 1.6rem;
   z-index: 2;
   position: absolute;
   color: white;
   font-weight: 700;
 }
 
-h4.caption {  
+h4.caption {
   font-weight: 400;
   padding: 0;
   margin: 0;
@@ -112,9 +118,9 @@ p {
   margin-bottom: 1.7rem;
 }
 
-p.disclaimer { 
+p.disclaimer {
   margin: 6rem 2rem 0 2rem;
-  width: auto; 
+  width: auto;
   text-align: center;
 }
 
@@ -122,7 +128,7 @@ a {
   color: blue;
   text-decoration: none;
   font-weight: 700;
-  box-shadow: inset 0 0 0 0 blue;  
+  box-shadow: inset 0 0 0 0 blue;
   transition: box-shadow 0.1s;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -141,7 +147,10 @@ a:hover {
   transition: box-shadow 0s;
 }
 
-a.caption, a.caption:hover, a.caption:visited,  a.caption:visited {
+a.caption,
+a.caption:hover,
+a.caption:visited,
+a.caption:visited {
   color: black;
   box-shadow: inset 0 -0.15rem 0 0 black;
 }
@@ -178,7 +187,7 @@ img {
 }
 
 button {
-  font-family: 'hk_groteskregular', sans-serif;
+  font-family: "hk_groteskregular", sans-serif;
   font-size: 2.5rem;
   letter-spacing: -0.02rem;
   font-weight: 400;
@@ -204,7 +213,29 @@ button {
 }
 
 .container {
-  justify-content: stretch;	
+  justify-content: stretch;
+}
+
+.preview-img {
+  height: auto;
+  width: 120rem;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+.infogrid {
+  background-color: white;
+  border: solid 1px black;
+  margin-top: 2.2rem;
+  margin-bottom: 6rem;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.infogrid > div {
+  margin: 2rem;
 }
 
 .grid {
@@ -229,36 +260,13 @@ button {
   box-shadow: 0px 0px 6px 1px #ccc;
 }
 
-.preview-img {
-  height: auto;
-  width: 120rem;
-  padding: 0;
-  margin: 0;
-  box-shadow: none;
-}
-
-.infogrid {
-  background-color: white;   
-  border: solid 1px black;
-  margin-top: 0;
-  margin-bottom: 6rem;
-  display: inline-grid;
-  grid-template-columns: 1fr 1fr ;
-  grid-template-rows: 1fr 1fr;
-}
-
-.infogrid > div {
-  margin: 2rem;      
-}
-
-
-
-
-
-
-
-.buttonlink, .buttonlink::after, .buttonlink:active, .buttonlink:hover, .buttonlink:hover::after, .buttonlink:visited {
-  cursor: pointer;  
+.buttonlink,
+.buttonlink::after,
+.buttonlink:active,
+.buttonlink:hover,
+.buttonlink:hover::after,
+.buttonlink:visited {
+  cursor: pointer;
   color: black;
   text-decoration: none;
   background: none;
@@ -266,51 +274,51 @@ button {
 }
 
 .one {
-   background-color: rgba(0, 0, 255, 1);
+  background-color: rgba(0, 0, 255, 1);
 }
 
 .two {
-background-color: rgba(0, 0, 255, 0.7);
+  background-color: rgba(0, 0, 255, 0.7);
 }
 
 .three {
-background-color: rgba(0, 0, 255, 0.5);
+  background-color: rgba(0, 0, 255, 0.5);
 }
 
 .four {
-background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgba(0, 0, 255, 0.2);
 }
 
 .five {
-background-color: rgba(0 , 255, 0, 0.5);
+  background-color: rgba(0, 255, 0, 0.5);
 }
 
 .six {
-background-color: rgba(255, 0, 0, 0.2);
+  background-color: rgba(255, 0, 0, 0.2);
 }
 
 .seven {
-background-color: rgba(255, 0, 0, 0.4);
+  background-color: rgba(255, 0, 0, 0.4);
 }
 
 .eight {
-background-color: rgba(255, 0, 0, 0.6);
+  background-color: rgba(255, 0, 0, 0.6);
 }
 
 .nine {
-background-color: rgba(255, 0, 0, 0.8);
+  background-color: rgba(255, 0, 0, 0.8);
 }
 
 .ten {
-background-color: rgba(255, 0, 0, 1);
+  background-color: rgba(255, 0, 0, 1);
 }
 
 .eleven {
-background-color: rgba(255, 0, 0, 1);
+  background-color: rgba(255, 0, 0, 1);
 }
 
 .twelve {
-background-color: rgba(255, 0, 0, 1);
+  background-color: rgba(255, 0, 0, 1);
 }
 
 .github {
@@ -318,27 +326,20 @@ background-color: rgba(255, 0, 0, 1);
 }
 
 @media only screen and (max-width: 2100px) {
-
-.grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media only screen and (max-width: 1600px) {
-
-.grid {
-  grid-template-columns: repeat(2, 1fr);
-}
-
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media only screen and (max-width: 1100px) {
-
   article {
     width: 100vw;
-    font-size: 1.7rem;
-    display: inline-block;
     margin-bottom: 4rem;
   }
 
@@ -346,6 +347,14 @@ background-color: rgba(255, 0, 0, 1);
     width: auto;
     display: inline-block;
     margin: 2.3rem 1rem 2.3rem 1rem;
+  }
+
+  .infogrid {
+    width: 90vw;
+  }
+
+  section.links {
+    width: 90vw;
   }
 
   h1 {
@@ -357,14 +366,15 @@ background-color: rgba(255, 0, 0, 1);
   }
 
   h3 {
-    font-size: 1.1rem;
+    font-size: 1.7rem;
   }
 
   p {
     width: auto;
+    font-size: 1.7rem;
   }
 
-  p.disclaimer { 
+  p.disclaimer {
     font-size: 1.7rem;
     margin: 4rem 2rem 0 2rem;
   }
@@ -374,9 +384,13 @@ background-color: rgba(255, 0, 0, 1);
   }
 
   a:hover {
-    color: blue; 
-    box-shadow: inset 0 -0.25rem 0 0 blue;  
+    color: blue;
+    box-shadow: inset 0 -0.25rem 0 0 blue;
     transition: box-shadow 0s;
+  }
+
+  li {
+    font-size: 1.7rem;
   }
 
   button {
@@ -401,12 +415,12 @@ background-color: rgba(255, 0, 0, 1);
   }
 
   footer {
-    width: auto;
+    width: 90vw;
   }
 
   .title {
     width: auto;
-    margin:   4rem 1rem 4rem 1rem;
+    margin: 4rem 1rem 4rem 1rem;
   }
 
   .portrait {
@@ -422,31 +436,22 @@ background-color: rgba(255, 0, 0, 1);
     width: 75rem;
     height: 75rem;
   }
-
 }
 
 @media only screen and (max-width: 800px) {
-
   .grid > div {
     width: auto;
     height: 50rem;
   }
 
-  section.links {
-  width: auto;
-  margin: 0 1rem 4.3rem 1rem;
-}
- 
+  .infogrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media only screen and (max-width: 400px) {
-
   .grid > div {
     width: auto;
     height: 30rem;
   }
-
 }
-
-
-
