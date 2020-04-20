@@ -6,16 +6,13 @@ const Previews = ({
   toggleShowDetails,
   showDetails,
   scrollToTop,
+  categories,
 }) => (
   <main>
     {showDetails ? (
-      <Post projects={projects} showDetails={showDetails} />
+      <Post projects={projects} categories={categories} showDetails={showDetails} />
     ) : null}
     <div style={{ borderTop: "1px solid black", width: "100vw" }}></div>
-    <p className="disclaimer">
-      *This part awaits its content, meanwhile, here’s some recent off-hours
-      reading.*
-    </p>
     <div className="grid">
       {projects.map((item, i) => {
         return (

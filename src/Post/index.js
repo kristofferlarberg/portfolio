@@ -1,7 +1,8 @@
 import React from "react";
+import Category from "./Category";
 import Footer from "../Footer";
 
-const Post = ({ projects, showDetails }) => {
+const Post = ({ projects, showDetails, categories }) => {
   let item = projects.find((item) => item.id === showDetails);
   if (!item) {
     return;
@@ -11,6 +12,7 @@ const Post = ({ projects, showDetails }) => {
       <section className="title">
         <h1>{item.title}</h1>
       </section>
+      <Category projects={projects} showDetails={showDetails} />
       <figure>
         <img src={item.img} alt="Documentation"></img>
         {item.credits ? (

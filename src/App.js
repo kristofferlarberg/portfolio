@@ -11,11 +11,11 @@ const API =
 
 const categories = [
   {
-    name: "Design",
+    title: "Design",
     id: uuidv4(),
   },
   {
-    name: "Development",
+    title: "Development",
     id: uuidv4(),
   },
 ];
@@ -24,11 +24,11 @@ const projects = [
   {
     title: "Konsthall C",
     description:
-      "Konsthall C is a gallery is located in the suburb of Hökarängen in Stockholm with an artistic direction and theme that changes every two years, in addition to certain fixed formats and events. The filtering function makes it easy to take part of all past events, an important aspect of the previous website. The design also builds upon previous use of colours and the typeface Georgia.",
+      "Konsthall C is an artistic space located in the suburb of Hökarängen in Stockholm with a direction and theme that changes every two years, in addition to certain fixed formats and events. The filtering function makes it easy to take part of all past events, an important aspect of the previous website. The design also builds upon previous use of colours and the typeface Georgia.",
     img: "./img/konsthallc.png",
     url: "https://konsthallc.se/",
     role: "Designer",
-    category: "Design",
+    category: [["Design"]],
     team: "Sanna Frese (Development)",
     format: "Website",
     method: [["Layout"], ["Typography"], ["UI"]],
@@ -275,6 +275,7 @@ class App extends Component {
                 showDetails={showDetails}
                 toggleShowDetails={this.toggleShowDetails.bind(this)}
                 projects={projects}
+                categories={categories}
                 onScrollStep={this.onScrollStep.bind(this)}
                 scrollToTop={this.scrollToTop.bind(this)}
               />
