@@ -22,6 +22,34 @@ const categories = [
 
 const projects = [
   {
+    title: "Ingela Johansson",
+    description:
+      "Portfolio website for artist Ingela Johansson serving her multi-layered practise in a practictal manner, which makes possible overview and summary.",
+    img: "./img/3.png",
+    url: "http://ingelajohansson.net/",
+    role: "Designer",
+    category: [["Design"]],
+    team: "Viiksimaisteri (Development)",
+    format: "Portfolio Website",
+    method: "Layout, Typography, UI",
+    github: "",
+    id: uuidv4(),
+  },
+  {
+    title: "Riksdagskollen",
+    description:
+      "The foundation for a web app proposal which visualizes voting data from the Swedish parliament.",
+    img: "./img/10.png",
+    url: "",
+    role: "Developer",
+    category: [["Development"]],
+    team: "Amanda Olsson, Erik Calmfors, Ismail Güven, Mohmed Salah Ahmed",
+    format: "Website",
+    method: "HTML, CSS, JavaScript, React",
+    github: "https://github.com/kristofferlarberg/fe19tp2_strawberry",
+    id: uuidv4(),
+  },
+  {
     title: "Konsthall C",
     description:
       "Konsthall C is an artistic space located in the suburb of Hökarängen in Stockholm with a direction and theme that changes every two years, in addition to certain fixed formats and events. The filtering function makes it easy to take part of all past events, an important aspect of the previous website. The design also builds upon previous use of colours and the typeface Georgia.",
@@ -31,63 +59,36 @@ const projects = [
     category: [["Design"]],
     team: "Sanna Frese (Development)",
     format: "Website",
-    method: [["Layout"], ["Typography"], ["UI"]],
+    method: "Layout, Typography, UI",
     github: "",
     credits: "",
     id: uuidv4(),
   },
   {
-    title: "The Sucker, the Sucker!",
-    description:
-      '"Peter Godfrey-Smith is a philosopher and diver who has been studying octopuses and other cephalopods in the wild, mostly off the coast of his native Sydney, for years. The alienness of octopuses, in his view, provides an opportunity to reflect on the nature of cognition and consciousness without simply projecting from the human example. Because of their evolutionary distance from us, octopuses are an ‘independent experiment in the evolution of large brains and complex behaviour’. Insofar as we are able to make intelligent contact with them – to understand octopuses and have them understand us – it is ‘not because of a shared history, not because of kinship, but because evolution built minds twice over’. The potential worry is that the evolutionary chasm between us and the octopus is too great to make mutual intelligibility possible. In that case the octopus will have something to teach us about the limits of our own understanding."',
-    img: "./img/03.png",
-    url:
-      "https://www.lrb.co.uk/the-paper/v39/n17/amia-srinivasan/the-sucker-the-sucker",
-    role: "",
-    category: "",
-    team: "",
-    format: "",
-    method: "",
-    github: "",
-    credits: [
-      ["Photo: edmondlafoto"],
-      ["https://pixabay.com/users/edmondlafoto-7913128/"],
-    ],
+    title: "Quire",
+    description: "A notebook browser app build with Quill.",
+    img: "./img/7.png",
+    url: "",
+    role: "Developer",
+    category: [["Development"]],
+    team: "Amanda Olsson, Martin Lindén, Nick Magnusson",
+    format: "Website",
+    method: "HTML, CSS, JavaScript, Quill",
+    github: "https://github.com/amol0900/fe19tp1_-team-ink-",
     id: uuidv4(),
   },
   {
-    title: `This Is How Scandinavia Got Great`,
+    title: "Olivia Berkowicz",
     description:
-      '"The 19th-century Nordic elites did something we haven’t been able to do in this country recently. They realized that if their countries were to prosper they had to create truly successful “folk schools” for the least educated among them. They realized that they were going to have to make lifelong learning a part of the natural fabric of society."',
-    img: "./img/04.jpg",
-    url:
-      "https://www.nytimes.com/2020/02/13/opinion/scandinavia-education.html",
-    role: "",
-    category: "",
-    team: "",
-    format: "",
-    method: "",
+      "Portfolio website for curator and writer Olivia Berkowicz. The site and its design is based on a simple layout which can be used in a variety of ways depending on the type of content.",
+    img: "./img/1.jpg",
+    url: "http://oliviaberkowicz.com/",
+    role: "Designer",
+    category: [["Design"]],
+    team: "Per Sturesson (Development)",
+    format: "Portfolio Website",
+    method: "Layout, Typography, UI",
     github: "",
-    credits: [["Photo: Karl Heinz Hernried"], []],
-    id: uuidv4(),
-  },
-  {
-    title: `Anni Albers and Ancient American Textiles`,
-    description:
-      '"At the time Anni Albers wrote On Weaving in 1965, few discussions of Andean textiles “as art” had appeared in weaving textbooks, but there were numerous publications, many of which were German books published between 1880 and 1929, that documented and described their visual and technical properties. Albers almost single-handedly introduced weaving students to this ancient textile art through her writing and her artistic work."',
-    img: "./img/06.png",
-    url:
-      "http://www.bauhaus-imaginista.org/articles/771/anni-albers-and-ancient-american-textiles",
-    role: "",
-    category: "",
-    team: "",
-    format: "",
-    method: "",
-    github: "",
-    credits: [
-      ["Photo: Steve Bowbrick"],
-      ["https://creativecommons.org/licenses/by/2.0/"],
-    ],
     id: uuidv4(),
   },
 ];
@@ -174,10 +175,6 @@ const software = [
   },
   {
     title: "Glyphs",
-    id: uuidv4(),
-  },
-  {
-    title: "PHP",
     id: uuidv4(),
   },
 ];

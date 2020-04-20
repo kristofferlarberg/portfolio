@@ -66,6 +66,7 @@ const Weather = (props) => {
   } else if (weather >= 30 && weather <= 35) {
     return (
       <Link to="/about" className="buttonlink">
+        {" "}
         <button className="eleven">Info</button>
       </Link>
     );

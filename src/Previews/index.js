@@ -10,7 +10,11 @@ const Previews = ({
 }) => (
   <main>
     {showDetails ? (
-      <Post projects={projects} categories={categories} showDetails={showDetails} />
+      <Post
+        projects={projects}
+        categories={categories}
+        showDetails={showDetails}
+      />
     ) : null}
     <div style={{ borderTop: "1px solid black", width: "100vw" }}></div>
     <div className="grid">
