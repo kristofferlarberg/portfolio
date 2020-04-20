@@ -29,7 +29,9 @@ const Previews = ({
             }}
           >
             <img src={item.img} className="preview-img" alt="Project"></img>
-            <h4 className="top">{item.title}</h4>
+            <div className="preview-title">
+              <h4 className="preview">{item.title}</h4>
+            </div>
           </div>
         );
       })}

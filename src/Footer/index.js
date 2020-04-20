@@ -7,11 +7,15 @@ const Footer = ({ projects, showDetails }) => {
   }
   return (
     <footer>
-      <h4>{item.role ? `Role: ${item.role}` : null}</h4>
-      <h4>{item.team ? `Team: ${item.team}` : null}</h4>
-      <h4>{item.format ? `Format: ${item.format}` : null}</h4>
-      <h4>{item.method ? `Method: ${item.method}` : null}</h4>
-      <h4>
+      <h4 className="footer">{item.role ? `Role: ${item.role}` : null}</h4>
+      <h4 className="footer">{item.team ? `Team: ${item.team}` : null}</h4>
+      <h4 className="footer">
+        {item.format ? `Format: ${item.format}` : null}
+      </h4>
+      <h4 className="footer">
+        {item.method ? `Method: ${item.method}` : null}
+      </h4>
+      <h4 className="footer">
         {item.github ? (
           <a
             target="_blank"

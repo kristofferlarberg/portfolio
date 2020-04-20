@@ -74,12 +74,6 @@ section.categories {
   margin: 0 0 6rem 0;
 }
 
-section.preview {
-  background-color: white;
-  width: auto;
-  margin: 0;
-}
-
 footer {
   width: 60%;
   background-color: none;
@@ -88,6 +82,15 @@ footer {
   margin: 0 1rem 0 1rem;
   margin-bottom: 0;
   padding: 1rem 0 2rem 0;
+}
+
+.preview-title {
+  background-color: blue;
+  margin: 0;
+  position: absolute;
+  padding: 3rem 3.5rem;
+  border-radius: 35px;
+  z-index: 2;
 }
 
 h1 {
@@ -125,22 +128,25 @@ h4 {
   line-height: 4.5rem;
   font-weight: 400;
   padding: 0;
-  margin: 0 2rem;
+  margin: 0;
 }
 
-h4.top {
-  font-size: 1.7rem;
-  color: blue;
-  font-weight: 700;
-  z-index: 3;
-  position: absolute;
-  /* text-shadow: 0px 0px 15px black; */
+h4.footer {
+  margin: 0 2rem;
 }
 
 h4.caption {
   padding: 0;
+  margin: 1rem 0 0 0;
+  line-height: 0;
+}
+
+h4.preview {
+  padding: 0;
   margin: 0;
-  line-height: 1rem;
+  line-height: 0;
+  color: white;
+  z-index: 3;
 }
 
 h4.category {
@@ -253,12 +259,26 @@ a.github {
   justify-content: stretch;
 }
 
-.preview-img {
+.preview-img,
+.preview-img:visited {
   height: auto;
   width: 120rem;
   padding: 0;
   margin: 0;
   box-shadow: none;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.preview-img:hover,
+.preview-img:active {
+  height: auto;
+  width: 120rem;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  opacity: 1;
+  z-index: 1;
 }
 
 .infogrid {
