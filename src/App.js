@@ -102,11 +102,17 @@ const bio = [
   },
 ];
 
-const contact = [
+const contact = [{ contact: "mail@kristofferlarberg.se", id: uuidv4() }];
+
+const links = [
   {
-    email: "mail@kristofferlarberg.se",
-    github: "https://github.com/kristofferlarberg",
-    linkedin: "https://se.linkedin.com/in/kristofferlarberg",
+    name: "GitHub",
+    link: "https://github.com/kristofferlarberg",
+    id: uuidv4(),
+  },
+  {
+    name: "LinkedIn",
+    link: "https://se.linkedin.com/in/kristofferlarberg",
     id: uuidv4(),
   },
 ];
@@ -195,6 +201,7 @@ class App extends Component {
       software,
       bio,
       contact,
+      links,
     };
   }
 
@@ -245,6 +252,7 @@ class App extends Component {
       frameLib,
       tools,
       software,
+      links,
     } = this.state;
     return (
       <Router>
@@ -265,6 +273,7 @@ class App extends Component {
                 frameLib={frameLib}
                 tools={tools}
                 software={software}
+                links={links}
               />
             </Route>
             <Route path="/">

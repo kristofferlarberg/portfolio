@@ -1,42 +1,24 @@
 import React from "react";
+import Links from "./Links";
 
-const Contact = ({ contact }) => (
+const Contact = ({ contact, links }) => (
   <>
     <section className="links">
-      {contact.map((item) => (
-        <div>
-          <ul>
-            <li>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={`mailto:${item.email}`}
-              >
-                {item.email}
-              </a>
-            </li>
-          </ul>
-        </div>
-      ))}
+      <ul>
+        {contact.map((item) => (
+          <li key={item.id}>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`mailto:${item.email}`}
+            >
+              {item.contact}
+            </a>
+          </li>
+        ))}
+      </ul>
     </section>
-    <section className="links">
-      {contact.map((item) => (
-        <div>
-          <ul>
-            <li>
-              <a target="_blank" rel="noopener noreferrer" href={item.github}>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a target="_blank" rel="noopener noreferrer" href={item.linkedin}>
-                LinkedIn
-              </a>
-            </li>
-          </ul>
-        </div>
-      ))}
-    </section>
+    <Links contact={contact} links={links} />
   </>
 );
 
