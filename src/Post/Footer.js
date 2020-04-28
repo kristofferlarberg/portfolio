@@ -7,15 +7,14 @@ const Footer = ({ projects, showDetails }) => {
   }
   return (
     <footer>
-      <h4 className="footer">{item.role ? `Role: ${item.role}` : null}</h4>
-      <h4 className="footer">{item.team ? `Team: ${item.team}` : null}</h4>
-      <h4 className="footer">
+      <h5 className="footer">{item.role ? `Role: ${item.role}` : null}</h5>
+      <h5 className="footer">{item.team ? `Team: ${item.team}` : null}</h5>
+      <h5 className="footer">
         {item.format ? `Format: ${item.format}` : null}
-      </h4>
-      <h4 className="footer">
+      </h5>
+      <h5 className="footer">
         {item.method ? `Method: ${item.method}` : null}
-      </h4>
-      <h4 className="footer">
+      </h5>
         {item.github ? (
           <a
             target="_blank"
@@ -30,7 +29,6 @@ const Footer = ({ projects, showDetails }) => {
             ></img>
           </a>
         ) : null}
-      </h4>
     </footer>
   );
 };

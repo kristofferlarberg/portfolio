@@ -24,8 +24,9 @@ const projects = [
   {
     title: "Ingela Johansson",
     description:
-      "Portfolio website for artist Ingela Johansson serving her multi-layered practise in a practictal manner, which makes possible overview and summary.",
-    img: "./img/3.png",
+      "Portfolio website for artist Ingela Johansson, a Stockholm based artist whose research-based artistic practice often responds to site-specific issues with an interest in social history and collective memory. Her interdisciplinary approach combines various aesthetic strategies and media to create an engaging body of work. She works with film, painting, installation, text and photo. The website aims to display this through indexical overview as well as filtering. It is also possible to connect projects with each other and in that way emphasizing recurring themes.",
+    img: [{ img: "./img/IJ2.png", id: uuidv4(), credits: "" }],
+    preview: "./img/IJ2.png",
     url: "http://ingelajohansson.net/",
     role: "Designer",
     category: [["Design"]],
@@ -33,13 +34,20 @@ const projects = [
     format: "Portfolio Website",
     method: "Layout, Typography, UI",
     github: "",
+    credits: "",
     id: uuidv4(),
   },
   {
     title: "Riksdagskollen",
     description:
-      "The foundation for a web app proposal which visualizes voting data from the Swedish parliament.",
-    img: "./img/10.png",
+      'The foundation for a web app proposal which visualizes voting data from the Swedish parliament via "The Riksdag’s open data" API. This project was carried out as a team assignment part of a diploma course in front-end development. The assignment had its main focus on React and handling API requests as well as a basic introduction to Firebase. The project also included training in agile methods, especially Scrum.',
+    img: [
+      { img: "./img/RK1.png", id: uuidv4(), credits: "" },
+      { img: "./img/RK2.png", id: uuidv4(), credits: "" },
+      { img: "./img/RK4.png", id: uuidv4(), credits: "" },
+      { img: "./img/RK5.png", id: uuidv4(), credits: "" },
+    ],
+    preview: "./img/RK1.png",
     url: "",
     role: "Developer",
     category: [["Development"]],
@@ -53,7 +61,8 @@ const projects = [
     title: "Konsthall C",
     description:
       "Konsthall C is an artistic space located in the suburb of Hökarängen in Stockholm with a direction and theme that changes every two years, in addition to certain fixed formats and events. The filtering function makes it easy to take part of all past events, an important aspect of the previous website. The design also builds upon previous use of colours and the typeface Georgia.",
-    img: "./img/konsthallc.png",
+    img: [{ img: "./img/KC.png", id: uuidv4(), credits: "" }],
+    preview: "./img/KC.png",
     url: "https://konsthallc.se/",
     role: "Designer",
     category: [["Design"]],
@@ -61,13 +70,14 @@ const projects = [
     format: "Website",
     method: "Layout, Typography, UI",
     github: "",
-    credits: "",
     id: uuidv4(),
   },
   {
     title: "Quire",
-    description: "A notebook browser app build with Quill.",
-    img: "./img/7.png",
+    description:
+      "A notebook browser app built with Quill. This project was carried out as a team assignment part of a diploma course in front-end development. The assignment had its main focus on JavaScript, HTML and CSS. The project also included training in agile methods, especially Scrum.",
+    img: [{ img: "./img/Q.png", id: uuidv4(), credits: "" }],
+    preview: "./img/Q.png",
     url: "",
     role: "Developer",
     category: [["Development"]],
@@ -75,20 +85,7 @@ const projects = [
     format: "Website",
     method: "HTML, CSS, JavaScript, Quill",
     github: "https://github.com/amol0900/fe19tp1_-team-ink-",
-    id: uuidv4(),
-  },
-  {
-    title: "Olivia Berkowicz",
-    description:
-      "Portfolio website for curator and writer Olivia Berkowicz. The site and its design is based on a simple layout which can be used in a variety of ways depending on the type of content.",
-    img: "./img/1.jpg",
-    url: "http://oliviaberkowicz.com/",
-    role: "Designer",
-    category: [["Design"]],
-    team: "Per Sturesson (Development)",
-    format: "Portfolio Website",
-    method: "Layout, Typography, UI",
-    github: "",
+    credits: "",
     id: uuidv4(),
   },
 ];
@@ -96,8 +93,8 @@ const projects = [
 const bio = [
   {
     description: `I’m a Stockholm based front-end developer and graphic designer who has been active as a graphic designer since 2014, often in close collaboration with clients. The last few years I’ve started making a shift from working solely with design towards focusing more on web development. What I like to do most is thorough research and conceptual development executed with attention to detail as well as overall functionality. `,
-    img: "./img/portrait.jpg",
-    credits: "Photo: Anna Drvnik",
+    img: "./img/portrait.png",
+    credits: "",
     id: uuidv4(),
   },
 ];

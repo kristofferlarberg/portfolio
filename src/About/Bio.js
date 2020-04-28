@@ -11,7 +11,7 @@ const Bio = ({ bio }) => {
             alt="Portrait photography by Anna Drvnik."
           ></img>
           <figcaption>
-            <h4 className="caption">{item.credits}</h4>
+            <h5 className="caption">{item.credits}</h5>
           </figcaption>
         </figure>
       ))}

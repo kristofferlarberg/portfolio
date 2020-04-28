@@ -10,7 +10,7 @@ const Contact = ({ contact, links }) => (
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href={`mailto:${item.email}`}
+              href={`mailto:${item.contact}`}
             >
               {item.contact}
             </a>
@@ -18,7 +18,7 @@ const Contact = ({ contact, links }) => (
         ))}
       </ul>
     </section>
-    <Links contact={contact} links={links} />
+    <Links links={links} />
   </>
 );
 

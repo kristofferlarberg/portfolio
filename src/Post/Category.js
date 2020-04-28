@@ -9,12 +9,12 @@ const Category = ({ projects, showDetails }) => {
     <section className="categories">
       {item.category[0] ? (
         <section className="category">
-          <h4 className="category">{item.category[0]}</h4>
+          <h5 className="category">{item.category[0]}</h5>
         </section>
       ) : null}
       {item.category[1] ? (
         <section className="category">
-          <h4 className="category">{item.category[1]}</h4>
+          <h5 className="category">{item.category[1]}</h5>
         </section>
       ) : null}
     </section>

@@ -6,7 +6,7 @@ const Links = ({ links }) => (
       <ul key={item.id}>
         <li key={item.id}>
           <a target="_blank" rel="noopener noreferrer" href={item.link}>
-          → {item.name}
+            → {item.name}
           </a>
         </li>
       </ul>

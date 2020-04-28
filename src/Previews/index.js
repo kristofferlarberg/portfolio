@@ -28,9 +28,9 @@ const Previews = ({
               scrollToTop();
             }}
           >
-            <img src={item.img} className="preview-img" alt="Project"></img>
+            <img src={item.preview} className="preview-img" alt="Project"></img>
             <div className="preview-title">
-              <h4 className="preview">{item.title}</h4>
+              <h5 className="preview">{item.title}</h5>
             </div>
           </div>
         );

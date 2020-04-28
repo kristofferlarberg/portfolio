@@ -19,7 +19,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 
 nav {
@@ -39,7 +39,7 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 12rem;
+  margin-bottom: 6rem;
   border-top: solid black 1px;
 }
 
@@ -49,7 +49,7 @@ section {
 }
 
 section.links {
-  margin: 0rem 1rem 4.3rem 1rem;
+  margin: 0rem 1rem 6rem 1rem;
 }
 
 section.title {
@@ -79,8 +79,7 @@ footer {
   background-color: none;
   border: solid black 1px;
   padding: 0;
-  margin: 0 1rem 0 1rem;
-  margin-bottom: 0;
+  margin: 3rem 1rem 0 1rem;
   padding: 1rem 0 2rem 0;
 }
 
@@ -123,6 +122,12 @@ h3 {
 }
 
 h4 {
+  font-style: italic;
+  font-weight: 400;
+  margin: 0 0 0.5rem 0;
+}
+
+h5 {
   font-family: "Space Mono", monospace;
   font-size: 1.4rem;
   line-height: 4.5rem;
@@ -131,17 +136,17 @@ h4 {
   margin: 0;
 }
 
-h4.footer {
+h5.footer {
   margin: 0 2rem;
 }
 
-h4.caption {
+h5.caption {
   padding: 0;
   margin: 1rem 0 0 0;
   line-height: 0;
 }
 
-h4.preview {
+h5.preview {
   padding: 0;
   margin: 0;
   line-height: 0;
@@ -149,7 +154,7 @@ h4.preview {
   z-index: 3;
 }
 
-h4.category {
+h5.category {
   line-height: 0;
   margin: 0;
 }
@@ -200,12 +205,12 @@ a.caption:visited {
 figure {
   width: 80%;
   padding: 0;
-  margin: 0 1rem 0 1rem;
+  margin: 0 2rem 3rem 2rem;
 }
 
 figure.portrait {
-  width: 60%;
-  margin: 6rem 1rem 0 1rem;
+  width: 20%;
+  margin: 6rem 2rem 0 2rem;
 }
 
 figcaption {
@@ -221,6 +226,10 @@ ul {
 }
 
 img {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
   width: 100%;
   margin: 0;
   -webkit-box-shadow: 0px 0px 6px 1px #ccc;
@@ -243,15 +252,14 @@ button {
 
 .github {
   margin-top: 1rem;
+  margin-left: 2rem;
   width: 50px;
   height: auto;
   box-shadow: none;
 }
 
 a.github {
-  margin-top: 1rem;
-  width: 50px;
-  height: auto;
+  margin: 0;
   box-shadow: none;
 }
 
@@ -284,7 +292,7 @@ a.github {
 .infogrid {
   background-color: white;
   border: solid 1px black;
-  margin-top: 2.2rem;
+  margin-top: 0;
   margin-bottom: 6rem;
   display: inline-grid;
   grid-template-columns: 1fr 1fr;
@@ -296,14 +304,14 @@ a.github {
 }
 
 .grid {
-  margin: 6rem 2rem 6rem 2rem;
+  margin: 6rem 2rem;
   display: inline-grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
 }
 
 .grid > div {
-  width: 50rem;
+  width: 100%;
   height: 50rem;
   display: flex;
   justify-content: center;
@@ -393,26 +401,30 @@ a.github {
 @media only screen and (max-width: 1100px) {
   article {
     width: 100vw;
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
   }
 
   section {
     width: auto;
     display: inline-block;
-    margin: 2.3rem 1rem 2.3rem 1rem;
+    margin: 3rem 2rem 3.5rem 2rem;
   }
 
   section.title {
-    width: auto;
-    margin: 4rem 1rem 4rem 1rem;
+    width: calc(100vw - 4rem);
+    margin: 4rem 2rem 2rem 2rem;
   }
 
   section.links {
-    width: 90vw;
+    width: calc(100vw - 4rem);
+    margin-bottom: 5rem;
   }
 
-  .infogrid {
-    width: 90vw;
+  section.categories {
+    width: calc(100vw - 4rem);
+    display: flex;
+    align-items: flex-start;
+    margin: 0 2rem 5rem 2rem;
   }
 
   h1 {
@@ -420,21 +432,24 @@ a.github {
   }
 
   h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   h3 {
     font-size: 1.7rem;
   }
 
-  p {
-    width: auto;
+  h4 {
     font-size: 1.7rem;
   }
 
-  p.disclaimer {
+  h5 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    width: auto;
     font-size: 1.7rem;
-    margin: 4rem 2rem 0 2rem;
   }
 
   a {
@@ -461,11 +476,12 @@ a.github {
 
   figure {
     width: auto;
+    margin-bottom: 1rem;
   }
 
   figure.portrait {
     width: auto;
-    margin: 4rem 1rem 0 1rem;
+    margin: 4rem 2rem 0 2rem;
   }
 
   figcaption {
@@ -473,30 +489,26 @@ a.github {
   }
 
   footer {
-    width: 90vw;
+    width: calc(100vw - 4rem);
+    margin-top: 1rem;
   }
 
   .portrait {
     width: 100%;
   }
 
-  .grid {
-    margin-top: 4rem;
-    grid-template-columns: repeat(1, 1fr);
+  .infogrid {
+    width: calc(100vw - 4rem);
   }
 
-  .grid > div {
-    width: 75rem;
-    height: 75rem;
+  .grid {
+    margin-top: 6rem;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 6rem;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  .grid > div {
-    width: auto;
-    height: 50rem;
-  }
-
   .infogrid {
     grid-template-columns: 1fr;
   }
@@ -504,7 +516,6 @@ a.github {
 
 @media only screen and (max-width: 400px) {
   .grid > div {
-    width: auto;
     height: 30rem;
   }
 }

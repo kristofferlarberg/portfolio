@@ -1,8 +1,9 @@
 import React from "react";
 import Category from "./Category";
-import Footer from "../Footer";
+import Figure from "./Figure";
+import Footer from "./Footer";
 
-const Post = ({ projects, showDetails, categories }) => {
+const Post = ({ projects, showDetails }) => {
   let item = projects.find((item) => item.id === showDetails);
   if (!item) {
     return;
@@ -13,26 +14,7 @@ const Post = ({ projects, showDetails, categories }) => {
         <h1>{item.title}</h1>
       </section>
       <Category projects={projects} showDetails={showDetails} />
-      <figure>
-        <img src={item.img} alt="Documentation"></img>
-        {item.credits ? (
-          <figcaption>
-            <h4 className="caption">
-              {item.credits[0]}
-              <span style={{ paddingLeft: "1em" }}>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={item.credits[1]}
-                  className="caption"
-                >
-                  {item.credits[1]}
-                </a>
-              </span>
-            </h4>
-          </figcaption>
-        ) : null}
-      </figure>
+      <Figure projects={projects} showDetails={showDetails} />
       <section>
         <p>{item.description}</p>
         <p>
