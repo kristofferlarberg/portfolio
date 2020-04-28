@@ -1,97 +1,184 @@
-import React, { Component } from 'react';
-import About from './About';
-import Previews from './Previews';
-import Header from './Header';
-import './App.css';
-import {
-  HashRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import React, { Component } from "react";
+import About from "./About";
+import Previews from "./Previews";
+import Header from "./Header";
+import "./App.css";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 
-const API = 'https://api.openweathermap.org/data/2.5/weather?q=stockholm,se&APPID=f8384513fad5f91ea04d07a2cbf916ec&units=metric';
+const API =
+  "https://api.openweathermap.org/data/2.5/weather?q=stockholm,se&APPID=f8384513fad5f91ea04d07a2cbf916ec&units=metric";
 
 const categories = [
   {
-    name: 'Design',
-    objectID: 0,
+    title: "Design",
+    id: uuidv4(),
   },
   {
-    name: 'Development',
-    id: 1,
+    title: "Development",
+    id: uuidv4(),
   },
 ];
 
 const projects = [
-
   {
-    title: `Crawl - en kunskapsimport från kolonierna`,
-    description: '"Simstilen crawl existerade i det antika Grekland och Rom. Det var inte så konstigt. Det hade crawlats i Medelhavet alltsedan dynastiernas Egypten och längs mesopotamiska floder under assyriernas imperier. Och det var långt fler runt om i världen som nyttjade tekniken som gick ut på att ligga på magen och föra armarna alternerade över huvudet för att sedan fortsätta den vevande armrörelsen under vattnet. Benen hjälpte till att hålla fart och styra den hjulångare överkroppen blivit. I Polynesien crawlades det och även bland nordamerikanska urbefolkningar. Kulturer längs den afrikanska västkusten crawlade så bra att kunskapen var eftertraktad i slavhandeln. Afrikaners simkunskaper blev även till redskap i ett otal flyktförsök. I dessa kulturer och fler fanns det en crawlhistoria kvar i kropparna. Det fanns det inte i Väst. Och Sid Cavill fick sin livs match på Samoa."',
-    img: './img/01.png',
-    url: 'https://sverigesradio.se/sida/avsnitt/702087?programid=503',
-    role: '',
-    category: '',
-    team: '',
-    format: '',
-    method: '',
-    github: '',
-    credits: [['Photo: Chris Lawton'], ['https://unsplash.com/@chrislawton?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText']],
-    id: 1,
+    title: "Ingela Johansson",
+    description:
+      "Portfolio website for artist Ingela Johansson, a Stockholm based artist whose research-based artistic practice often responds to site-specific issues with an interest in social history and collective memory. Her interdisciplinary approach combines various aesthetic strategies and media to create an engaging body of work. She works with film, painting, installation, text and photo. The website aims to display this through indexical overview as well as filtering. It is also possible to connect projects with each other and in that way emphasizing recurring themes.",
+    img: [{ img: "./img/IJ2.png", id: uuidv4(), credits: "" }],
+    preview: "./img/IJ2.png",
+    url: "http://ingelajohansson.net/",
+    role: "Designer",
+    category: [["Design"]],
+    team: "Viiksimaisteri (Development)",
+    format: "Portfolio Website",
+    method: "Layout, Typography, UI",
+    github: "",
+    credits: "",
+    id: uuidv4(),
   },
   {
-    title: 'The Sucker, the Sucker!',
-    description: '"Peter Godfrey-Smith is a philosopher and diver who has been studying octopuses and other cephalopods in the wild, mostly off the coast of his native Sydney, for years. The alienness of octopuses, in his view, provides an opportunity to reflect on the nature of cognition and consciousness without simply projecting from the human example. Because of their evolutionary distance from us, octopuses are an ‘independent experiment in the evolution of large brains and complex behaviour’. Insofar as we are able to make intelligent contact with them – to understand octopuses and have them understand us – it is ‘not because of a shared history, not because of kinship, but because evolution built minds twice over’. The potential worry is that the evolutionary chasm between us and the octopus is too great to make mutual intelligibility possible. In that case the octopus will have something to teach us about the limits of our own understanding."',
-    img: './img/03.png',
-    url: 'https://www.lrb.co.uk/the-paper/v39/n17/amia-srinivasan/the-sucker-the-sucker',
-    role: '',
-    category: '',
-    team: '',
-    format: '',
-    method: '',
-    github: '',
-    credits: [['Photo: edmondlafoto'], ['https://pixabay.com/users/edmondlafoto-7913128/']],
-    id: 2,
+    title: "Riksdagskollen",
+    description:
+      'The foundation for a web app proposal which visualizes voting data from the Swedish parliament via "The Riksdag’s open data" API. This project was carried out as a team assignment part of a diploma course in front-end development. The assignment had its main focus on React and handling API requests as well as a basic introduction to Firebase. The project also included training in agile methods, especially Scrum.',
+    img: [
+      { img: "./img/RK1.png", id: uuidv4(), credits: "" },
+      { img: "./img/RK2.png", id: uuidv4(), credits: "" },
+      { img: "./img/RK4.png", id: uuidv4(), credits: "" },
+      { img: "./img/RK5.png", id: uuidv4(), credits: "" },
+    ],
+    preview: "./img/RK1.png",
+    url: "",
+    role: "Developer",
+    category: [["Development"]],
+    team: "Amanda Olsson, Erik Calmfors, Ismail Güven, Mohmed Salah Ahmed",
+    format: "Website",
+    method: "HTML, CSS, JavaScript, React",
+    github: "https://github.com/kristofferlarberg/fe19tp2_strawberry",
+    id: uuidv4(),
   },
   {
-    title: `This Is How Scandinavia Got Great`,
-    description: '"The 19th-century Nordic elites did something we haven’t been able to do in this country recently. They realized that if their countries were to prosper they had to create truly successful “folk schools” for the least educated among them. They realized that they were going to have to make lifelong learning a part of the natural fabric of society."',
-    img: './img/04.jpg',
-    url: 'https://www.nytimes.com/2020/02/13/opinion/scandinavia-education.html',
-    role: '',
-    category: '',
-    team: '',
-    format: '',
-    method: '',
-    github: '',
-    credits: [['Photo: Karl Heinz Hernried'], []],
-    id: 3,
+    title: "Konsthall C",
+    description:
+      "Konsthall C is an artistic space located in the suburb of Hökarängen in Stockholm with a direction and theme that changes every two years, in addition to certain fixed formats and events. The filtering function makes it easy to take part of all past events, an important aspect of the previous website. The design also builds upon previous use of colours and the typeface Georgia.",
+    img: [{ img: "./img/KC.png", id: uuidv4(), credits: "" }],
+    preview: "./img/KC.png",
+    url: "https://konsthallc.se/",
+    role: "Designer",
+    category: [["Design"]],
+    team: "Sanna Frese (Development)",
+    format: "Website",
+    method: "Layout, Typography, UI",
+    github: "",
+    id: uuidv4(),
   },
   {
-    title: `Anni Albers and Ancient American Textiles`,
-    description: '"At the time Anni Albers wrote On Weaving in 1965, few discussions of Andean textiles “as art” had appeared in weaving textbooks, but there were numerous publications, many of which were German books published between 1880 and 1929, that documented and described their visual and technical properties. Albers almost single-handedly introduced weaving students to this ancient textile art through her writing and her artistic work."',
-    img: './img/06.png',
-    url: 'http://www.bauhaus-imaginista.org/articles/771/anni-albers-and-ancient-american-textiles',
-    role: '',
-    category: '',
-    team: '',
-    format: '',
-    method: '',
-    github: '',
-    credits: [['Photo: Steve Bowbrick'], ['https://creativecommons.org/licenses/by/2.0/']],
-    id: 4,
+    title: "Quire",
+    description:
+      "A notebook browser app built with Quill. This project was carried out as a team assignment part of a diploma course in front-end development. The assignment had its main focus on JavaScript, HTML and CSS. The project also included training in agile methods, especially Scrum.",
+    img: [{ img: "./img/Q.png", id: uuidv4(), credits: "" }],
+    preview: "./img/Q.png",
+    url: "",
+    role: "Developer",
+    category: [["Development"]],
+    team: "Amanda Olsson, Martin Lindén, Nick Magnusson",
+    format: "Website",
+    method: "HTML, CSS, JavaScript, Quill",
+    github: "https://github.com/amol0900/fe19tp1_-team-ink-",
+    credits: "",
+    id: uuidv4(),
   },
 ];
 
-const info = [
+const bio = [
   {
     description: `I’m a Stockholm based front-end developer and graphic designer who has been active as a graphic designer since 2014, often in close collaboration with clients. The last few years I’ve started making a shift from working solely with design towards focusing more on web development. What I like to do most is thorough research and conceptual development executed with attention to detail as well as overall functionality. `,
-    img: './img/portrait.jpg',
-    credits: [['Photo: Anna Drvnik'], ['']],
-    id: 0,
-    email: 'mail@kristofferlarberg.se',
-    github: 'https://github.com/kristofferlarberg',
-    linkedin: 'https://se.linkedin.com/in/kristofferlarberg',
-    link: 'https://www.are.na/kristoffer-larberg',
+    img: "./img/portrait.png",
+    credits: "",
+    id: uuidv4(),
+  },
+];
+
+const contact = [{ contact: "mail@kristofferlarberg.se", id: uuidv4() }];
+
+const links = [
+  {
+    name: "GitHub",
+    link: "https://github.com/kristofferlarberg",
+    id: uuidv4(),
+  },
+  {
+    name: "LinkedIn",
+    link: "https://se.linkedin.com/in/kristofferlarberg",
+    id: uuidv4(),
+  },
+];
+
+const languages = [
+  {
+    title: "Javascript ES6",
+    id: uuidv4(),
+  },
+  {
+    title: "HTML 5",
+    id: uuidv4(),
+  },
+  {
+    title: "CSS",
+    id: uuidv4(),
+  },
+  {
+    title: "Dart",
+    id: uuidv4(),
+  },
+  {
+    title: "PHP",
+    id: uuidv4(),
+  },
+];
+
+const frameLib = [
+  {
+    title: "React",
+    id: uuidv4(),
+  },
+  {
+    title: "Flutter",
+    id: uuidv4(),
+  },
+  {
+    title: "Node.js",
+    id: uuidv4(),
+  },
+];
+
+const tools = [
+  {
+    title: "Git",
+    id: uuidv4(),
+  },
+  {
+    title: "npm",
+    id: uuidv4(),
+  },
+];
+
+const software = [
+  {
+    title: "VS Code",
+    id: uuidv4(),
+  },
+  {
+    title: "Adobe CC",
+    id: uuidv4(),
+  },
+  {
+    title: "Figma",
+    id: uuidv4(),
+  },
+  {
+    title: "Glyphs",
+    id: uuidv4(),
   },
 ];
 
@@ -101,26 +188,32 @@ class App extends Component {
     this.state = {
       categories,
       projects,
-      info,
       showDetails: null,
       intervalId: 0,
       thePosition: false,
-      weather: '',
+      weather: "",
+      languages,
+      frameLib,
+      tools,
+      software,
+      bio,
+      contact,
+      links,
     };
   }
 
   componentDidMount() {
     document.addEventListener("scroll", () => {
       if (window.scrollY > 170) {
-        this.setState({ thePosition: true })
+        this.setState({ thePosition: true });
       } else {
-        this.setState({ thePosition: false })
+        this.setState({ thePosition: false });
       }
     });
     window.scrollTo(0, 0);
     fetch(API)
-      .then(response => response.json())
-      .then(data => this.setState({ weather: data.main.feels_like }));
+      .then((response) => response.json())
+      .then((data) => this.setState({ weather: data.main.feels_like }));
   }
 
   onScrollStep = () => {
@@ -128,25 +221,36 @@ class App extends Component {
       clearInterval(this.state.intervalId);
     }
     window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);
-  }
+  };
 
   scrollToTop = () => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
-  }
+  };
 
   toggleShowDetails = (id) => {
     this.setState({
       showDetails: id,
-    })
-
-  }
+    });
+  };
 
   render() {
-    const { categories, projects, info, showDetails, weather, } = this.state;
+    const {
+      categories,
+      projects,
+      bio,
+      contact,
+      showDetails,
+      weather,
+      languages,
+      frameLib,
+      tools,
+      software,
+      links,
+    } = this.state;
     return (
       <Router>
         <div className="App">
@@ -158,16 +262,23 @@ class App extends Component {
             weather={weather}
           />
           <Switch>
-            <Route path='/about'>
+            <Route path="/about">
               <About
-                info={info}
+                bio={bio}
+                contact={contact}
+                languages={languages}
+                frameLib={frameLib}
+                tools={tools}
+                software={software}
+                links={links}
               />
             </Route>
-            <Route path='/'>
+            <Route path="/">
               <Previews
                 showDetails={showDetails}
                 toggleShowDetails={this.toggleShowDetails.bind(this)}
                 projects={projects}
+                categories={categories}
                 onScrollStep={this.onScrollStep.bind(this)}
                 scrollToTop={this.scrollToTop.bind(this)}
               />
@@ -180,5 +291,3 @@ class App extends Component {
 }
 
 export default App;
-
-
