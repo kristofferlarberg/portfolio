@@ -260,6 +260,7 @@ class App extends Component {
             showDetails={showDetails}
             toggleShowDetails={this.toggleShowDetails.bind(this)}
             weather={weather}
+            links={links}
           />
           <Switch>
             <Route path="/about">

@@ -1,7 +1,6 @@
 import React from "react";
-import Links from "./Links";
 
-const Contact = ({ contact, links }) => (
+const Contact = ({ contact }) => (
   <>
     <section className="links">
       <ul>
@@ -18,7 +17,6 @@ const Contact = ({ contact, links }) => (
         ))}
       </ul>
     </section>
-    <Links links={links} />
   </>
 );
 

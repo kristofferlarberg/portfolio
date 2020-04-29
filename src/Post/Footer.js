@@ -15,20 +15,20 @@ const Footer = ({ projects, showDetails }) => {
       <h5 className="footer">
         {item.method ? `Method: ${item.method}` : null}
       </h5>
-        {item.github ? (
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={item.github}
+      {item.github ? (
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={item.github}
+          className="github"
+        >
+          <img
+            src="img/github.svg"
+            alt="Project documentation"
             className="github"
-          >
-            <img
-              src="img/github.svg"
-              alt="Project documentation"
-              className="github"
-            ></img>
-          </a>
-        ) : null}
+          ></img>
+        </a>
+      ) : null}
     </footer>
   );
 };

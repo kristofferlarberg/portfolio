@@ -78,9 +78,13 @@ footer {
   width: 60%;
   background-color: none;
   border: solid black 1px;
-  padding: 0;
   margin: 3rem 1rem 0 1rem;
   padding: 1rem 0 2rem 0;
+}
+
+footer.tech {
+  padding: 0;
+  margin: 0;
 }
 
 .preview-title {
@@ -119,6 +123,10 @@ h3 {
   font-size: 2.2rem;
   font-weight: 700;
   margin: 0 0 0.5rem 0;
+}
+
+h3.tech {
+  margin: 2rem;
 }
 
 h4 {
@@ -289,17 +297,16 @@ a.github {
   z-index: 1;
 }
 
-.infogrid {
+.techgrid {
+  width: 100%;
   background-color: white;
-  border: solid 1px black;
-  margin-top: 0;
-  margin-bottom: 6rem;
+  margin: 0;
   display: inline-grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
 
-.infogrid > div {
+.techgrid > div {
   margin: 2rem;
 }
 
@@ -504,8 +511,9 @@ a.github {
     width: 100%;
   }
 
-  .infogrid {
+  .techgrid {
     width: calc(100vw - 4rem);
+    grid-template-columns: 1fr;
   }
 
   .grid {

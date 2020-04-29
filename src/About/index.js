@@ -1,7 +1,8 @@
 import React from "react";
-import Contact from "../Contact";
+import Contact from "./Contact";
 import Tech from "../Tech";
 import Bio from "./Bio";
+import Links from "../Links";
 
 const About = ({
   bio,
@@ -16,8 +17,8 @@ const About = ({
     <main>
       <article>
         <Bio bio={bio} />
-        <Contact contact={contact} links={links} />
-        <h2>Skills</h2>
+        <Contact contact={contact} />
+        <Links links={links} />
         <Tech
           languages={languages}
           frameLib={frameLib}

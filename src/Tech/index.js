@@ -6,12 +6,15 @@ import Tools from "./Tools";
 
 const Tech = ({ languages, software, frameLib, tools }) => {
   return (
-    <section className="infogrid">
-      <Languages languages={languages} />
-      <FrameLib frameLib={frameLib} />
-      <Tools tools={tools} />
-      <Software software={software} />
-    </section>
+    <footer className="tech">
+      <h3 className="tech">Skills</h3>
+      <section className="techgrid">
+        <Languages languages={languages} />
+        <FrameLib frameLib={frameLib} />
+        <Tools tools={tools} />
+        <Software software={software} />
+      </section>
+    </footer>
   );
 };
 export default Tech;

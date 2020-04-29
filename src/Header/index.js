@@ -2,7 +2,7 @@ import React from "react";
 import Weather from "../Weather";
 import { Link } from "react-router-dom";
 
-const Header = ({ toggleShowDetails, weather }) => (
+const Header = ({ toggleShowDetails, weather, links }) => (
   <header>
     <nav>
       <Link to="/" className="headerlink">
