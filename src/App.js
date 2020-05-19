@@ -147,7 +147,15 @@ const frameLib = [
     id: uuidv4(),
   },
   {
+    title: "Gatsby",
+    id: uuidv4(),
+  },
+  {
     title: "Node.js",
+    id: uuidv4(),
+  },
+  {
+    title: "Styled Components",
     id: uuidv4(),
   },
 ];
