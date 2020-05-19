@@ -143,11 +143,11 @@ const frameLib = [
     id: uuidv4(),
   },
   {
-    title: "Flutter",
+    title: "Gatsby",
     id: uuidv4(),
   },
   {
-    title: "Gatsby",
+    title: "Flutter",
     id: uuidv4(),
   },
   {
@@ -167,6 +167,10 @@ const tools = [
   },
   {
     title: "npm",
+    id: uuidv4(),
+  },
+  {
+    title: "Firebase",
     id: uuidv4(),
   },
 ];
