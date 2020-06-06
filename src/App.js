@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import About from "./About";
 import Previews from "./Previews";
-import Header from "./Header";
+import Nav from "./Nav";
+import Bio from "./Bio";
+import Contact from "./Contact";
 import "./App.css";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
 const API =
@@ -21,6 +21,22 @@ const categories = [
 ];
 
 const projects = [
+  {
+    title: "Appendix",
+    description:
+      "A platform which presents the graduate projects from the programs MA Spatial Design and BA Interior Architecture & Furniture Design at Konstfack 2020.",
+    img: [{ img: "./img/A.png", id: uuidv4(), credits: "" }],
+    preview: "./img/A.png",
+    url: "https://konstfack2020.se/appendix/",
+    role: "Developer, Designer",
+    category: [["Development"], ["Design"]],
+    team: "Per Sturesson",
+    format: "Website",
+    method: "HTML, CSS, JavaScript, React, Gatsby",
+    github: "https://github.com/kristofferlarberg/appendix",
+    credits: "",
+    id: uuidv4(),
+  },
   {
     title: "Ingela Johansson",
     description:
@@ -93,13 +109,18 @@ const projects = [
 const bio = [
   {
     description: `I’m a Stockholm based front-end developer and graphic designer who has been active as a graphic designer since 2014, often in close collaboration with clients. The last few years I’ve started making a shift from working solely with design towards focusing more on web development. What I like to do most is thorough research and conceptual development executed with attention to detail as well as overall functionality. `,
-    img: "./img/portrait.png",
     credits: "",
     id: uuidv4(),
   },
 ];
 
-const contact = [{ contact: "mail@kristofferlarberg.se", id: uuidv4() }];
+const contact = [
+  {
+    contact: "mail@kristofferlarberg.se",
+    img: "./img/portrait.png",
+    id: uuidv4(),
+  },
+];
 
 const links = [
   {
@@ -152,10 +173,6 @@ const frameLib = [
   },
   {
     title: "Node.js",
-    id: uuidv4(),
-  },
-  {
-    title: "Styled Components",
     id: uuidv4(),
   },
 ];
@@ -264,41 +281,35 @@ class App extends Component {
       links,
     } = this.state;
     return (
-      <Router>
-        <div className="App">
-          <Header
-            categories={categories}
-            projects={projects}
+      <div className="App">
+        <Nav
+          categories={categories}
+          projects={projects}
+          showDetails={showDetails}
+          toggleShowDetails={this.toggleShowDetails.bind(this)}
+          weather={weather}
+          links={links}
+        />
+        <main>
+          <Bio bio={bio} />
+          <Previews
             showDetails={showDetails}
             toggleShowDetails={this.toggleShowDetails.bind(this)}
-            weather={weather}
+            projects={projects}
+            categories={categories}
+            onScrollStep={this.onScrollStep.bind(this)}
+            scrollToTop={this.scrollToTop.bind(this)}
+          />
+          <Contact
+            contact={contact}
+            languages={languages}
+            frameLib={frameLib}
+            tools={tools}
+            software={software}
             links={links}
           />
-          <Switch>
-            <Route path="/about">
-              <About
-                bio={bio}
-                contact={contact}
-                languages={languages}
-                frameLib={frameLib}
-                tools={tools}
-                software={software}
-                links={links}
-              />
-            </Route>
-            <Route path="/">
-              <Previews
-                showDetails={showDetails}
-                toggleShowDetails={this.toggleShowDetails.bind(this)}
-                projects={projects}
-                categories={categories}
-                onScrollStep={this.onScrollStep.bind(this)}
-                scrollToTop={this.scrollToTop.bind(this)}
-              />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
+        </main>
+      </div>
     );
   }
 }
