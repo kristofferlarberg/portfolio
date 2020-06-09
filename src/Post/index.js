@@ -11,7 +11,7 @@ const Article = styled.article`
   align-items: center;
   margin-bottom: 6rem;
   border-top: solid black 1px;
-`
+`;
 
 const Post = ({ projects, showDetails }) => {
   let item = projects.find((item) => item.id === showDetails);

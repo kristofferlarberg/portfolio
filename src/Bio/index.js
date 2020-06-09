@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-
-
 const Container = styled.div`
   background-color: var(--color);
   border-top: 1px solid black;
@@ -13,15 +11,15 @@ const Container = styled.div`
   border-top: solid black 1px;
 `;
 
-const Bio = ({ bio, color }) => {
+const Bio = ({ bio }) => {
   return (
-      <Container>
-        {bio.map((item) => (
-          <section key={item.id}>
-            <p>{item.description}</p>
-          </section>
-        ))}
-      </Container>
+    <Container>
+      {bio.map((item) => (
+        <section key={item.id}>
+          <p>{item.description}</p>
+        </section>
+      ))}
+    </Container>
   );
 };
 export default Bio;

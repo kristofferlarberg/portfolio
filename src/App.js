@@ -283,7 +283,7 @@ class App extends Component {
 
   scrollToTop = () => {
     window.scrollTo({
-      top: 0,
+      top: 378,
       left: 0,
       behavior: "smooth",
     });
