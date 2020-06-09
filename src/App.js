@@ -1,10 +1,15 @@
 import React, { Component } from "react";
+import { v4 as uuidv4 } from "uuid";
+import styled from "styled-components";
+import "./App.css";
 import Previews from "./Previews";
 import Nav from "./Nav";
 import Bio from "./Bio";
-import Contact from "./Contact";
-import "./App.css";
-import { v4 as uuidv4 } from "uuid";
+import About from "./About";
+
+const CSSVariables = styled.div`
+  --color: ${(props) => props.color};
+`;
 
 const API =
   "https://api.openweathermap.org/data/2.5/weather?q=stockholm,se&APPID=f8384513fad5f91ea04d07a2cbf916ec&units=metric";
@@ -228,6 +233,7 @@ class App extends Component {
       bio,
       contact,
       links,
+      color: "",
     };
   }
 
@@ -239,10 +245,33 @@ class App extends Component {
         this.setState({ thePosition: false });
       }
     });
+
     window.scrollTo(0, 0);
     fetch(API)
       .then((response) => response.json())
-      .then((data) => this.setState({ weather: data.main.feels_like }));
+      .then((data) => this.setState({ weather: data.main.feels_like }))
+      .then((result) => {
+        const weather = this.state.weather;
+        if (weather >= -40 && weather <= -30) {
+          this.setState({ color: "#99a4fb" });
+        } else if (weather >= -30 && weather <= -20) {
+          this.setState({ color: "#b2bafc" });
+        } else if (weather >= -20 && weather <= -10) {
+          this.setState({ color: "#ccd1fd" });
+        } else if (weather >= -10 && weather <= 0) {
+          this.setState({ color: "#e5e8fe" });
+        } else if (weather >= 0 && weather <= 10) {
+          this.setState({ color: "#f1ffed" });
+        } else if (weather >= 10 && weather <= 20) {
+          this.setState({ color: "#e3fedb" });
+        } else if (weather >= 20 && weather <= 30) {
+          this.setState({ color: "#d5fec9" });
+        } else if (weather >= 30 && weather <= 40) {
+          this.setState({ color: "#c8fdb8" });
+        } else {
+          this.setState({ color: "yellow" });
+        }
+      });
   }
 
   onScrollStep = () => {
@@ -279,37 +308,42 @@ class App extends Component {
       tools,
       software,
       links,
+      color,
     } = this.state;
     return (
-      <div className="App">
-        <Nav
-          categories={categories}
-          projects={projects}
-          showDetails={showDetails}
-          toggleShowDetails={this.toggleShowDetails.bind(this)}
-          weather={weather}
-          links={links}
-        />
-        <main>
-          <Bio bio={bio} />
-          <Previews
+      <CSSVariables color={color}>
+        <div className="App">
+          <Nav
+            categories={categories}
+            projects={projects}
             showDetails={showDetails}
             toggleShowDetails={this.toggleShowDetails.bind(this)}
-            projects={projects}
-            categories={categories}
-            onScrollStep={this.onScrollStep.bind(this)}
-            scrollToTop={this.scrollToTop.bind(this)}
-          />
-          <Contact
-            contact={contact}
-            languages={languages}
-            frameLib={frameLib}
-            tools={tools}
-            software={software}
+            weather={weather}
             links={links}
           />
-        </main>
-      </div>
+          <main>
+            <Bio bio={bio} color={color} />
+            <Previews
+              showDetails={showDetails}
+              toggleShowDetails={this.toggleShowDetails.bind(this)}
+              projects={projects}
+              categories={categories}
+              onScrollStep={this.onScrollStep.bind(this)}
+              scrollToTop={this.scrollToTop.bind(this)}
+            />
+            <About
+              contact={contact}
+              languages={languages}
+              frameLib={frameLib}
+              tools={tools}
+              software={software}
+              links={links}
+              color={color}
+              weather={weather}
+            />
+          </main>
+        </div>
+      </CSSVariables>
     );
   }
 }

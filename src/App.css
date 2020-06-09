@@ -69,11 +69,10 @@ footer.tech {
 
 .preview-title {
   color: black;
-  background-color: white;
+  background-color: var(--color);;
   margin: 0;
   position: absolute;
   padding: 3rem 3.5rem;
-  border: black solid 1px;
   border-radius: 35px;
   z-index: 2;
 }
@@ -156,7 +155,7 @@ p.disclaimer {
 }
 
 a {
-  color: blue;
+  color: black;
   text-decoration: none;
   font-weight: 700;
   box-shadow: inset 0 0 0 0 blue;
@@ -173,8 +172,8 @@ a {
 }
 
 a:hover {
-  color: blue;
-  box-shadow: inset 0 -0.3rem 0 0 blue;
+  color: black;
+  box-shadow: inset 0 -0.3rem 0 0 black;
   transition: box-shadow 0s;
 }
 
@@ -194,7 +193,7 @@ figure {
 
 figure.portrait {
   width: 20%;
-  margin: 6rem 2rem 0 2rem;
+  margin: 6rem 2rem 2rem 2rem;
 }
 
 figcaption {
@@ -262,7 +261,6 @@ a.github {
 
 .techgrid {
   width: 100%;
-  background-color: white;
   margin: 0;
   display: inline-grid;
   grid-template-columns: 1fr 1fr;
@@ -274,10 +272,10 @@ a.github {
 }
 
 .grid {
-  margin: 6rem 2rem;
+  margin: 6rem 9rem;
   display: inline-grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 6rem;
 }
 
 .grid > div {
@@ -286,7 +284,7 @@ a.github {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 1;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   overflow: hidden;
@@ -296,7 +294,7 @@ a.github {
 }
 
 .grid > div:hover {
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .buttonlink,
@@ -414,8 +412,8 @@ a.github {
   }
 
   figure.portrait {
-    width: auto;
-    margin: 4rem 2rem 0 2rem;
+    width: 50vw;
+    margin-top: 4rem
   }
 
   figcaption {

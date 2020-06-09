@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Weather from "../Weather";
 
 const Nav = styled.nav`
   display: flex;
@@ -9,9 +8,9 @@ const Nav = styled.nav`
   padding: 2rem 2rem;
 `;
 
-const Header = ({ toggleShowDetails, weather }) => (
+const Header = () => (
   <Nav>
-    <Weather weather={weather}>Kristoffer Larberg</Weather>
+    <h2>Kristoffer Larberg</h2>
   </Nav>
 );
 
