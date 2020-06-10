@@ -113,7 +113,7 @@ const projects = [
 
 const bio = [
   {
-    description: `I’m a Stockholm based front-end developer and graphic designer who has been active as a graphic designer since 2014, often in close collaboration with clients. The last few years I’ve started making a shift from working solely with design towards focusing more on web development. What I like to do most is thorough research and conceptual development executed with attention to detail as well as overall functionality. `,
+    description: `I’m a Stockholm based front-end developer and graphic designer who has been active as a graphic designer since 2014, often in close collaboration with clients. The last few years I’ve made a shift towards focusing more on web development. What I like to do most is thorough research executed with attention to detail as well as overall functionality.`,
     credits: "",
     id: uuidv4(),
   },
