@@ -29,11 +29,8 @@ const About = ({ contact, languages, links, frameLib, tools, software }) => (
           <img
             className="portrait"
             src={item.img}
-            alt="Portrait photography by Anna Drvnik."
+            alt="Portrait"
           ></img>
-          <figcaption>
-            <h5 className="caption">{item.credits}</h5>
-          </figcaption>
         </figure>
         <section className="links">
           <ul>
