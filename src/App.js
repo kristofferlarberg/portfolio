@@ -192,6 +192,10 @@ const tools = [
     id: uuidv4(),
   },
   {
+    title: "GraphQL",
+    id: uuidv4(),
+  },
+  {
     title: "Firebase",
     id: uuidv4(),
   },
