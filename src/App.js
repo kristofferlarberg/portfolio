@@ -6,6 +6,7 @@ import Previews from "./Previews";
 import Nav from "./Nav";
 import Bio from "./Bio";
 import About from "./About";
+import Color from "./Color";
 
 const CSSVariables = styled.div`
   --color: ${(props) => props.color};
@@ -256,24 +257,16 @@ class App extends Component {
       .then((data) => this.setState({ weather: data.main.feels_like }))
       .then((result) => {
         const weather = this.state.weather;
-        if (weather >= -40 && weather <= -30) {
-          this.setState({ color: "#99a4fb" });
-        } else if (weather >= -30 && weather <= -20) {
-          this.setState({ color: "#b2bafc" });
-        } else if (weather >= -20 && weather <= -10) {
-          this.setState({ color: "#ccd1fd" });
-        } else if (weather >= -10 && weather <= 0) {
-          this.setState({ color: "#e5e8fe" });
-        } else if (weather >= 0 && weather <= 10) {
-          this.setState({ color: "#f1ffed" });
-        } else if (weather >= 10 && weather <= 20) {
-          this.setState({ color: "#e3fedb" });
-        } else if (weather >= 20 && weather <= 30) {
-          this.setState({ color: "#d5fec9" });
-        } else if (weather >= 30 && weather <= 40) {
-          this.setState({ color: "#c8fdb8" });
+        if (weather >= -50 && weather <= -30) {
+          this.setState({ color: "#c566dc" });
+        } else if (weather >= -30 && weather <= -10) {
+          this.setState({ color: "#80c9d7" });
+        } else if (weather >= -10 && weather <= 10) {
+          this.setState({ color: "#66cbad" });
+        } else if (weather >= 10 && weather <= 30) {
+          this.setState({ color: "#f5e066" });
         } else {
-          this.setState({ color: "yellow" });
+          this.setState({ color: "f7668a" });
         }
       });
   }
@@ -345,6 +338,7 @@ class App extends Component {
               color={color}
               weather={weather}
             />
+            <Color/>
           </main>
         </div>
       </CSSVariables>
