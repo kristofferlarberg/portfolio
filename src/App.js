@@ -114,7 +114,8 @@ const projects = [
 
 const bio = [
   {
-    description: `I’m a Stockholm based front-end developer and graphic designer who has been active as a graphic designer since 2014, often in close collaboration with clients. The last few years I’ve made a shift towards focusing more on web development. What I like to do most is thorough research executed with attention to detail as well as overall functionality.`,
+    description: `I’m a Stockholm based front-end developer with graphic design experience, often working in close collaboration with clients. The last few years I’ve shifted from graphic design towards web development and am currently studying front-end development. What I do best is thorough research executed with attention to detail and intuitive functionality.
+`,
     credits: "",
     id: uuidv4(),
   },
@@ -258,15 +259,15 @@ class App extends Component {
       .then((result) => {
         const weather = this.state.weather;
         if (weather >= -50 && weather <= -30) {
-          this.setState({ color: "#c566dc" });
+          this.setState({ color: "#ff0000" }); //red
         } else if (weather >= -30 && weather <= -10) {
-          this.setState({ color: "#80c9d7" });
+          this.setState({ color: "#ff00ff" }); //magenta
         } else if (weather >= -10 && weather <= 10) {
-          this.setState({ color: "#66cbad" });
+          this.setState({ color: "#00ff00" }); //green
         } else if (weather >= 10 && weather <= 30) {
-          this.setState({ color: "#f5e066" });
+          this.setState({ color: "#ffff00" }); //yellow
         } else {
-          this.setState({ color: "f7668a" });
+          this.setState({ color: "#ff0000" }); //red
         }
       });
   }
