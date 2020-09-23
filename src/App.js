@@ -1,4 +1,6 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
 import { v4 as uuidv4 } from "uuid";
 import styled from "styled-components";
 import "./App.css";
@@ -8,12 +10,18 @@ import Bio from "./Bio";
 import About from "./About";
 import Color from "./Color";
 
+const Main = styled.main`
+  text-align: left;
+  margin: 0;
+  font-size: 2.2rem;
+  font-family: "hk_groteskregular", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+`;
+
 const CSSVariables = styled.div`
   --color: ${(props) => props.color};
 `;
-
-const API =
-  "https://api.openweathermap.org/data/2.5/weather?q=stockholm,se&APPID=f8384513fad5f91ea04d07a2cbf916ec&units=metric";
 
 const categories = [
   {
@@ -222,29 +230,57 @@ const software = [
   },
 ];
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      categories,
+const App = () => {
+  const [data, setData] = useState(null);
+  const [color, setColor] = useState("");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios(
+        "https://api.openweathermap.org/data/2.5/weather?q=stockholm,se&APPID=c333ad1637e15b11d381a890076be47b&units=metric"
+      );
+      if (result) {
+        console.log(result);
+        let weather = result.data.main.feels_like;
+
+        if (weather >= -50 && weather <= -30) {
+          setColor("#ff0000"); //red
+        } else if (weather >= -30 && weather <= -10) {
+          setColor("#ff00ff"); //magenta
+        } else if (weather >= -10 && weather <= 10) {
+          setColor("#00ff00"); //green
+        } else if (weather >= 10 && weather <= 30) {
+          setColor("#ffff00"); //yellow
+        } else {
+          setColor("#ff0000"); //red
+        }
+        return setData(result.data);
+      } else {
+        console.log("NO RESULT");
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  console.log(color);
+
+  /* showDetails: null, */
+  /* intervalId: 0, */
+  /* thePosition: false, */
+
+  /*  categories,
       projects,
-      showDetails: null,
-      intervalId: 0,
-      thePosition: false,
-      weather: "",
       languages,
       frameLib,
       tools,
       software,
       bio,
       contact,
-      links,
-      color: "",
-    };
-  }
+      links, */
 
-  componentDidMount() {
-    document.addEventListener("scroll", () => {
+  /* 
+      document.addEventListener("scroll", () => {
       if (window.scrollY > 170) {
         this.setState({ thePosition: true });
       } else {
@@ -252,48 +288,30 @@ class App extends Component {
       }
     });
 
-    window.scrollTo(0, 0);
-    fetch(API)
-      .then((response) => response.json())
-      .then((data) => this.setState({ weather: data.main.feels_like }))
-      .then((result) => {
-        const weather = this.state.weather;
-        if (weather >= -50 && weather <= -30) {
-          this.setState({ color: "#ff0000" }); //red
-        } else if (weather >= -30 && weather <= -10) {
-          this.setState({ color: "#ff00ff" }); //magenta
-        } else if (weather >= -10 && weather <= 10) {
-          this.setState({ color: "#00ff00" }); //green
-        } else if (weather >= 10 && weather <= 30) {
-          this.setState({ color: "#ffff00" }); //yellow
-        } else {
-          this.setState({ color: "#ff0000" }); //red
-        }
-      });
-  }
+    window.scrollTo(0, 0); */
 
-  onScrollStep = () => {
+  /*   onScrollStep = () => {
     if (window.pageYOffset === 0) {
       clearInterval(this.state.intervalId);
     }
     window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);
-  };
+  }; */
 
-  scrollToTop = () => {
+  /*   scrollToTop = () => {
     window.scrollTo({
       top: 378,
       left: 0,
       behavior: "smooth",
     });
-  };
+  }; */
 
-  toggleShowDetails = (id) => {
+  /*   toggleShowDetails = (id) => {
     this.setState({
       showDetails: id,
     });
-  };
+  }; */
 
-  render() {
+  /*  render() {
     const {
       categories,
       projects,
@@ -307,44 +325,43 @@ class App extends Component {
       software,
       links,
       color,
-    } = this.state;
-    return (
-      <CSSVariables color={color}>
-        <div className="App">
-          <Nav
-            categories={categories}
+    } = this.state; */
+  return (
+    <CSSVariables color={color}>
+      <Main>
+        <Nav
+          categories={categories}
+          projects={projects}
+          // showDetails={showDetails}
+          // toggleShowDetails={this.toggleShowDetails.bind(this)}
+
+          links={links}
+        />
+        <main>
+          <Bio bio={bio} color={color} />
+          <Previews
+            // showDetails={showDetails}
+            // toggleShowDetails={this.toggleShowDetails.bind(this)}
             projects={projects}
-            showDetails={showDetails}
-            toggleShowDetails={this.toggleShowDetails.bind(this)}
-            weather={weather}
-            links={links}
+            categories={categories}
+            // onScrollStep={this.onScrollStep.bind(this)}
+            // scrollToTop={this.scrollToTop.bind(this)}
           />
-          <main>
-            <Bio bio={bio} color={color} />
-            <Previews
-              showDetails={showDetails}
-              toggleShowDetails={this.toggleShowDetails.bind(this)}
-              projects={projects}
-              categories={categories}
-              onScrollStep={this.onScrollStep.bind(this)}
-              scrollToTop={this.scrollToTop.bind(this)}
-            />
-            <About
-              contact={contact}
-              languages={languages}
-              frameLib={frameLib}
-              tools={tools}
-              software={software}
-              links={links}
-              color={color}
-              weather={weather}
-            />
-            <Color/>
-          </main>
-        </div>
-      </CSSVariables>
-    );
-  }
-}
+          <About
+            contact={contact}
+            languages={languages}
+            frameLib={frameLib}
+            tools={tools}
+            software={software}
+            links={links}
+            color={color}
+          />
+          <Color />
+        </main>
+      </Main>
+    </CSSVariables>
+  );
+};
+//}
 
 export default App;
