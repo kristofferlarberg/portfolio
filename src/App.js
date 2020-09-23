@@ -3,36 +3,24 @@ import axios from "axios";
 
 import { v4 as uuidv4 } from "uuid";
 import styled from "styled-components";
-import "./App.css";
+import "./index.css";
 import Previews from "./Previews";
 import Nav from "./Nav";
 import Bio from "./Bio";
 import About from "./About";
 import Color from "./Color";
 
-const Main = styled.main`
-  text-align: left;
-  margin: 0;
-  font-size: 2.2rem;
-  font-family: "hk_groteskregular", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-`;
-
 const CSSVariables = styled.div`
   --color: ${(props) => props.color};
 `;
 
-const categories = [
-  {
-    title: "Design",
-    id: uuidv4(),
-  },
-  {
-    title: "Development",
-    id: uuidv4(),
-  },
-];
+const Main = styled.main`
+  background-color: var(--color);
+  text-align: left;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+`;
 
 const projects = [
   {
@@ -73,9 +61,6 @@ const projects = [
       'The foundation for a web app proposal which visualizes voting data from the Swedish parliament via "The Riksdag’s open data" API. This project was carried out as a team assignment part of a diploma course in front-end development. The assignment had its main focus on React and handling API requests as well as a basic introduction to Firebase. The project also included training in agile methods, especially Scrum.',
     img: [
       { img: "./img/RK1.png", id: uuidv4(), credits: "" },
-      { img: "./img/RK2.png", id: uuidv4(), credits: "" },
-      { img: "./img/RK4.png", id: uuidv4(), credits: "" },
-      { img: "./img/RK5.png", id: uuidv4(), credits: "" },
     ],
     preview: "./img/RK1.png",
     url: "",
@@ -230,9 +215,19 @@ const software = [
   },
 ];
 
-const App = () => {
+const App = (props) => {
   const [data, setData] = useState(null);
   const [color, setColor] = useState("");
+  const [content, setContent] = useState({
+    projects,
+    bio,
+    contact,
+    languages,
+    frameLib,
+    tools,
+    software,
+    links,
+  });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -262,102 +257,22 @@ const App = () => {
 
     fetchData();
   }, []);
-
-  console.log(color);
-
-  /* showDetails: null, */
-  /* intervalId: 0, */
-  /* thePosition: false, */
-
-  /*  categories,
-      projects,
-      languages,
-      frameLib,
-      tools,
-      software,
-      bio,
-      contact,
-      links, */
-
-  /* 
-      document.addEventListener("scroll", () => {
-      if (window.scrollY > 170) {
-        this.setState({ thePosition: true });
-      } else {
-        this.setState({ thePosition: false });
-      }
-    });
-
-    window.scrollTo(0, 0); */
-
-  /*   onScrollStep = () => {
-    if (window.pageYOffset === 0) {
-      clearInterval(this.state.intervalId);
-    }
-    window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);
-  }; */
-
-  /*   scrollToTop = () => {
-    window.scrollTo({
-      top: 378,
-      left: 0,
-      behavior: "smooth",
-    });
-  }; */
-
-  /*   toggleShowDetails = (id) => {
-    this.setState({
-      showDetails: id,
-    });
-  }; */
-
-  /*  render() {
-    const {
-      categories,
-      projects,
-      bio,
-      contact,
-      showDetails,
-      weather,
-      languages,
-      frameLib,
-      tools,
-      software,
-      links,
-      color,
-    } = this.state; */
+  console.log(content.projects);
   return (
     <CSSVariables color={color}>
       <Main>
-        <Nav
-          categories={categories}
-          projects={projects}
-          // showDetails={showDetails}
-          // toggleShowDetails={this.toggleShowDetails.bind(this)}
-
-          links={links}
+        <Nav />
+        <Bio bio={content.bio} />
+        <Previews projects={content.projects} />
+        <About
+          contact={content.contact}
+          languages={content.languages}
+          frameLib={content.frameLib}
+          tools={content.tools}
+          software={content.software}
+          links={content.links}
         />
-        <main>
-          <Bio bio={bio} color={color} />
-          <Previews
-            // showDetails={showDetails}
-            // toggleShowDetails={this.toggleShowDetails.bind(this)}
-            projects={projects}
-            categories={categories}
-            // onScrollStep={this.onScrollStep.bind(this)}
-            // scrollToTop={this.scrollToTop.bind(this)}
-          />
-          <About
-            contact={contact}
-            languages={languages}
-            frameLib={frameLib}
-            tools={tools}
-            software={software}
-            links={links}
-            color={color}
-          />
-          <Color />
-        </main>
+        <Color />
       </Main>
     </CSSVariables>
   );

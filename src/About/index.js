@@ -21,9 +21,9 @@ const Portrait = styled.div`
   align-items: center;
 `;
 
-const About = ({ contact, languages, links, frameLib, tools, software }) => (
+const About = (props) => (
   <Container>
-    {contact.map((item) => (
+    {props.contact.map((item) => (
       <Portrait key={item.id}>
         <figure className="portrait">
           <img
@@ -47,12 +47,12 @@ const About = ({ contact, languages, links, frameLib, tools, software }) => (
         </section>
       </Portrait>
     ))}
-    <Links links={links} />
+    <Links links={props.links} />
     <Tech
-      languages={languages}
-      frameLib={frameLib}
-      tools={tools}
-      software={software}
+      languages={props.languages}
+      frameLib={props.frameLib}
+      tools={props.tools}
+      software={props.software}
     />
   </Container>
 );

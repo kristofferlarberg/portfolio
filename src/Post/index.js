@@ -13,30 +13,36 @@ const Article = styled.article`
   border-top: solid black 1px;
 `;
 
-const Post = ({ projects, showDetails }) => {
-  let item = projects.find((item) => item.id === showDetails);
-  if (!item) {
-    return;
-  }
+const Post = (props) => {
+  console.log(props.projects);
+
   return (
     <Article>
       <section className="title">
-        <h1>{item.title}</h1>
+        <h1>{props.title}</h1>
       </section>
-      <Category projects={projects} showDetails={showDetails} />
-      <Figure projects={projects} showDetails={showDetails} />
+
+      <Category category={props.category} />
+
+      <Figure img={props.img} />
       <section>
-        <p>{item.description}</p>
+        <p>{props.description}</p>
         <p>
-          {item.url ? (
-            <a target="_blank" rel="noopener noreferrer" href={item.url}>
-              {item.url}
+          {props.url ? (
+            <a target="_blank" rel="noopener noreferrer" href={props.url}>
+              {props.url}
             </a>
           ) : null}
         </p>
       </section>
-      {item.role ? (
-        <Footer projects={projects} showDetails={showDetails} />
+      {props.role ? (
+        <Footer
+          role={props.role}
+          method={props.method}
+          team={props.team}
+          format={props.format}
+          github={props.github}
+        />
       ) : null}
     </Article>
   );

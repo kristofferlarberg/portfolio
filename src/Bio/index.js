@@ -11,10 +11,10 @@ const Container = styled.div`
   border-top: solid black 1px;
 `;
 
-const Bio = ({ bio }) => {
+const Bio = (props) => {
   return (
     <Container>
-      {bio.map((item) => (
+      {props.bio.map((item) => (
         <section key={item.id}>
           <p>{item.description}</p>
         </section>
