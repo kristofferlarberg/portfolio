@@ -1,5 +1,6 @@
 :root {
   font-size: 62.5%;
+  --side-padding: 0 6rem;
 }
 
 html {
@@ -50,6 +51,7 @@ html {
 body {
   margin: 0;
   font-family: "hk_groteskregular", sans-serif;
+  font-size: 2.2rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
@@ -60,7 +62,6 @@ code {
     monospace;
 }
 
-
 main {
   display: flex;
   flex-direction: column;
@@ -69,35 +70,12 @@ main {
   max-width: var(--contentWidth);
 }
 
-section {
-  width: 60%;
-  margin: 4.3rem 1rem 4.3rem 1rem;
-}
-
-section.links {
-  margin: 0rem 1rem 6rem 1rem;
-}
 
 section.title {
   display: flex;
   flex-direction: column;
   width: 60%;
   margin: 6rem 1rem 2.2rem 1rem;
-}
-
-section.category {
-  border: solid 1px black;
-  padding: 2rem 2rem 2.1rem 2rem;
-  border-radius: 35px;
-  margin: 0 1.5rem 0 0;
-  width: auto;
-}
-
-section.categories {
-  width: 60%;
-  display: flex;
-  align-items: flex-start;
-  margin: 0 0 6rem 0;
 }
 
 footer {
@@ -189,9 +167,8 @@ h5.category {
 p {
   font-size: 2.2rem;
   font-family: "hk_groteskregular", sans-serif;
-  width: 100%;
-  margin-top: 1.7rem;
-  margin-bottom: 1.7rem;
+  width: 70%;
+  margin: 1.7rem 0;
   font-weight: 400;
 }
 
@@ -389,27 +366,11 @@ a.github {
     margin-bottom: 6rem;
   }
 
-  section {
-    width: auto;
-    display: inline-block;
-    margin: 3rem 2rem 3.5rem 2rem;
-  }
+
 
   section.title {
     width: calc(100vw - 4rem);
     margin: 4rem 2rem 2rem 2rem;
-  }
-
-  section.links {
-    width: calc(100vw - 4rem);
-    margin-bottom: 5rem;
-  }
-
-  section.categories {
-    width: calc(100vw - 4rem);
-    display: flex;
-    align-items: flex-start;
-    margin: 0 2rem 5rem 2rem;
   }
 
   h1 {
@@ -484,12 +445,5 @@ a.github {
     grid-template-columns: 1fr;
   }
 
-  .grid {
-    grid-template-columns: repeat(1, 1fr);
-    margin: 6rem 2rem;
-  }
 
-  .grid > div {
-    height: calc(100vw - 4rem);
-  }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Figure = (props) => {
-  console.log(props.img);
+ 
   return (
     <>
       {props.img.map((item) => (

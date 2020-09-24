@@ -1,25 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-const Container = styled.div`
-  background-color: var(--color);
-  border-top: 1px solid black;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-top: solid black 1px;
+const ShowHide = styled.section`
+  margin: 8rem 0 10rem 0;
+  box-sizing: border-box;
+/*   width: 100vw;
+ */  height: auto;
+  height: ${(props) => (props.scroll ? "auto" : "0")};
+  opacity: ${(props) => (props.scroll ? "1" : "0")};
+  margin: ${(props) => (props.scroll ? "" : "0px")};
 `;
 
 const Bio = (props) => {
   return (
-    <Container>
+    <ShowHide scroll={props.scroll}>
       {props.bio.map((item) => (
-        <section key={item.id}>
-          <p>{item.description}</p>
-        </section>
+        <p>{item.description}</p>
       ))}
-    </Container>
+    </ShowHide>
   );
 };
 export default Bio;

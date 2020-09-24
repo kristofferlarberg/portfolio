@@ -14,8 +14,6 @@ const Article = styled.article`
 `;
 
 const Post = (props) => {
-  console.log(props.projects);
-
   return (
     <Article>
       <section className="title">

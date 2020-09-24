@@ -10,11 +10,13 @@ import Bio from "./Bio";
 import About from "./About";
 import Color from "./Color";
 
-const CSSVariables = styled.div`
+const ColorVariable = styled.div`
   --color: ${(props) => props.color};
 `;
 
 const Main = styled.main`
+  width: 100vw;
+  box-sizing: border-box;
   background-color: var(--color);
   text-align: left;
   margin: 0;
@@ -59,9 +61,7 @@ const projects = [
     title: "Riksdagskollen",
     description:
       'The foundation for a web app proposal which visualizes voting data from the Swedish parliament via "The Riksdag’s open data" API. This project was carried out as a team assignment part of a diploma course in front-end development. The assignment had its main focus on React and handling API requests as well as a basic introduction to Firebase. The project also included training in agile methods, especially Scrum.',
-    img: [
-      { img: "./img/RK1.png", id: uuidv4(), credits: "" },
-    ],
+    img: [{ img: "./img/RK1.png", id: uuidv4(), credits: "" }],
     preview: "./img/RK1.png",
     url: "",
     role: "Developer",
@@ -218,6 +218,7 @@ const software = [
 const App = (props) => {
   const [data, setData] = useState(null);
   const [color, setColor] = useState("");
+  const [scroll, setScroll] = useState(false);
   const [content, setContent] = useState({
     projects,
     bio,
@@ -229,13 +230,21 @@ const App = (props) => {
     links,
   });
 
+  const onScroll = () => {
+    let currentPosition = window.pageYOffset;
+    if (currentPosition > 1) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
         "https://api.openweathermap.org/data/2.5/weather?q=stockholm,se&APPID=c333ad1637e15b11d381a890076be47b&units=metric"
       );
       if (result) {
-        console.log(result);
         let weather = result.data.main.feels_like;
 
         if (weather >= -50 && weather <= -30) {
@@ -254,15 +263,16 @@ const App = (props) => {
         console.log("NO RESULT");
       }
     };
-
+    window.addEventListener("scroll", onScroll);
     fetchData();
   }, []);
-  console.log(content.projects);
+
+  console.log(scroll);
+
   return (
-    <CSSVariables color={color}>
+    <ColorVariable color={color}>
       <Main>
-        <Nav />
-        <Bio bio={content.bio} />
+        <Nav scroll={scroll} bio={content.bio} />
         <Previews projects={content.projects} />
         <About
           contact={content.contact}
@@ -274,7 +284,7 @@ const App = (props) => {
         />
         <Color />
       </Main>
-    </CSSVariables>
+    </ColorVariable>
   );
 };
 //}
