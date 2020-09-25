@@ -17,10 +17,15 @@ const Article = styled.article`
   border-top: solid black 1px;
   transition: max-height 0.6s ease;
   background-color: #efefef;
-  -webkit-box-shadow: 0px 4px 18px 5px grey;
-  -moz-box-shadow: 0px 4px 18px 5px grey;
-  box-shadow: 0px 4px 18px 5px grey;
-  cursor: ns-resize;
+  -webkit-box-shadow: -1px -7px 9px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -7px 9px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px -7px 9px 0px rgba(0, 0, 0, 0.2);
+  cursor: cell;
+  &:first-child {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
   @media (max-width: 1000px) {
     width: 100vw;
     margin-bottom: 6rem;
@@ -39,7 +44,7 @@ const ExpandContent = styled.section`
   width: 100%;
   margin: 4rem 0 0 0;
   @media (max-width: 1000px) {
-    width: 100% /* calc(100vw - 4rem) */;
+    width: 100%;
     margin: 3rem 2rem 0 2rem;
   }
 `;
@@ -50,7 +55,7 @@ const Section = styled.section`
   width: 100%;
   margin: 4rem 0 0 0;
   @media (max-width: 1000px) {
-    width: 100% /* calc(100vw - 4rem) */;
+    width: 100%;
     margin: 3rem 2rem 0 2rem;
   }
 `;
@@ -67,6 +72,7 @@ const Post = (props) => {
   };
   console.log(toggleExpand);
   console.log(height);
+
   return (
     <Article onClick={expandClick}>
       <ExpandContent>

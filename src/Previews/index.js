@@ -3,13 +3,13 @@ import styled from "styled-components";
 import Post from "../Post";
 
 const Previews = (props) => {
-  //<div style={{ borderTop: "1px solid black", width: "100vw" }}></div>
 
   return (
     <main>
       {props.projects.map((item, i) => (
         <Post
           key={i}
+          projects={item.projects}
           category={item.category}
           title={item.title}
           description={item.description}

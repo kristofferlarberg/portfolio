@@ -7,7 +7,6 @@ import "./index.css";
 import Previews from "./Previews";
 import Nav from "./Nav";
 import About from "./About";
-import Color from "./Color";
 
 const ColorVariable = styled.div`
   --color: ${(props) => props.color};
@@ -213,7 +212,7 @@ const software = [
     id: uuidv4(),
   },
 ];
-
+console.log(projects);
 const App = (props) => {
   const [data, setData] = useState(null);
   const [color, setColor] = useState("");
@@ -279,7 +278,7 @@ const App = (props) => {
           software={content.software}
           links={content.links}
         />
-        <Color />
+     
       </Main>
     </ColorVariable>
   );
