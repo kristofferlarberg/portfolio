@@ -18,7 +18,7 @@ const Main = styled.main`
   box-sizing: border-box;
   text-align: left;
   margin: 0;
-  background-color: var(--color);
+  background-color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 `;

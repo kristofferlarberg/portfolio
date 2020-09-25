@@ -1,48 +1,39 @@
 import React from "react";
 import styled from "styled-components";
 
-
 const Section = styled.section`
-  width: 100%;
   display: flex;
-  align-items: flex-start;
-  margin: 0 0 6rem 0;
+  align-items: center;
+  margin-left: 2rem;
   @media (max-width: 1000px) {
     width: calc(100vw - 4rem);
     display: flex;
     align-items: flex-start;
-    margin: 0 2rem 5rem 2rem;
   }
 `;
 
-
-const SubSection = styled.section`
-  border: solid 1px black;
+const Tag = styled.section`
   padding: 2rem 2rem 2.1rem 2rem;
+  margin: 0 1rem 0 0;
   border-radius: 35px;
-  margin: 0 1.5rem 0 0;
+  /* border: solid 1px black; */
   width: auto;
-  background-color: black;
-  color: white;
+  background-color: var(--color);
+  color: black;
 `;
 
-
-
-
-
 const Category = (props) => {
-
   return (
     <Section>
       {props.category[0] ? (
-        <SubSection>
+        <Tag>
           <h5 className="category">{props.category[0]}</h5>
-        </SubSection>
+        </Tag>
       ) : null}
       {props.category[1] ? (
-        <SubSection>
+        <Tag>
           <h5 className="category">{props.category[1]}</h5>
-        </SubSection>
+        </Tag>
       ) : null}
     </Section>
   );

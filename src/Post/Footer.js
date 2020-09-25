@@ -6,7 +6,7 @@ const FooterContainer = styled.footer`
   align-self: flex-start;
   background-color: black;
   border: solid black 1px;
-  margin: 3rem 0 0 0;
+  margin: 3rem 0 6rem 0;
   padding: 1rem 0 2rem 0;
   box-sizing: border-box;
   @media (max-width: 1000px) {
