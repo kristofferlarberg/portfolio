@@ -4,8 +4,9 @@ import styled from "styled-components";
 const ShowHide = styled.section`
   margin: 8rem 0 10rem 0;
   box-sizing: border-box;
-/*   width: 100vw;
- */  height: auto;
+  overflow: auto;
+  width: 80%;
+  height: auto;
   height: ${(props) => (props.scroll ? "auto" : "0")};
   opacity: ${(props) => (props.scroll ? "1" : "0")};
   margin: ${(props) => (props.scroll ? "" : "0px")};

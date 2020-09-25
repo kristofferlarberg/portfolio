@@ -4,7 +4,6 @@ import Links from "../Links";
 import Tech from "../Tech";
 
 const Container = styled.div`
-  background-color: var(--color);
   border-top: 1px solid black;
   padding-bottom: 12rem;
   width: 100vw;

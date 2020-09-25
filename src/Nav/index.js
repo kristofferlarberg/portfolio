@@ -8,7 +8,11 @@ const animatedText = keyframes`
 `;
 
 const Nav = styled.nav`
+  display: flex;
+  flex-direction: column;
+  margin: 0;
   padding: var(--side-padding);
+  overflow: auto;
   box-sizing: border-box;
   width: 100%;
   height: auto;
@@ -21,18 +25,16 @@ const Nav = styled.nav`
   }
 `;
 
-const Title = styled.h2`
-  white-space: nowrap;
+const Title = styled.h1`
+  /*   white-space: nowrap;
   overflow: hidden;
-  /* animation: ${animatedText} 2s steps(30, end) 1s 1 normal both; */
+  animation: ${animatedText} 2s steps(30, end) 1s 1 normal both; */
 `;
-
-
 
 const Header = (props) => (
   <Nav scroll={props.scroll}>
     <Title scroll={props.scroll}>Kristoffer Larberg</Title>
-      <Bio bio={props.bio} scroll={props.scroll} />
+    <Bio bio={props.bio} scroll={props.scroll} />
   </Nav>
 );
 
