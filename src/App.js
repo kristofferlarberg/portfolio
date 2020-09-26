@@ -277,6 +277,7 @@ const App = (props) => {
           tools={content.tools}
           software={content.software}
           links={content.links}
+          bio={content.bio}
         />
      
       </Main>

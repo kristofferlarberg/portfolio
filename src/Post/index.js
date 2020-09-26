@@ -12,7 +12,6 @@ const Article = styled.article`
   flex-direction: column;
   align-items: center;
   padding: 0 12rem;
-  /* margin-bottom: 6rem; */
   box-sizing: border-box;
   border-top: solid black 1px;
   transition: max-height 0.6s ease;

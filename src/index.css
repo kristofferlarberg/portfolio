@@ -79,8 +79,11 @@ body {
 }
 
 footer.tech {
-  padding: 0;
+  width: 50vw;
+  background-color: var(--color);
+  padding-top: 0;
   margin: 0;
+  margin-top: 6rem;
 }
 
 .preview-title {
