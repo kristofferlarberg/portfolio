@@ -22,17 +22,22 @@ const Tag = styled.section`
   color: black;
 `;
 
+const Text = styled.h4`
+  line-height: 0;
+`;
+
+
 const Category = (props) => {
   return (
     <Section>
       {props.category[0] ? (
         <Tag>
-          <h5 className="category">{props.category[0]}</h5>
+          <Text>{props.category[0]}</Text>
         </Tag>
       ) : null}
       {props.category[1] ? (
         <Tag>
-          <h5 className="category">{props.category[1]}</h5>
+          <Text>{props.category[1]}</Text>
         </Tag>
       ) : null}
     </Section>

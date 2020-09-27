@@ -4,7 +4,7 @@ import styled from "styled-components";
   const FigureSection = styled.section`
     width: 100%;
     padding: 0;
-    margin: 0 2rem 0 2rem;
+    margin: 0;
     @media (max-width: 1000px) {
       box-sizing: border-box;
       margin-bottom: 1rem;

@@ -105,17 +105,16 @@ const projects = [
 
 const bio = [
   {
-    description: `I’m a Stockholm based front-end developer with graphic design experience, often working in close collaboration with clients. The last few years I’ve shifted from graphic design towards web development and am currently studying front-end development. What I do best is thorough research executed with attention to detail and intuitive functionality.
-`,
+    description: `I’m a Stockholm based front-end developer with graphic design experience, often working in close collaboration with clients. The last few years I’ve shifted from graphic design towards web development and am currently studying front-end development. What I do best is thorough research executed with attention to detail and intuitive functionality.`,
     credits: "",
+    img: "./img/portrait.png",
     id: uuidv4(),
   },
 ];
 
 const contact = [
   {
-    contact: "mail@kristofferlarberg.se",
-    img: "./img/portrait.png",
+    contact: "mail@kristofferlarberg.se",  
     id: uuidv4(),
   },
 ];
@@ -268,7 +267,7 @@ const App = (props) => {
   return (
     <ColorVariable color={color}>
       <Main>
-        <Nav scroll={scroll} bio={content.bio} />
+        <Nav scroll={scroll} bio={content.bio} links={content.links} />
         <Previews projects={content.projects} />
         <About
           contact={content.contact}
@@ -276,10 +275,8 @@ const App = (props) => {
           frameLib={content.frameLib}
           tools={content.tools}
           software={content.software}
-          links={content.links}
           bio={content.bio}
         />
-     
       </Main>
     </ColorVariable>
   );

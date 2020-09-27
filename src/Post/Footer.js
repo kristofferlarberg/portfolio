@@ -2,12 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const FooterContainer = styled.footer`
-  width: 60vw;
+  width: 100%;
   align-self: flex-start;
-  background-color: black;
-  border: solid black 1px;
-  margin: 3rem 0 6rem 0;
-  padding: 1rem 0 2rem 0;
+  border-top: 1px solid black;
+  margin: 5rem 0 6rem 0;
+  padding: 1rem 0 0 0;
   box-sizing: border-box;
   @media (max-width: 1000px) {
     width: 100%;
@@ -15,20 +14,23 @@ const FooterContainer = styled.footer`
   }
 `;
 
-const FooterText = styled.h5`
-  margin: 0 2rem;
-  color: white;
+const FooterText = styled.h4`
+  margin: 0;
+  color: black;
+`;
+
+const Link = styled.a`
+  box-shadow: none;
 `;
 
 const GitHub = styled.svg`
   margin-top: 1rem;
-  margin-left: 2rem;
   width: 50px;
   height: 50px;
-  box-shadow: none;
-  fill: white;
-  a:hover & {
+  fill: black;
+  ${Link}:hover & {
     fill: var(--color);
+    box-shadow: none;
   }
 `;
 
@@ -40,11 +42,10 @@ const Footer = (props) => {
       <FooterText>{props.format ? `Format: ${props.format}` : null}</FooterText>
       <FooterText>{props.method ? `Method: ${props.method}` : null}</FooterText>
       {props.github ? (
-        <a
+        <Link
           target="_blank"
           rel="noopener noreferrer"
           href={props.github}
-          className="github"
         >
           <GitHub>
             <path
@@ -58,7 +59,7 @@ const Footer = (props) => {
 	c6.47-2.16,11.13-8.26,11.13-15.45C32.58,7.29,25.29,0,16.29,0z"
             />
           </GitHub>
-        </a>
+        </Link>
       ) : null}
     </FooterContainer>
   );

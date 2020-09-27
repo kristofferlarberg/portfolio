@@ -78,70 +78,32 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-footer.tech {
-  width: 50vw;
-  background-color: var(--color);
-  padding-top: 0;
-  margin: 0;
-  margin-top: 6rem;
-}
-
-.preview-title {
-  color: black;
-  background-color: var(--color);
-  margin: 0;
-  position: absolute;
-  padding: 3rem 3.5rem;
-  z-index: 2;
-}
-
 h1 {
   font-size: 3rem;
   letter-spacing: -0.02rem;
   font-weight: 500;
-
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   letter-spacing: -0.02rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 h3 {
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   letter-spacing: -0.02rem;
   font-weight: 500;
-}
-
-h3.tech {
-  margin: 2rem;
+  font-style: italic;
 }
 
 h4 {
-  font-style: italic;
-  letter-spacing: -0.02rem;
-  font-weight: 500;
-}
-
-h5 {
   font-family: "Space Mono", monospace;
   font-size: 1.6rem;
   line-height: 4.5rem;
   font-weight: 400;
   padding: 0;
   margin: 0;
-}
-
-button {
-  font-family: "HK Grotesk", sans-serif;
-  background-color: none;
-  border: none;
-}
-
-button:focus {
-  outline: 1;
-  outline-color: white;
 }
 
 h5.caption {
@@ -205,11 +167,6 @@ a.caption:visited {
   box-shadow: inset 0 -0.15rem 0 0 black;
 }
 
-figure.portrait {
-  width: 20%;
-  margin: 6rem 2rem 5rem 2rem;
-}
-
 figcaption {
   margin: 0;
 }
@@ -227,68 +184,8 @@ img {
   image-rendering: -o-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
   -ms-interpolation-mode: nearest-neighbor;
-      max-width: 100%;
+  max-width: 100%;
   margin: 0;
-}
-
-.portrait {
-  box-shadow: none;
-}
-
-a.github {
-  margin: 0;
-  box-shadow: none;
-}
-
-.container {
-  justify-content: stretch;
-}
-
-.preview-img,
-.preview-img:visited {
-  height: auto;
-  width: 120rem;
-  padding: 0;
-  margin: 0;
-  box-shadow: none;
-
-  z-index: 1;
-}
-
-.preview-img:hover,
-.preview-img:active {
-  height: auto;
-  width: 120rem;
-  padding: 0;
-  margin: 0;
-  box-shadow: none;
-
-  z-index: 1;
-}
-
-.techgrid {
-  width: 100%;
-  margin: 0;
-  display: inline-grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-
-.techgrid > div {
-  margin: 2rem;
-}
-
-.buttonlink,
-.buttonlink::after,
-.buttonlink:active,
-.buttonlink:hover,
-.buttonlink:hover::after,
-.buttonlink:visited {
-  cursor: pointer;
-  color: black;
-  text-decoration: none;
-  background: none;
-  box-shadow: none;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -336,11 +233,6 @@ a.github {
     width: 100%;
   }
 
-  figure.portrait {
-    width: 50vw;
-    margin-top: 4rem;
-  }
-
   figcaption {
     width: auto;
   }
@@ -348,10 +240,6 @@ a.github {
   footer {
     width: calc(100vw - 4rem);
     margin-top: 1rem;
-  }
-
-  .portrait {
-    width: 100%;
   }
 
   .techgrid {

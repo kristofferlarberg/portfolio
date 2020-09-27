@@ -13,14 +13,13 @@ const Article = styled.article`
   align-items: center;
   padding: 0 12rem;
   box-sizing: border-box;
-  border-top: solid black 1px;
   transition: max-height 0.6s ease;
   background-color: #efefef;
   -webkit-box-shadow: -1px -7px 9px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px -7px 9px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px -7px 9px 0px rgba(0, 0, 0, 0.2);
   cursor: cell;
-  &:first-child {
+  &:nth-child(2) {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -32,27 +31,27 @@ const Article = styled.article`
   }
 `;
 
-const ExpandedContent = styled.section`
-  max-height: ${(props) => props.height}rem;
-  overflow: hidden;
-  transition: max-height 0.6s ease;
-`;
-
 const ExpandContent = styled.section`
   display: flex;
   width: 100%;
-  margin: 4rem 0 0 0;
+  margin: 4rem 0 2rem 0;
   @media (max-width: 1000px) {
     width: 100%;
     margin: 3rem 2rem 0 2rem;
   }
 `;
 
+const ExpandedContent = styled.section`
+  max-height: ${(props) => props.height}rem;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+`;
+
 const Section = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 4rem 0 0 0;
+  margin: 3rem 0 0 0;
   @media (max-width: 1000px) {
     width: 100%;
     margin: 3rem 2rem 0 2rem;

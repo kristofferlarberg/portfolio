@@ -8,19 +8,21 @@ const Container = styled.div`
   padding-bottom: 12rem;
   padding: var(--side-padding);
   width: 100vw;
-  display: flex;
   position: relative;
-  z-index: 1;box-sizing: border-box;
-  
-  align-items: start;
+  z-index: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-top: solid black 1px;
+  background-color: white;
   -webkit-box-shadow: -1px -7px 9px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px -7px 9px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px -7px 9px 0px rgba(0, 0, 0, 0.2);
 `;
 
-const Portrait = styled.div`
-  width: 50vw;
+const Contact = styled.div`
+  margin-top: 6rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -30,29 +32,16 @@ const Portrait = styled.div`
 const About = (props) => (
   <Container>
     {props.contact.map((item) => (
-      <Portrait key={item.id}>
-        <figure className="portrait">
-          <img className="portrait" src={item.img} alt="Portrait"></img>
-        </figure>
-        <section className="links">
-          <ul>
-            <li key={item.id}>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={`mailto:${item.contact}`}
-              >
-                {item.contact}
-              </a>
-            </li>
-          </ul>
-        </section>
-        <Links links={props.links} />
-        {props.bio.map((item) => (
-        <p>{item.description}</p> ))}
-      </Portrait>
+      <Contact key={item.id}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={`mailto:${item.contact}`}
+        >
+          {item.contact}
+        </a>
+      </Contact>
     ))}
-
     <Tech
       languages={props.languages}
       frameLib={props.frameLib}

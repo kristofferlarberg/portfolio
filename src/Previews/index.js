@@ -5,7 +5,7 @@ import Post from "../Post";
 const Previews = (props) => {
 
   return (
-    <main>
+    <>
       {props.projects.map((item, i) => (
         <Post
           key={i}
@@ -22,7 +22,7 @@ const Previews = (props) => {
           github={item.github}
         />
       ))}
-    </main>
+    </>
   );
 };
 export default Previews;
