@@ -17,6 +17,9 @@ const Container = styled.footer`
   -webkit-box-shadow: -1px -7px 9px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px -7px 9px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px -7px 9px 0px rgba(0, 0, 0, 0.2);
+  @media (max-width: 1000px) {
+    padding: 0 2rem 6rem 2rem;
+  }
 `;
 
 const Contact = styled.div`
@@ -48,7 +51,6 @@ const About = (props) => (
       </Contact>
     ))}
     <Links links={props.links} />
-
     <Tech
       languages={props.languages}
       frameLib={props.frameLib}
