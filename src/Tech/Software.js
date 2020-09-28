@@ -1,15 +1,14 @@
 import React from "react";
 
-const Software = ({ software }) => {
+const Software = (props) => {
   return (
-    <div>
-      <h3>Software</h3>
+    <>
       <ul>
-        {software.map((item) => (
+        {props.software.map((item) => (
           <li key={item.id}>{item.title}</li>
         ))}
       </ul>
-    </div>
+    </>
   );
 };
 

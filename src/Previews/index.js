@@ -1,9 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import Post from "../Post";
 
 const Previews = (props) => {
-
   return (
     <>
       {props.projects.map((item, i) => (
@@ -26,4 +24,3 @@ const Previews = (props) => {
   );
 };
 export default Previews;
-

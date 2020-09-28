@@ -20,17 +20,19 @@ const FooterText = styled.h4`
 `;
 
 const Link = styled.a`
-  box-shadow: none;
+  &:hover {
+    box-shadow: none;
+  }
 `;
 
 const GitHub = styled.svg`
   margin-top: 1rem;
+  margin-left: 0.3rem;
   width: 50px;
   height: 50px;
   fill: black;
   ${Link}:hover & {
     fill: var(--color);
-    box-shadow: none;
   }
 `;
 
@@ -42,11 +44,7 @@ const Footer = (props) => {
       <FooterText>{props.format ? `Format: ${props.format}` : null}</FooterText>
       <FooterText>{props.method ? `Method: ${props.method}` : null}</FooterText>
       {props.github ? (
-        <Link
-          target="_blank"
-          rel="noopener noreferrer"
-          href={props.github}
-        >
+        <Link target="_blank" rel="noopener noreferrer" href={props.github}>
           <GitHub>
             <path
               class="st0"

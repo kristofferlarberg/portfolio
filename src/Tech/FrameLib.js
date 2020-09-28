@@ -1,15 +1,14 @@
 import React from "react";
 
-const FrameLib = ({ frameLib }) => {
+const FrameLib = (props) => {
   return (
-    <div>
-      <h3>Frameworks/Libraries</h3>
+    <>
       <ul>
-        {frameLib.map((item) => (
+        {props.frameLib.map((item) => (
           <li key={item.id}>{item.title}</li>
         ))}
       </ul>
-    </div>
+    </>
   );
 };
 

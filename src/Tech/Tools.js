@@ -1,15 +1,14 @@
 import React from "react";
 
-const Tools = ({ tools }) => {
+const Tools = (props) => {
   return (
-    <div>
-      <h3>Tools</h3>
+    <>
       <ul>
-        {tools.map((item) => (
+        {props.tools.map((item) => (
           <li key={item.id}>{item.title}</li>
         ))}
       </ul>
-    </div>
+    </>
   );
 };
 

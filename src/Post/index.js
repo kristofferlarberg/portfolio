@@ -1,11 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import Category from "./Category";
 import Figure from "./Figure";
 import Footer from "./Footer";
+import Description from "./Description";
 
 const Article = styled.article`
-  width: 100vw;
+  width: 100%;
   display: flex;
   position: relative;
   z-index: 1;
@@ -13,7 +14,6 @@ const Article = styled.article`
   align-items: center;
   padding: 0 12rem;
   box-sizing: border-box;
-  transition: max-height 0.6s ease;
   background-color: #efefef;
   -webkit-box-shadow: -1px -7px 9px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px -7px 9px 0px rgba(0, 0, 0, 0.3);
@@ -44,18 +44,7 @@ const ExpandContent = styled.section`
 const ExpandedContent = styled.section`
   max-height: ${(props) => props.height}rem;
   overflow: hidden;
-  transition: max-height 0.6s ease;
-`;
-
-const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 3rem 0 0 0;
-  @media (max-width: 1000px) {
-    width: 100%;
-    margin: 3rem 2rem 0 2rem;
-  }
+  transition: max-height 0.3s ease;
 `;
 
 const Post = (props) => {
@@ -68,28 +57,15 @@ const Post = (props) => {
     setToggleExpand(toggleExpand === false ? true : false);
     setHeight(toggleExpand === true ? "5" : `${content.current.scrollHeight}`);
   };
-  console.log(toggleExpand);
-  console.log(height);
-
   return (
     <Article onClick={expandClick}>
       <ExpandContent>
         <h1>{props.title}</h1>
         <Category category={props.category} />
       </ExpandContent>
-
       <ExpandedContent ref={content} height={height}>
         <Figure img={props.img} />
-        <Section>
-          <p>{props.description}</p>
-          <p>
-            {props.url ? (
-              <a target="_blank" rel="noopener noreferrer" href={props.url}>
-                {props.url}
-              </a>
-            ) : null}
-          </p>
-        </Section>
+        <Description description={props.description} url={props.url} />
         {props.role ? (
           <Footer
             role={props.role}
