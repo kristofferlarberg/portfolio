@@ -3,14 +3,14 @@ import styled from "styled-components";
 
 const FooterContainer = styled.footer`
   width: 100%;
-  align-self: flex-start;
-  border-top: 1px solid black;
   margin: 5rem 0 6rem 0;
   padding: 1rem 0 0 0;
+  align-self: flex-start;
+  border-top: 1px solid black;
   box-sizing: border-box;
   @media (max-width: 1000px) {
     width: 100%;
-    margin: 1rem 0 0 0;
+    margin: 5rem 0 5rem 0;
   }
 `;
 
@@ -23,13 +23,16 @@ const Link = styled.a`
   &:hover {
     box-shadow: none;
   }
+  @media (max-width: 1000px) {
+    box-shadow: none;
+  }
 `;
 
 const GitHub = styled.svg`
-  margin-top: 1rem;
-  margin-left: 0.3rem;
   width: 50px;
   height: 50px;
+  margin-top: 1rem;
+  margin-left: 0.3rem;
   fill: black;
   ${Link}:hover & {
     fill: var(--color);

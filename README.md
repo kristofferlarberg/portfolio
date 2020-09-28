@@ -6,11 +6,6 @@ Portfolio website for freelance work and other projects. Visit the website [here
 ## Install
 Run `npm install` to download package and dependencies. This project was bootstrapped with `create react app`.
 
-<!-- ## Screenshots
-
-![Image of homepage](https://github.com/kristofferlarberg/portfolio/raw/develop/1.png)
-![Image of page](https://github.com/kristofferlarberg/portfolio/raw/develop/2.png) -->
-
 ## License
 MIT License
 

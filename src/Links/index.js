@@ -7,7 +7,7 @@ const Section = styled.section`
   flex-direction: column;
   align-items: flex-start;
   @media (max-width: 1000px) {
-    margin-bottom: 5rem;
+    align-items: center;
   }
 `;
 

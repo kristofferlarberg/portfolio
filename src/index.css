@@ -73,13 +73,10 @@ body {
   margin: 0;
   font-family: "HK Grotesk", sans-serif;
   font-weight: 500;
-  font-size: 2.3rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-body::-webkit-scrollbar {
-  scrollbar-width: thin;
 }
 
 h1 {
@@ -89,13 +86,13 @@ h1 {
 }
 
 h2 {
-  font-size: 2.3rem;
+  font-size: 2rem;
   letter-spacing: -0.02rem;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 2.3rem;
+  font-size: 2rem;
   letter-spacing: -0.02rem;
   font-weight: 500;
   font-style: italic;
@@ -145,6 +142,13 @@ a:hover {
   transition: box-shadow 0s;
 }
 
+ul {
+  line-height: 3.5rem;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
 img {
   image-rendering: -moz-crisp-edges;
   image-rendering: -o-crisp-edges;
@@ -154,13 +158,7 @@ img {
   margin: 0;
 }
 
-ul {
-  line-height: 3.5rem;
-  width: 100%;
-  margin: 0;
-  padding-left: 0;
-  list-style-type: none;
-}
+
 
 @media only screen and (max-width: 1000px) {
   body {
@@ -172,7 +170,7 @@ ul {
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   h3 {
@@ -180,11 +178,8 @@ ul {
   }
 
   h4 {
-    font-size: 1.7rem;
-  }
-
-  h5 {
     font-size: 1.2rem;
+    line-height: 3.5rem;
   }
 
   p {
@@ -197,10 +192,6 @@ ul {
   a:active,
   a:visited {
     box-shadow: inset 0 -0.25rem 0 0 black;
-  }
-
-  li {
-    font-size: 1.7rem;
   }
 
   img {

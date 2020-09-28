@@ -4,23 +4,27 @@ import Bio from "../Bio";
 import Links from "../Links";
 
 const Nav = styled.nav`
-  display: flex;
-  flex-direction: column;
+  max-width: 100%;
+  height: auto;
   margin: 0;
   padding: 5rem 6rem 6rem 6rem;
   overflow: auto;
   box-sizing: border-box;
-  max-width: 100%;
-  height: auto;
-  background-color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color);
   @media (max-width: 1000px) {
     display: flex;
     justify-content: center;
+    padding: 5rem 2rem 6rem 2rem;
   }
 `;
 
 const Title = styled.h1`
   margin: 0;
+  @media (max-width: 1000px) {
+    text-align: center;
+  }
 `;
 
 const Header = (props) => (

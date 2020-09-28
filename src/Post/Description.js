@@ -2,13 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const Section = styled.section`
-  display: flex;
-  flex-direction: column;
   width: 100%;
   margin: 3rem 0 0 0;
+  display: flex;
+  flex-direction: column;
   @media (max-width: 1000px) {
-    width: 100%;
-    margin: 3rem 2rem 0 2rem;
   }
 `;
 

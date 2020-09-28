@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const FigureSection = styled.section`
+const FigSection = styled.section`
   width: 100%;
   padding: 0;
   margin: 0;
@@ -35,14 +35,14 @@ const Figure = (props) => {
   return (
     <>
       {props.img.map((item) => (
-        <FigureSection key={item.id}>
+        <FigSection key={item.id}>
           <img src={item.img} alt="Documentation"></img>
           {item.credits ? (
             <FigCaption>
               <Caption>{item.credits}</Caption>
             </FigCaption>
           ) : null}
-        </FigureSection>
+        </FigSection>
       ))}
     </>
   );

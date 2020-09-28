@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Links from "../Links";
 import Tech from "../Tech";
 
-const Container = styled.div`
+const Container = styled.footer`
   margin: 0;
   padding: 0 6rem 6rem 6rem;
   width: 100%;
@@ -13,7 +13,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: var(--color);
   -webkit-box-shadow: -1px -7px 9px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px -7px 9px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px -7px 9px 0px rgba(0, 0, 0, 0.2);
@@ -25,12 +25,6 @@ const Contact = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
-`;
-
-const Header = styled.h2`
-  margin: 6rem 0 2rem 0;
-  width: 100%;
-  text-align: center;
 `;
 
 const Figure = styled.figure`
@@ -54,7 +48,7 @@ const About = (props) => (
       </Contact>
     ))}
     <Links links={props.links} />
-    <Header>Skills</Header>
+
     <Tech
       languages={props.languages}
       frameLib={props.frameLib}

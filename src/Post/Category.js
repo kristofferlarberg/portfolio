@@ -6,23 +6,26 @@ const Section = styled.section`
   align-items: center;
   margin-left: 2rem;
   @media (max-width: 1000px) {
-    display: flex;
+    margin: 0;
+    flex-direction: column;
     align-items: flex-start;
   }
 `;
 
-const Tag = styled.section`
+const Tag = styled.div`
+  width: auto;
   padding: 2rem 2rem 2.1rem 2rem;
   margin: 0 1rem 0 0;
   border-radius: 35px;
-  width: auto;
   background-color: var(--color);
-  color: black;
+  @media (max-width: 1000px) {
+    margin: 0 0 1rem 0;
+  }
 `;
 
 const Text = styled.h4`
   line-height: 0;
-  color: white;
+  color: black;
 `;
 
 const Category = (props) => {

@@ -238,7 +238,6 @@ const App = (props) => {
 
   const getBarWidth = () => {
     let width = window.innerWidth - document.documentElement.clientWidth;
-    console.log(width);
     setBarWidth(width);
   };
 
@@ -253,15 +252,15 @@ const App = (props) => {
         if (weather >= -30 && weather <= -20) {
           setColor("black"); //black
         } else if (weather >= -20 && weather <= -10) {
-          setColor("#364fc7"); //indigo
+          setColor("#bac8ff"); //indigo
         } else if (weather >= -10 && weather <= 0) {
-          setColor("#5f3dc4"); //violet
+          setColor("#e5dbff"); //violet
         } else if (weather >= 0 && weather <= 10) {
-          setColor("#37b24d"); //green
+          setColor("#20c997"); //green
         } else if (weather >= 10 && weather <= 20) {
-          setColor("#ffa94d"); //orange
+          setColor("#ffd43b"); //yellow
         } else if (weather >= 20 && weather <= 30) {
-          setColor("#ff8787"); //red
+          setColor("#ff922b"); //orange
         } else {
           setColor("black"); //black
         }
@@ -293,6 +292,5 @@ const App = (props) => {
     </ColorVariable>
   );
 };
-//}
 
 export default App;

@@ -7,12 +7,12 @@ import Description from "./Description";
 
 const Article = styled.article`
   width: 100%;
+  padding: 0 12rem;
   display: flex;
   position: relative;
   z-index: 1;
   flex-direction: column;
   align-items: center;
-  padding: 0 12rem;
   box-sizing: border-box;
   background-color: #efefef;
   -webkit-box-shadow: -1px -7px 9px 0px rgba(0, 0, 0, 0.3);
@@ -25,26 +25,30 @@ const Article = styled.article`
     box-shadow: none;
   }
   @media (max-width: 1000px) {
-    width: 100vw;
-    margin-bottom: 6rem;
+    width: 100%;
     padding: 0 2rem;
   }
 `;
 
-const ExpandContent = styled.section`
-  display: flex;
+const Header = styled.section`
   width: 100%;
-  margin: 4rem 0 2rem 0;
+  margin: 3rem 0 2rem 0;
+  display: flex;
   @media (max-width: 1000px) {
-    width: 100%;
-    margin: 3rem 2rem 0 2rem;
+    flex-direction: column;
+    align-items: left;
   }
 `;
 
-const ExpandedContent = styled.section`
+const Content = styled.section`
   max-height: ${(props) => props.height}rem;
   overflow: hidden;
   transition: max-height 0.3s ease;
+`;
+
+const Title = styled.h1`
+  @media (max-width: 1000px) {
+  }
 `;
 
 const Post = (props) => {
@@ -59,11 +63,11 @@ const Post = (props) => {
   };
   return (
     <Article onClick={expandClick}>
-      <ExpandContent>
-        <h1>{props.title}</h1>
+      <Header>
+        <Title>{props.title}</Title>
         <Category category={props.category} />
-      </ExpandContent>
-      <ExpandedContent ref={content} height={height}>
+      </Header>
+      <Content ref={content} height={height}>
         <Figure img={props.img} />
         <Description description={props.description} url={props.url} />
         {props.role ? (
@@ -75,7 +79,7 @@ const Post = (props) => {
             github={props.github}
           />
         ) : null}
-      </ExpandedContent>
+      </Content>
     </Article>
   );
 };
