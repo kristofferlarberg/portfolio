@@ -7,20 +7,25 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   @media (max-width: 1000px) {
+    margin: 2rem 0 0 0;
   }
+`;
+
+const LinkP = styled.p`
+  margin-top: 0;
 `;
 
 const Description = (props) => {
   return (
     <Section>
       <p>{props.description}</p>
-      <p>
+      <LinkP>
         {props.url ? (
           <a target="_blank" rel="noopener noreferrer" href={props.url}>
             {props.url.includes("github") ? "→ GitHub" : `${props.url}`}
           </a>
         ) : null}
-      </p>
+      </LinkP>
     </Section>
   );
 };

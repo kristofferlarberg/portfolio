@@ -12,16 +12,15 @@ const Nav = styled.nav`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  background-color: var(--color);
+  background-color: white;
   @media (max-width: 1000px) {
     display: flex;
     justify-content: center;
-    padding: 5rem 2rem 6rem 2rem;
+    padding: 4rem 2rem 6rem 2rem;
   }
 `;
 
 const Title = styled.h1`
-  margin: 0;
   @media (max-width: 1000px) {
     text-align: center;
   }

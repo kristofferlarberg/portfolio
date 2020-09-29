@@ -3,14 +3,14 @@ import styled from "styled-components";
 
 const FooterContainer = styled.footer`
   width: 100%;
-  margin: 5rem 0 6rem 0;
+  margin: 4rem 0 6rem 0;
   padding: 1rem 0 0 0;
   align-self: flex-start;
   border-top: 1px solid black;
   box-sizing: border-box;
   @media (max-width: 1000px) {
     width: 100%;
-    margin: 5rem 0 5rem 0;
+    margin: 4rem 0 5rem 0;
   }
 `;
 

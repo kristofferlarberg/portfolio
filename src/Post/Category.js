@@ -19,7 +19,7 @@ const Tag = styled.div`
   border-radius: 35px;
   background-color: var(--color);
   @media (max-width: 1000px) {
-    margin: 0 0 1rem 0;
+    margin: 0 0 0.5rem 0;
   }
 `;
 

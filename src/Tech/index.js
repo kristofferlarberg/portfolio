@@ -11,7 +11,10 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  opacity: ${(props) => (props.scroll > 900 ? "1" : "0")};
+  transition: opacity 0.1s ease;
   @media (max-width: 1000px) {
+    height: auto;
     align-items: center;
   }
 `;
@@ -19,10 +22,11 @@ const Container = styled.section`
 const GridContainer = styled.section`
   width: 100%;
   margin-top: 0;
-  padding: 2.5rem 3rem;
+  padding: 3.5rem 3rem 3rem 3rem;
   box-sizing: border-box;
   background-color: black;
-  border-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   @media (max-width: 1000px) {
   }
 `;
@@ -78,11 +82,13 @@ const Four = styled(GridItem)`
 `;
 
 const Header = styled.h2`
-  margin: 6rem 0 0 6rem;
-  padding: 1.5rem 3rem 1.2rem 3rem;
-  width: auto;
+  margin: 5rem 0 0 0;
+  padding: 2.5rem 3rem 0 3rem;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
   text-align: center;
-  background-color: white;
+  background-color: black;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   @media (max-width: 1000px) {
@@ -96,7 +102,7 @@ const SubHeader = styled.h3`
 
 const Tech = (props) => {
   return (
-    <Container>
+    <Container scroll={props.scroll}>
       <Header>Skills</Header>
       <GridContainer>
         <Grid>

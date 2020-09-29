@@ -6,7 +6,7 @@ import styled from "styled-components";
 import "./index.css";
 import Previews from "./Previews";
 import Nav from "./Nav";
-import About from "./About";
+import Footer from "./Footer";
 
 const ColorVariable = styled.div`
   --color: ${(props) => props.color};
@@ -214,7 +214,7 @@ const software = [
 const App = (props) => {
   const [data, setData] = useState(null);
   const [color, setColor] = useState("");
-  const [scroll, setScroll] = useState(false);
+  const [scroll, setScroll] = useState(0);
   const [barWidth, setBarWidth] = useState("");
   const [content, setContent] = useState({
     projects,
@@ -229,11 +229,7 @@ const App = (props) => {
 
   const onScroll = () => {
     let currentPosition = window.pageYOffset;
-    if (currentPosition > 1) {
-      setScroll(true);
-    } else {
-      setScroll(false);
-    }
+    setScroll(currentPosition);
   };
 
   const getBarWidth = () => {
@@ -270,16 +266,21 @@ const App = (props) => {
       }
     };
     fetchData();
+
     getBarWidth();
+
     window.addEventListener("scroll", onScroll);
   }, []);
+
+  console.log(scroll)
 
   return (
     <ColorVariable color={color}>
       <Main>
         <Nav scroll={scroll} bio={content.bio} links={content.links} />
         <Previews projects={content.projects} />
-        <About
+        <Footer
+          scroll={scroll}
           contact={content.contact}
           languages={content.languages}
           frameLib={content.frameLib}

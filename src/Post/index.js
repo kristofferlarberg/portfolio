@@ -32,11 +32,12 @@ const Article = styled.article`
 
 const Header = styled.section`
   width: 100%;
-  margin: 3rem 0 2rem 0;
+  margin: 6rem 0 4rem 0;
   display: flex;
   @media (max-width: 1000px) {
     flex-direction: column;
     align-items: left;
+    margin: 5rem 0 4rem 0;
   }
 `;
 
@@ -47,7 +48,9 @@ const Content = styled.section`
 `;
 
 const Title = styled.h1`
+  margin: 0.3rem 0 0 0;
   @media (max-width: 1000px) {
+    margin: 0 0 2rem 0;
   }
 `;
 

@@ -37,7 +37,7 @@ const Figure = styled.figure`
   height: auto;
 `;
 
-const About = (props) => (
+const Footer = (props) => (
   <Container>
     {props.contact.map((item) => (
       <Contact key={item.id}>
@@ -52,6 +52,7 @@ const About = (props) => (
     ))}
     <Links links={props.links} />
     <Tech
+      scroll={props.scroll}
       languages={props.languages}
       frameLib={props.frameLib}
       tools={props.tools}
@@ -60,4 +61,4 @@ const About = (props) => (
   </Container>
 );
 
-export default About;
+export default Footer;
