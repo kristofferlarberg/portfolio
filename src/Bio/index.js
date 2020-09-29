@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Section = styled.section`
   width: 60%;
-  max-height: ${(props) => (props.scroll === 0 ? "auto" : "0px")};
+  height: ${(props) => (props.scroll === 0 ? "auto" : "0px")};
   margin: ${(props) => (props.scroll === 0 ? "5.5rem 0 3rem 0" : "0px")};
   padding: ${(props) => (props.scroll === 0 ? "1rem 2rem" : "0px")};
   box-sizing: border-box;

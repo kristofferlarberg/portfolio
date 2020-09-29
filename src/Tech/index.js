@@ -11,7 +11,7 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  opacity: ${(props) => (props.scroll > 900 ? "1" : "0")};
+  opacity: ${(props) => (props.scroll > 750 ? "1" : "0")};
   transition: opacity 0.1s ease;
   @media (max-width: 1000px) {
     height: auto;
