@@ -1,17 +1,25 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styled from "styled-components";
-import {projects, bio, contact, links, languages, frameLib, software, tools} from "./data";
-import "./index.css";
-import Previews from "./Previews";
-import Nav from "./Nav";
-import Footer from "./Footer";
+import {
+  projects,
+  bio,
+  contact,
+  links,
+  languages,
+  frameLib,
+  software,
+  tools,
+} from "./data";
+import { GlobalStyle } from "./styles/global";
+import Previews from "./components/Previews";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
-const ColorVariable = styled.div`
-  --color: ${(props) => props.color};
-  --bar: ${(props) => props.barWidth};
+/* const ColorVariable = styled.div`
+
 `;
-
+ */
 const Main = styled.main`
   width: calc(100vw - --bar);
   box-sizing: border-box;
@@ -21,7 +29,6 @@ const Main = styled.main`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 `;
-
 
 const App = (props) => {
   const [data, setData] = useState(null);
@@ -84,10 +91,11 @@ const App = (props) => {
     window.addEventListener("scroll", onScroll);
   }, []);
 
-  console.log(scroll)
+  console.log(scroll);
 
   return (
-    <ColorVariable color={color}>
+    <>
+      <GlobalStyle color={color} barWidth={barWidth}/>
       <Main>
         <Nav scroll={scroll} bio={content.bio} links={content.links} />
         <Previews projects={content.projects} />
@@ -102,7 +110,7 @@ const App = (props) => {
           links={content.links}
         />
       </Main>
-    </ColorVariable>
+    </>
   );
 };
 
