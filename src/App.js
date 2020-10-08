@@ -16,12 +16,8 @@ import Previews from "./components/Previews";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 
-/* const ColorVariable = styled.div`
-
-`;
- */
 const Main = styled.main`
-  width: calc(100vw - --bar);
+  width: 100%;
   box-sizing: border-box;
   text-align: left;
   margin: 0;
@@ -95,7 +91,7 @@ const App = (props) => {
 
   return (
     <>
-      <GlobalStyle color={color} barWidth={barWidth}/>
+      <GlobalStyle color={color} barWidth={barWidth} />
       <Main>
         <Nav scroll={scroll} bio={content.bio} links={content.links} />
         <Previews projects={content.projects} />

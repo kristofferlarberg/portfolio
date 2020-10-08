@@ -1,11 +1,13 @@
-import { createGlobalStyle, css } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyle = createGlobalStyle`${css`
+export const GlobalStyle = createGlobalStyle`
   :root {
     font-size: 62.5%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
+    overflow-y: scroll;
+    overflow-x: hidden;
     --color: ${(props) => props.color};
     --bar: ${(props) => props.barWidth};
   }
@@ -17,8 +19,6 @@ export const GlobalStyle = createGlobalStyle`${css`
     font-weight: 500;
     font-size: 2rem;
     line-height: 2.5rem;
-    overflow-y: scroll;
-    overflow-x: hidden;
   }
 
   h1 {
@@ -138,6 +138,4 @@ export const GlobalStyle = createGlobalStyle`${css`
       width: 100%;
     }
   }
-`}`;
-
-/* export default GlobalStyle; */
+`;
