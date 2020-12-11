@@ -3,16 +3,15 @@ import styled from "styled-components";
 
 const Section = styled.section`
   width: 60%;
-  height: ${(props) => (props.scroll === 0 ? "auto" : "0px")};
-  margin: ${(props) => (props.scroll === 0 ? "5.5rem 0 3rem 0" : "0px")};
-  padding: ${(props) => (props.scroll === 0 ? "1rem 2rem" : "0px")};
+  height: auto;
+  margin: 5.5rem 0 3rem 0;
+  padding: 1rem 2rem;
   box-sizing: border-box;
   display: flex;
   overflow: auto;
   color: black;
   background-color: var(--color);
   border-radius: 20px;
-  opacity: ${(props) => (props.scroll ? "0" : "1")};
   transition: opacity 0.3s ease;
   @media (max-width: 1000px) {
     width: 100%;
