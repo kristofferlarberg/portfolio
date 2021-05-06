@@ -122,7 +122,7 @@ export const links = [
 
 export const languages = [
   {
-    title: "Javascript ES6",
+    title: "CSS",
     id: uuidv4(),
   },
   {
@@ -130,26 +130,22 @@ export const languages = [
     id: uuidv4(),
   },
   {
-    title: "CSS",
+    title: "Javascript ES6",
     id: uuidv4(),
   },
   {
-    title: "Dart",
-    id: uuidv4(),
-  },
-  {
-    title: "PHP",
+    title: "TypeScript",
     id: uuidv4(),
   },
 ];
 
 export const frameLib = [
   {
-    title: "React",
+    title: "Adobe React Spectrum",
     id: uuidv4(),
   },
   {
-    title: "Gatsby",
+    title: "Chakra UI",
     id: uuidv4(),
   },
   {
@@ -157,12 +153,32 @@ export const frameLib = [
     id: uuidv4(),
   },
   {
-    title: "Node.js",
+    title: "Gatsby",
+    id: uuidv4(),
+  },
+  {
+    title: "Next.js",
+    id: uuidv4(),
+  },
+  {
+    title: "React",
+    id: uuidv4(),
+  },
+  {
+    title: "React Query",
     id: uuidv4(),
   },
 ];
 
 export const tools = [
+  {
+    title: "Firebase",
+    id: uuidv4(),
+  },
+  {
+    title: "GraphQL",
+    id: uuidv4(),
+  },
   {
     title: "Git",
     id: uuidv4(),
@@ -176,20 +192,12 @@ export const tools = [
     id: uuidv4(),
   },
   {
-    title: "GraphQL",
-    id: uuidv4(),
-  },
-  {
-    title: "Firebase",
+    title: "Styled Components",
     id: uuidv4(),
   },
 ];
 
 export const software = [
-  {
-    title: "VS Code",
-    id: uuidv4(),
-  },
   {
     title: "Adobe CC",
     id: uuidv4(),
@@ -200,6 +208,10 @@ export const software = [
   },
   {
     title: "Glyphs",
+    id: uuidv4(),
+  },
+  {
+    title: "VS Code",
     id: uuidv4(),
   },
 ];
