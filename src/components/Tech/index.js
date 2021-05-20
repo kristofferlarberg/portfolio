@@ -115,7 +115,7 @@ const Tech = (props) => {
             <FrameLib frameLib={props.frameLib} />
           </Two>
           <Three>
-            <SubHeader>Tools</SubHeader>
+            <SubHeader>Other tools</SubHeader>
             <Tools tools={props.tools} />
           </Three>
           <Four>

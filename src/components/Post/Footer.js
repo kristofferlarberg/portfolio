@@ -45,7 +45,7 @@ const Footer = (props) => {
       <FooterText>{props.role ? `Role: ${props.role}` : null}</FooterText>
       <FooterText>{props.team ? `Team: ${props.team}` : null}</FooterText>
       <FooterText>{props.format ? `Format: ${props.format}` : null}</FooterText>
-      <FooterText>{props.method ? `Method: ${props.method}` : null}</FooterText>
+      <FooterText>{props.tools ? `Tools: ${props.tools}` : null}</FooterText>
       {props.github ? (
         <Link target="_blank" rel="noopener noreferrer" href={props.github}>
           <GitHub>

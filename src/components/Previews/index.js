@@ -13,7 +13,7 @@ const Previews = (props) => {
           description={item.description}
           url={item.url}
           role={item.role}
-          method={item.method}
+          tools={item.tools}
           team={item.team}
           format={item.format}
           img={item.img}

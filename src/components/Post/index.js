@@ -76,7 +76,7 @@ const Post = (props) => {
         {props.role ? (
           <Footer
             role={props.role}
-            method={props.method}
+            tools={props.tools}
             team={props.team}
             format={props.format}
             github={props.github}
