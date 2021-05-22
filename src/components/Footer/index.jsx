@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+
+import Color from '../Color';
 import Links from '../Links';
 import Tech from '../Tech';
 
@@ -53,6 +55,7 @@ const Footer = ({
       scroll={scroll}
       tech={tech}
     />
+  <Color/>
   </Container>
 );
 
