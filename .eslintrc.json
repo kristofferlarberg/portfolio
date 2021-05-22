@@ -30,10 +30,15 @@
                 "brace-style": ["error", "stroustrup"],
                 "indent": ["error", 2],
                 "max-len": ["error", { "code": 150 }],
-                "object-curly-spacing": [2, "always"],
-                "react/jsx-indent": [2, 2],
-                "react/jsx-indent-props": [2, 2],
-                "react/prop-types": "off"
+                "object-curly-spacing": ["error", "never"],
+                "react/jsx-indent": ["error", 2],
+                "react/jsx-indent-props": ["error", 2],
+                "react/jsx-sort-props": ["error", {
+                    "ignoreCase": true,
+                    "reservedFirst": true
+                }],
+                "react/prop-types": "off",
+                "sort-keys": "error"
             }
         }
     ]
