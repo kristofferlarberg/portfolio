@@ -1,9 +1,10 @@
-import React from "react";
-import Languages from "./Languages";
-import Software from "./Software";
-import FrameLib from "./FrameLib";
-import Tools from "./Tools";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+
+import Languages from './Languages';
+import Software from './Software';
+import FrameLib from './FrameLib';
+import Tools from './Tools';
 
 const Container = styled.section`
   width: 100%;
@@ -11,7 +12,7 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  opacity: ${(props) => (props.scroll > 750 ? "1" : "0")};
+  opacity: ${props => (props.scroll > 750 ? '1' : '0')};
   transition: opacity 0.1s ease;
   @media (max-width: 1000px) {
     height: auto;
@@ -100,31 +101,39 @@ const SubHeader = styled.h3`
   margin: 0 0 0.5rem 0;
 `;
 
-const Tech = (props) => {
+const Tech = ({scroll, tech}) => {
+  const {
+    languages,
+    frameLib,
+    tools,
+    software,
+  } = tech;
+
   return (
-    <Container scroll={props.scroll}>
+    <Container scroll={scroll}>
       <Header>Skills</Header>
       <GridContainer>
         <Grid>
           <One>
             <SubHeader>Languages</SubHeader>
-            <Languages languages={props.languages} />
+            <Languages languages={languages} />
           </One>
           <Two>
             <SubHeader>Frameworks/Libraries</SubHeader>
-            <FrameLib frameLib={props.frameLib} />
+            <FrameLib frameLib={frameLib} />
           </Two>
           <Three>
             <SubHeader>Other tools</SubHeader>
-            <Tools tools={props.tools} />
+            <Tools tools={tools} />
           </Three>
           <Four>
             <SubHeader>Software</SubHeader>
-            <Software software={props.software} />
+            <Software software={software} />
           </Four>
         </Grid>
       </GridContainer>
     </Container>
   );
 };
+
 export default Tech;

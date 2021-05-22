@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Section = styled.section`
   width: 60%;
@@ -22,13 +22,12 @@ const Section = styled.section`
   }
 `;
 
-const Bio = (props) => {
-  return (
-    <Section>
-      {props.bio.map((item) => (
-        <p key={item.id}>{item.description}</p>
-      ))}
-    </Section>
-  );
-};
+const Bio = ({bio}) => (
+  <Section>
+    {bio.map(item => (
+      <p key={item.id}>{item.description}</p>
+    ))}
+  </Section>
+);
+
 export default Bio;

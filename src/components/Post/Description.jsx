@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Section = styled.section`
   width: 100%;
@@ -15,19 +15,17 @@ const LinkP = styled.p`
   margin-top: 0;
 `;
 
-const Description = (props) => {
-  return (
-    <Section>
-      <p>{props.description}</p>
-      <LinkP>
-        {props.url ? (
-          <a target="_blank" rel="noopener noreferrer" href={props.url}>
-            {props.url.includes("github") ? "→ GitHub" : `${props.url}`}
-          </a>
-        ) : null}
-      </LinkP>
-    </Section>
-  );
-};
+const Description = ({description, url}) => (
+  <Section>
+    <p>{description}</p>
+    <LinkP>
+      {url ? (
+        <a href={url} rel="noopener noreferrer" target="_blank">
+          {url.includes('github') ? '→ GitHub' : `${url}`}
+        </a>
+      ) : null}
+    </LinkP>
+  </Section>
+);
 
 export default Description;

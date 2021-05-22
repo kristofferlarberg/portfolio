@@ -1,15 +1,13 @@
-import React from "react";
+import React from 'react';
 
-const Tools = (props) => {
-  return (
-    <>
-      <ul>
-        {props.tools.map((item) => (
-          <li key={item.id}>{item.title}</li>
-        ))}
-      </ul>
-    </>
-  );
-};
+const Tools = ({tools}) => (
+  <>
+    <ul>
+      {tools.map(tool => (
+        <li key={tool.id}>{tool.title}</li>
+      ))}
+    </ul>
+  </>
+);
 
 export default Tools;

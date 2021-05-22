@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-const FigSection = styled.section`
+const PostFigure = styled.figure`
   width: 100%;
   padding: 0;
   margin: 0;
@@ -11,41 +11,10 @@ const FigSection = styled.section`
   }
 `;
 
-const FigCaption = styled.figcaption`
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  @media (max-width: 1000px) {
-    box-sizing: border-box;
-    margin-bottom: 1rem;
-  }
-`;
-
-const Caption = styled.h4`
-  padding: 0;
-  margin: 1rem 0 0 0;
-  line-height: 0;
-  @media (max-width: 1000px) {
-    box-sizing: border-box;
-    margin-bottom: 1rem;
-  }
-`;
-
-const Figure = (props) => {
-  return (
-    <>
-      {props.img.map((item) => (
-        <FigSection key={item.id}>
-          <img src={item.img} alt="Documentation"></img>
-          {item.credits ? (
-            <FigCaption>
-              <Caption>{item.credits}</Caption>
-            </FigCaption>
-          ) : null}
-        </FigSection>
-      ))}
-    </>
-  );
-};
+const Figure = ({img}) => (
+  <PostFigure>
+    <img alt="Documentation" src={img} />
+  </PostFigure>
+);
 
 export default Figure;

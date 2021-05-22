@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Section = styled.section`
   margin-top: 3rem;
@@ -18,12 +18,12 @@ const Div = styled.div`
   }
 `;
 
-const Links = (props) => (
+const Links = ({links}) => (
   <Section>
-    {props.links.map((item) => (
+    {links.map(item => (
       <Div key={item.id}>
-        <a target="_blank" rel="noopener noreferrer" href={item.link}>
-          → {item.name}
+        <a href={item.link} rel="noopener noreferrer" target="_blank">
+          {`→ ${item.name}`}
         </a>
       </Div>
     ))}

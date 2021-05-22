@@ -1,15 +1,13 @@
-import React from "react";
+import React from 'react';
 
-const Software = (props) => {
-  return (
-    <>
-      <ul>
-        {props.software.map((item) => (
-          <li key={item.id}>{item.title}</li>
-        ))}
-      </ul>
-    </>
-  );
-};
+const Software = ({software}) => (
+  <>
+    <ul>
+      {software.map(soft => (
+        <li key={soft.id}>{soft.title}</li>
+      ))}
+    </ul>
+  </>
+);
 
 export default Software;

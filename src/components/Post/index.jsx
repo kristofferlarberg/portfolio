@@ -1,9 +1,9 @@
-import React, { useState, useRef } from "react";
-import styled from "styled-components";
-import Category from "./Category";
-import Figure from "./Figure";
-import Footer from "./Footer";
-import Description from "./Description";
+import React, {useState, useRef} from 'react';
+import styled from 'styled-components';
+import Category from './Category';
+import Figure from './Figure';
+import Footer from './Footer';
+import Description from './Description';
 
 const Article = styled.article`
   width: 100%;
@@ -42,7 +42,7 @@ const Header = styled.section`
 `;
 
 const Content = styled.section`
-  max-height: ${(props) => props.height}rem;
+  max-height: ${props => props.height}rem;
   overflow: hidden;
   transition: max-height 0.3s ease;
 `;
@@ -54,32 +54,44 @@ const Title = styled.h1`
   }
 `;
 
-const Post = (props) => {
+const Post = ({project}) => {
   const [toggleExpand, setToggleExpand] = useState(false);
-  const [height, setHeight] = useState("5");
+  const [height, setHeight] = useState('5');
 
   const content = useRef(null);
+  const {
+    category,
+    description,
+    format,
+    github,
+    img,
+    role,
+    team,
+    title,
+    tools,
+    url,
+  } = project;
 
   const expandClick = () => {
-    setToggleExpand(toggleExpand === false ? true : false);
-    setHeight(toggleExpand === true ? "5" : `${content.current.scrollHeight}`);
+    setToggleExpand(!toggleExpand);
+    setHeight(toggleExpand ? '5' : `${content.current.scrollHeight}`);
   };
   return (
     <Article onClick={expandClick}>
       <Header>
-        <Title>{props.title}</Title>
-        <Category category={props.category} />
+        <Title>{title}</Title>
+        <Category category={category} />
       </Header>
       <Content ref={content} height={height}>
-        <Figure img={props.img} />
-        <Description description={props.description} url={props.url} />
-        {props.role ? (
+        <Figure img={img} />
+        <Description description={description} url={url} />
+        {role ? (
           <Footer
-            role={props.role}
-            tools={props.tools}
-            team={props.team}
-            format={props.format}
-            github={props.github}
+            format={format}
+            github={github}
+            role={role}
+            team={team}
+            tools={tools}
           />
         ) : null}
       </Content>

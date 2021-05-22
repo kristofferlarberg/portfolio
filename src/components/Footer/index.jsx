@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import Links from "../Links";
-import Tech from "../Tech";
+import React from 'react';
+import styled from 'styled-components';
+import Links from '../Links';
+import Tech from '../Tech';
 
 const Container = styled.footer`
   margin: 0;
@@ -30,26 +30,28 @@ const Contact = styled.div`
   align-items: start;
 `;
 
-const Footer = (props) => (
+const Footer = ({
+  contact,
+  links,
+  scroll,
+  tech,
+}) => (
   <Container>
-    {props.contact.map((item) => (
+    {contact.map(item => (
       <Contact key={item.id}>
         <a
-          target="_blank"
-          rel="noopener noreferrer"
           href={`mailto:${item.contact}`}
+          rel="noopener noreferrer"
+          target="_blank"
         >
           {item.contact}
         </a>
       </Contact>
     ))}
-    <Links links={props.links} />
+    <Links links={links} />
     <Tech
-      scroll={props.scroll}
-      languages={props.languages}
-      frameLib={props.frameLib}
-      tools={props.tools}
-      software={props.software}
+      scroll={scroll}
+      tech={tech}
     />
   </Container>
 );

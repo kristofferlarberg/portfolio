@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Section = styled.section`
   display: flex;
@@ -28,21 +28,19 @@ const Text = styled.h4`
   color: black;
 `;
 
-const Category = (props) => {
-  return (
-    <Section>
-      {props.category[0] ? (
-        <Tag>
-          <Text>{props.category[0]}</Text>
-        </Tag>
-      ) : null}
-      {props.category[1] ? (
-        <Tag>
-          <Text>{props.category[1]}</Text>
-        </Tag>
-      ) : null}
-    </Section>
-  );
-};
+const Category = ({category}) => (
+  <Section>
+    {category[0] ? (
+      <Tag>
+        <Text>{category[0]}</Text>
+      </Tag>
+    ) : null}
+    {category[1] ? (
+      <Tag>
+        <Text>{category[1]}</Text>
+      </Tag>
+    ) : null}
+  </Section>
+);
 
 export default Category;

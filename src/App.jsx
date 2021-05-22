@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+
 import data from './data';
 import GlobalStyle from './styles/global';
 import Previews from './components/Previews';
@@ -25,11 +26,8 @@ const App = () => {
     projects,
     bio,
     contact,
-    languages,
-    frameLib,
-    tools,
-    software,
     links,
+    tech,
   } = data;
 
   const onScroll = () => {
@@ -74,17 +72,13 @@ const App = () => {
     <>
       <GlobalStyle color={color} />
       <Main>
-        <Nav scroll={scroll} bio={bio} links={links} />
+        <Nav bio={bio} links={links} />
         <Previews projects={projects} />
         <Footer
-          scroll={scroll}
           contact={contact}
-          languages={languages}
-          frameLib={frameLib}
-          tools={tools}
-          software={software}
-          bio={bio}
           links={links}
+          scroll={scroll}
+          tech={tech}
         />
       </Main>
     </>
