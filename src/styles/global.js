@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   :root {
     font-size: 62.5%;
     -webkit-font-smoothing: antialiased;
@@ -8,8 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     overflow-y: scroll;
     overflow-x: hidden;
-    --color: ${(props) => props.color};
-    --bar: ${(props) => props.barWidth};
+    --color: ${props => props.color};
   }
 
   body {
@@ -139,3 +138,5 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 `;
+
+export default GlobalStyle;

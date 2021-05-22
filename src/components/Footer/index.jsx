@@ -30,13 +30,6 @@ const Contact = styled.div`
   align-items: start;
 `;
 
-const Figure = styled.figure`
-  margin-left: 0;
-  width: 20%;
-  min-width: 20%;
-  height: auto;
-`;
-
 const Footer = (props) => (
   <Container>
     {props.contact.map((item) => (

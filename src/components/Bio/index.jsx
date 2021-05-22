@@ -24,7 +24,7 @@ const Section = styled.section`
 
 const Bio = (props) => {
   return (
-    <Section scroll={props.scroll}>
+    <Section>
       {props.bio.map((item) => (
         <p key={item.id}>{item.description}</p>
       ))}
