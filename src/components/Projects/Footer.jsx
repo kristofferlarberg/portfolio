@@ -39,7 +39,13 @@ const GitHub = styled.svg`
   }
 `;
 
-const Footer = (format, github, role, team, tools) => (
+const Footer = ({
+  format,
+  github,
+  role,
+  team,
+  tools,
+}) => (
   <FooterContainer>
     <FooterText>{role ? `Role: ${role}` : null}</FooterText>
     <FooterText>{team ? `Team: ${team}` : null}</FooterText>

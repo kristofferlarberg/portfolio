@@ -4,9 +4,9 @@ import styled from 'styled-components';
 
 import data from './data';
 import GlobalStyle from './styles/global';
-import Previews from './components/Previews';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import Projects from './components/Projects';
 
 const Main = styled.main`
   width: 100%;
@@ -73,7 +73,7 @@ const App = () => {
       <GlobalStyle color={color} />
       <Main>
         <Nav bio={bio} links={links} />
-        <Previews projects={projects} />
+        <Projects projects={projects} />
         <Footer
           contact={contact}
           links={links}

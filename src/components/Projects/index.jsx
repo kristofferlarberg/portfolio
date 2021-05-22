@@ -54,49 +54,62 @@ const Title = styled.h1`
   }
 `;
 
-const Post = ({project}) => {
+const Project = ({project}) => {
   const [toggleExpand, setToggleExpand] = useState(false);
   const [height, setHeight] = useState('5');
 
-  const content = useRef(null);
+  const ref = useRef(null);
+
+  const expandClick = () => {
+    setToggleExpand(!toggleExpand);
+    setHeight(toggleExpand ? '5' : `${ref.current.scrollHeight}`);
+  };
+
   const {
     category,
     description,
     format,
     github,
+    id,
     img,
-    role,
-    team,
     title,
+    team,
     tools,
+    role,
     url,
   } = project;
 
-  const expandClick = () => {
-    setToggleExpand(!toggleExpand);
-    setHeight(toggleExpand ? '5' : `${content.current.scrollHeight}`);
-  };
   return (
-    <Article onClick={expandClick}>
-      <Header>
-        <Title>{title}</Title>
-        <Category category={category} />
-      </Header>
-      <Content ref={content} height={height}>
-        <Figure img={img} />
-        <Description description={description} url={url} />
-        {role ? (
-          <Footer
-            format={format}
-            github={github}
-            role={role}
-            team={team}
-            tools={tools}
-          />
-        ) : null}
-      </Content>
-    </Article>
+    <>
+      <Article key={id} onClick={expandClick}>
+        <Header>
+          <Title>{title}</Title>
+          <Category category={category} />
+        </Header>
+        <Content ref={ref} height={height}>
+          <Figure img={img} />
+          <Description description={description} url={url} />
+          {role ? (
+            <Footer
+              format={format}
+              github={github}
+              role={role}
+              team={team}
+              tools={tools}
+            />
+          ) : null}
+        </Content>
+      </Article>
+    </>
   );
 };
 
-export default Post;
+const Projects = ({projects}) => (
+  <>
+    {projects.map(project => (
+      <Project project={project} />
+    ))}
+  </>
+);
+
+export default Projects;
