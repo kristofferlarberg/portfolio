@@ -1,0 +1,40 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "overrides": [
+        {
+            "files": ["**/*.js", "**/*.jsx"],
+            "rules": {
+                "arrow-body-style": ["error", "as-needed"],
+                "arrow-parens": ["error", "as-needed", {"requireForBlockBody": true }],
+                "brace-style": ["error", "stroustrup"],
+                "indent": ["error", 2],
+                "max-len": ["error", { "code": 150 }],
+                "object-curly-spacing": [2, "always"],
+                "react/jsx-indent": [2, 2],
+                "react/jsx-indent-props": [2, 2],
+                "react/prop-types": "off"
+            }
+        }
+    ]
+}
