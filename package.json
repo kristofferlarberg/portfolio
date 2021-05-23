@@ -9,7 +9,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.3",
+    "react-scripts": "4.0.0",
     "react-transition-group": "^4.3.0",
     "styled-components": "^5.0.1",
     "uuid": "^8.3.2"
@@ -18,7 +18,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "lint": "eslint --ext js,jsx src"
+    "lint": "eslint src"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,11 +36,6 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^7.27.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.23.3",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.23.2",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "eslint-config-airbnb": "^18.2.1"
   }
 }
