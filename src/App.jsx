@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 
 import data from './data';
+import Footer from './components/Footer';
 import GlobalStyle from './styles/global';
 import Nav from './components/Nav';
-import Footer from './components/Footer';
 import Projects from './components/Projects';
 
 const Main = styled.main`

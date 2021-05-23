@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import Bio from '../Bio';
 import Links from '../Links';
 

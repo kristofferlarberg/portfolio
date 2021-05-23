@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import FrameLib from './FrameLib';
 import Languages from './Languages';
 import Software from './Software';
-import FrameLib from './FrameLib';
 import Tools from './Tools';
 
 const Container = styled.section`

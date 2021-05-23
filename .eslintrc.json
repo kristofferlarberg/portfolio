@@ -26,7 +26,7 @@
             "files": ["**/*.js", "**/*.jsx"],
             "rules": {
                 "arrow-body-style": ["error", "as-needed"],
-                "arrow-parens": ["error", "as-needed", {"requireForBlockBody": true }],
+                "arrow-parens": ["error", "as-needed", {"requireForBlockBody": true}],
                 "brace-style": ["error", "stroustrup"],
                 "indent": ["error", 2],
                 "max-len": ["error", { "code": 150 }],
@@ -38,7 +38,8 @@
                     "reservedFirst": true
                 }],
                 "react/prop-types": "off",
-                "sort-keys": "error"
+                "sort-keys": "error",
+                "sort-imports": ["error", {"allowSeparatedGroups": true, "ignoreCase": true}]
             }
         }
     ]

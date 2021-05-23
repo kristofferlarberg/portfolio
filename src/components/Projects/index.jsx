@@ -1,9 +1,10 @@
-import React, {useState, useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import styled from 'styled-components';
+
 import Category from './Category';
+import Description from './Description';
 import Figure from './Figure';
 import Footer from './Footer';
-import Description from './Description';
 
 const Article = styled.article`
   width: 100%;

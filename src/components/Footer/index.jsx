@@ -55,7 +55,7 @@ const Footer = ({
       scroll={scroll}
       tech={tech}
     />
-  <Color/>
+    <Color />
   </Container>
 );
 
