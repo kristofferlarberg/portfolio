@@ -186,6 +186,14 @@ const data = {
     tools: [
       {
         id: uuidv4(),
+        title: 'Cypress',
+      },
+      {
+        id: uuidv4(),
+        title: 'ESLint',
+      },
+      {
+        id: uuidv4(),
         title: 'Firebase',
       },
       {
