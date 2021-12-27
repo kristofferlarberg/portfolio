@@ -48,7 +48,7 @@ const Content = styled.section`
   transition: max-height 0.3s ease;
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
   margin: 0.3rem 0 0 0;
   @media (max-width: 1000px) {
     margin: 0 0 2rem 0;
@@ -76,7 +76,6 @@ const Project = ({project}) => {
     title,
     team,
     tools,
-    role,
     url,
   } = project;
 
@@ -90,11 +89,10 @@ const Project = ({project}) => {
         <Content ref={ref} height={height}>
           <Figure img={img} />
           <Description description={description} url={url} />
-          {role ? (
+          {format ? (
             <Footer
               format={format}
               github={github}
-              role={role}
               team={team}
               tools={tools}
             />
@@ -108,7 +106,7 @@ const Project = ({project}) => {
 const Projects = ({projects}) => (
   <>
     {projects.map(project => (
-      <Project project={project} />
+      <Project key={project.id} project={project} />
     ))}
   </>
 );

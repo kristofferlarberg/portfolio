@@ -20,7 +20,7 @@ const Description = ({description, url}) => (
     <p>{description}</p>
     <LinkP>
       {url ? (
-        <a href={url} rel="noopener noreferrer" target="_blank">
+        <a aria-label="Link to project" href={url} rel="noopener noreferrer">
           {url.includes('github') ? '→ GitHub' : `${url}`}
         </a>
       ) : null}

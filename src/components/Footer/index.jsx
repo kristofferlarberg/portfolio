@@ -24,6 +24,14 @@ const Container = styled.footer`
   }
 `;
 
+const Header = styled.h2`
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+`;
+
 const Contact = styled.div`
   margin-top: 6rem;
   box-sizing: border-box;
@@ -39,12 +47,12 @@ const Footer = ({
   tech,
 }) => (
   <Container>
+    <Header>Additional information</Header>
     {contact.map(item => (
       <Contact key={item.id}>
         <a
           href={`mailto:${item.contact}`}
           rel="noopener noreferrer"
-          target="_blank"
         >
           {item.contact}
         </a>

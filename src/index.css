@@ -6,6 +6,7 @@
     url("./fonts/HKGrotesk-Medium.woff") format("woff");
   font-weight: 500;
   font-style: medium;
+  font-display: swap;
 }
 
 @font-face {
@@ -17,6 +18,7 @@
     url("./fonts/HKGrotesk-MediumItalic.woff") format("woff");
   font-weight: 500;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -27,16 +29,7 @@
     url("./fonts/HKGrotesk-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "HK Grotesk";
-  src: url("./fonts/HKGrotesk-BoldItalic.eot");
-  src: url("./fonts/HKGrotesk-BoldItalic.eot?#iefix") format("embedded-opentype"),
-    url("./fonts/HKGrotesk-BoldItalic.woff2") format("woff2"),
-    url("./fonts/HKGrotesk-BoldItalic.woff") format("woff");
-  font-weight: 700;
-  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -44,18 +37,5 @@
   src: url("./fonts/SpaceMono-Regular.ttf");
   font-weight: 400;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Space Mono";
-  src: url("./fonts/SpaceMono-Italic.ttf");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Space Mono";
-  src: url("./fonts/SpaceMono-Bold.ttf");
-  font-weight: 700;
-  font-style: bold;
+  font-display: swap;
 }

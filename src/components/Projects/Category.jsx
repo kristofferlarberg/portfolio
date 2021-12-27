@@ -23,9 +23,17 @@ const Tag = styled.div`
   }
 `;
 
-const Text = styled.h4`
-  line-height: 0;
-  color: black;
+const Text = styled.p`
+    font-family: "Space Mono", monospace;
+    color: black;
+    font-size: 1.6rem;
+    line-height: 0;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    @media (max-width: 1000px) {
+      font-size: 1.2rem;
+    }
 `;
 
 const Category = ({category}) => (

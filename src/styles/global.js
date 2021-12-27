@@ -29,9 +29,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     letter-spacing: -0.02rem;
-    font-weight: 700;
+    font-weight: 500;
+    line-height: 3rem;
+    margin: 0;
   }
 
   h3 {
@@ -39,15 +41,6 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: -0.02rem;
     font-weight: 500;
     font-style: italic;
-  }
-
-  h4 {
-    font-family: "Space Mono", monospace;
-    font-size: 1.6rem;
-    line-height: 4.5rem;
-    font-weight: 400;
-    padding: 0;
-    margin: 0;
   }
 
   p {
@@ -95,7 +88,8 @@ const GlobalStyle = createGlobalStyle`
   img {
     image-rendering: auto;
     image-rendering: -webkit-optimize-contrast;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
     margin: 0;
   }
 
@@ -109,16 +103,11 @@ const GlobalStyle = createGlobalStyle`
     }
 
     h2 {
-      font-size: 1.7rem;
+      font-size: 2.2rem;
     }
 
     h3 {
       font-size: 1.7rem;
-    }
-
-    h4 {
-      font-size: 1.2rem;
-      line-height: 3.5rem;
     }
 
     p {

@@ -83,6 +83,8 @@ const Four = styled(GridItem)`
 `;
 
 const Header = styled.h2`
+  font-size: 2rem;
+  font-weight: 700;
   margin: 5rem 0 0 0;
   padding: 2.5rem 3rem 0 3rem;
   width: 100%;
@@ -94,6 +96,7 @@ const Header = styled.h2`
   border-top-right-radius: 20px;
   @media (max-width: 1000px) {
     margin-left: 0;
+    font-size: 1.7rem;
   }
 `;
 

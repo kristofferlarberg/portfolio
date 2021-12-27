@@ -22,7 +22,7 @@ const Links = ({links}) => (
   <Section>
     {links.map(item => (
       <Div key={item.id}>
-        <a href={item.link} rel="noopener noreferrer" target="_blank">
+        <a href={item.link} rel="noopener noreferrer">
           {`→ ${item.name}`}
         </a>
       </Div>

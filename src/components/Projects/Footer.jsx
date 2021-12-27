@@ -14,9 +14,18 @@ const FooterContainer = styled.footer`
   }
 `;
 
-const FooterText = styled.h4`
-  margin: 0;
-  color: black;
+const FooterText = styled.p`
+  font-family: "Space Mono", monospace;
+    color: black;
+    font-size: 1.6rem;
+    line-height: 4.5rem;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    @media (max-width: 1000px) {
+      font-size: 1.2rem;
+      line-height: 3.5rem;
+    }
 `;
 
 const Link = styled.a`
@@ -52,8 +61,8 @@ const Footer = ({
     <FooterText>{format ? `Format: ${format}` : null}</FooterText>
     <FooterText>{tools ? `Tools: ${tools}` : null}</FooterText>
     {github ? (
-      <Link href={github} rel="noopener noreferrer" target="_blank">
-        <GitHub>
+      <Link aria-label="Link to GitHub repo" href={github} rel="noopener noreferrer">
+        <GitHub aria-hidden="true">
           <path
             className="st0"
             d="M16.29,0C7.29,0,0,7.29,0,16.29c0,7.2,4.67,13.3,11.14,15.46c0.81,0.15,1.11-0.35,1.11-0.79
