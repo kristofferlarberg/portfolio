@@ -43,7 +43,6 @@ const Contact = styled.div`
 const Footer = ({
   contact,
   links,
-  scroll,
   tech,
 }) => (
   <Container>
@@ -60,7 +59,6 @@ const Footer = ({
     ))}
     <Links links={links} />
     <Tech
-      scroll={scroll}
       tech={tech}
     />
     <Color />

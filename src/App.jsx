@@ -20,7 +20,6 @@ const Main = styled.main`
 
 const App = () => {
   const [color, setColor] = useState('');
-  const [scroll, setScroll] = useState(0);
 
   const {
     projects,
@@ -29,11 +28,6 @@ const App = () => {
     links,
     tech,
   } = data;
-
-  const onScroll = () => {
-    const currentPosition = window.pageYOffset;
-    setScroll(currentPosition);
-  };
 
   const fetchColorData = async () => {
     const result = await axios(
@@ -65,7 +59,6 @@ const App = () => {
 
   useEffect(() => {
     fetchColorData();
-    window.addEventListener('scroll', onScroll);
   }, []);
 
   return (
@@ -77,7 +70,6 @@ const App = () => {
         <Footer
           contact={contact}
           links={links}
-          scroll={scroll}
           tech={tech}
         />
       </Main>

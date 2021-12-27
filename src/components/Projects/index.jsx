@@ -46,6 +46,9 @@ const Content = styled.section`
   max-height: ${props => props.height}rem;
   overflow: hidden;
   transition: max-height 0.3s ease;
+  @media (prefers-reduced-motion) {
+    transition: max-height 0s;
+  }
 `;
 
 const Title = styled.h2`
