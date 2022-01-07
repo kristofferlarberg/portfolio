@@ -3,7 +3,7 @@ import {v4 as uuidv4} from 'uuid';
 const data = {
   bio: [
     {
-      description: `I’m a Stockholm based front-end developer with a background in graphic design,
+      description: `I’m a Stockholm based developer with a background in graphic design,
        drawn to working with data and experiment with visual expressions.
        This portfolio contains selected work done while freelancing and studying.
        See my GitHub for smaller experiments and more work.`,
@@ -111,6 +111,10 @@ const data = {
     frameLib: [
       {
         id: uuidv4(),
+        title: 'Eleventy',
+      },
+      {
+        id: uuidv4(),
         title: 'Flutter',
       },
       {
@@ -160,6 +164,10 @@ const data = {
       {
         id: uuidv4(),
         title: 'Glyphs',
+      },
+      {
+        id: uuidv4(),
+        title: 'Notion',
       },
       {
         id: uuidv4(),
