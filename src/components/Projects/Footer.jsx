@@ -50,7 +50,9 @@ const GitHub = styled.svg`
 
 const Footer = ({
   format,
+  frameLibs,
   github,
+  languages,
   role,
   team,
   tools,
@@ -59,6 +61,8 @@ const Footer = ({
     <FooterText>{role ? `Role: ${role}` : null}</FooterText>
     <FooterText>{team ? `Team: ${team}` : null}</FooterText>
     <FooterText>{format ? `Format: ${format}` : null}</FooterText>
+    <FooterText>{frameLibs ? `Frameworks/Libraries: ${frameLibs}` : null}</FooterText>
+    <FooterText>{languages ? `Languages: ${languages}` : null}</FooterText>
     <FooterText>{tools ? `Tools: ${tools}` : null}</FooterText>
     {github ? (
       <Link aria-label="Link to GitHub repo" href={github} rel="noopener noreferrer">

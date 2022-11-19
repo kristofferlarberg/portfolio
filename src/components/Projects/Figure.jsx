@@ -11,9 +11,16 @@ const PostFigure = styled.figure`
   }
 `;
 
-const Figure = ({img}) => (
+const Figure = ({img, video}) => (
   <PostFigure>
-    <img alt="Documentation" src={img} />
+    {/* eslint-disable */}
+    {video &&
+      <video controls autoPlay={false}>
+        <source src={video} type="video/mp4" />
+        <p>A video scrolling through the website.</p>
+      </video>
+    }
+    {img && <img alt="Documentation" src={img} />}
   </PostFigure>
 );
 

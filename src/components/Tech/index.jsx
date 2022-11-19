@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import FrameLib from './FrameLib';
+import FrameLibs from './FrameLibs';
 import Languages from './Languages';
 import Software from './Software';
 import Tools from './Tools';
@@ -105,7 +105,7 @@ const SubHeader = styled.h3`
 const Tech = ({scroll, tech}) => {
   const {
     languages,
-    frameLib,
+    frameLibs,
     tools,
     software,
   } = tech;
@@ -121,10 +121,10 @@ const Tech = ({scroll, tech}) => {
           </One>
           <Two>
             <SubHeader>Frameworks/Libraries</SubHeader>
-            <FrameLib frameLib={frameLib} />
+            <FrameLibs frameLibs={frameLibs} />
           </Two>
           <Three>
-            <SubHeader>Other tools</SubHeader>
+            <SubHeader>Tools</SubHeader>
             <Tools tools={tools} />
           </Three>
           <Four>

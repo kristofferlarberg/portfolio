@@ -93,6 +93,12 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
+   video {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
   @media only screen and (max-width: 1000px) {
     body {
       font-size: 1.7rem;

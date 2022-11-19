@@ -3,10 +3,8 @@ import {v4 as uuidv4} from 'uuid';
 const data = {
   bio: [
     {
-      description: `I’m a Stockholm based developer with a background in graphic design,
-       drawn to working with data and experiment with visual expressions.
-       This portfolio contains selected work done while freelancing and studying.
-       See my GitHub for smaller experiments and more work.`,
+      description: `I’m a Stockholm based developer drawn to working with both visual experimentation and handling data.
+       This portfolio contains selected work. See my GitHub for more work and other projects.`,
       id: uuidv4(),
     },
   ],
@@ -30,18 +28,35 @@ const data = {
   ],
   projects: [
     {
+      category: ['Development'],
+      description:
+        'A temporary site for the new version of sparvagsmuseet.se.',
+      format: 'Website',
+      frameLibs: 'Next.js',
+      github: '',
+      id: uuidv4(),
+      languages: 'CSS, HTML, JavaScript, TypeScript',
+      team: 'Familjen Sthlm',
+      title: 'Spårvägsmuseet',
+      tools: 'ESLint, Styled Components',
+      url: 'https://sparvagsmuseet.se/',
+      video: './video/S.mov',
+    },
+    {
       category: ['Development', 'Design'],
       description:
         `A new home for for Antikvariat Hundörat in Stockholm and Österlen.
          Aside from general information about the stores,
          the site collects writings and news articles by owner Peter Bodén.`,
       format: 'Website',
+      frameLibs: 'React',
       github: 'https://github.com/kristofferlarberg/hundorat',
       id: uuidv4(),
       img: './img/H.png',
+      languages: 'CSS, HTML, JavaScript, TypeScript',
       team: '',
       title: 'Hundörat',
-      tools: 'HTML, CSS, JavaScript, React, React Query, TypeScript, Chakra UI',
+      tools: 'Chakra UI, ESLint, React Query',
       url: 'http://hundorat.se/',
     },
     {
@@ -51,12 +66,14 @@ const data = {
          I worked on the user dashboard of the new version of Zetkin,
          a web based tool for political organizing.`,
       format: 'Website',
+      frameLibs: 'Next.js',
       github: 'https://github.com/zetkin/app.zetkin.org',
       id: uuidv4(),
       img: './img/Z.png',
+      languages: 'CSS, HTML, JavaScript, TypeScript',
       team: '',
       title: 'Zetkin',
-      tools: 'Adobe React Spectrum, HTML, CSS, Cypress, JavaScript, Next.js, React, React Query, TypeScript',
+      tools: 'Adobe React Spectrum, ESLint, React Query',
       url: 'https://github.com/zetkin/app.zetkin.org',
     },
     {
@@ -66,61 +83,19 @@ const data = {
          It is intented to be used foremost as an alternative to PDF:s and the like during presentations,
          but has the extra functionality of a portfolio website.`,
       format: 'Website',
+      frameLibs: 'React',
       github: 'https://github.com/kristofferlarberg/trisvonnamichell',
       id: uuidv4(),
       img: './img/T.png',
+      languages: 'CSS, HTML, JavaScript',
       team: 'Erik Calmfors',
       title: 'Tris Vonna-Michell',
-      tools: 'HTML, CSS, JavaScript, Prismic, React, UI',
+      tools: 'ESLint, Prismic',
       url: 'https://www.tris-vonna-michell.com/',
-    },
-    {
-      category: ['Development', 'Design'],
-      description:
-        `A platform which presents the graduate projects from the programs MA Spatial Design and
-         BA Interior Architecture & Furniture Design at Konstfack 2020.`,
-      format: 'Website',
-      github: 'https://github.com/kristofferlarberg/appendix',
-      id: uuidv4(),
-      img: './img/A.png',
-      team: 'Per Sturesson',
-      title: 'Appendix',
-      tools: 'HTML, CSS, Gatsby, JavaScript, React',
-      url: 'https://konstfack2020.se/appendix/',
-    },
-    {
-      category: ['Design', 'Development'],
-      description:
-        `Konsthall C is an artistic space located in the suburb of Hökarängen in Stockholm
-         with a direction and theme that changes every two years,
-         in addition to certain fixed formats and events.
-         The filtering function makes it easy to take part of all past events,
-         an important aspect of the previous website. In a second stage of the development,
-         Shopify was integrated into the site.`,
-      format: 'Website',
-      github: 'https://github.com/kristofferlarberg/konsthallc.se',
-      id: uuidv4(),
-      img: './img/KC.png',
-      team: 'Sanna Frese, Erik Calmfors, Per Sturesson',
-      title: 'Konsthall C',
-      tools: 'UI, UX, Nuxt.js, Shopify',
-      url: 'https://konsthallc.se/',
     },
   ],
   tech: {
-    frameLib: [
-      {
-        id: uuidv4(),
-        title: 'Eleventy',
-      },
-      {
-        id: uuidv4(),
-        title: 'Flutter',
-      },
-      {
-        id: uuidv4(),
-        title: 'Gatsby',
-      },
+    frameLibs: [
       {
         id: uuidv4(),
         title: 'Next.js',
@@ -141,11 +116,11 @@ const data = {
       },
       {
         id: uuidv4(),
-        title: 'HTML 5',
+        title: 'HTML',
       },
       {
         id: uuidv4(),
-        title: 'Javascript ES6',
+        title: 'Javascript',
       },
       {
         id: uuidv4(),
@@ -160,10 +135,6 @@ const data = {
       {
         id: uuidv4(),
         title: 'Figma',
-      },
-      {
-        id: uuidv4(),
-        title: 'Glyphs',
       },
       {
         id: uuidv4(),
@@ -189,10 +160,6 @@ const data = {
       },
       {
         id: uuidv4(),
-        title: 'Firebase',
-      },
-      {
-        id: uuidv4(),
         title: 'GraphQL',
       },
       {
@@ -214,6 +181,10 @@ const data = {
       {
         id: uuidv4(),
         title: 'Styled Components',
+      },
+      {
+        id: uuidv4(),
+        title: 'Tailwind',
       },
     ],
   },

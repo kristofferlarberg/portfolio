@@ -64,40 +64,52 @@ const Project = ({project}) => {
 
   const ref = useRef(null);
 
-  const expandClick = () => {
-    setToggleExpand(!toggleExpand);
-    setHeight(toggleExpand ? '5' : `${ref.current.scrollHeight}`);
+  const expandClick = (video) => {
+    if (!toggleExpand) {
+      setToggleExpand(!toggleExpand);
+      setHeight(`${ref.current.scrollHeight}`);
+    }
+    if (toggleExpand && !video) {
+      setToggleExpand(!toggleExpand);
+      setHeight('5');
+    }
   };
 
   const {
     category,
     description,
     format,
+    frameLibs,
     github,
     id,
     img,
+    languages,
     title,
     team,
     tools,
     url,
+    video,
   } = project;
 
   return (
     <>
-      <Article key={id} onClick={expandClick}>
+      <Article key={id} onClick={() => expandClick(video)}>
         <Header>
           <Title>{title}</Title>
           <Category category={category} />
         </Header>
         <Content ref={ref} height={height}>
-          <Figure img={img} />
+          <Figure img={img} video={video} />
           <Description description={description} url={url} />
           {format ? (
             <Footer
               format={format}
+              frameLibs={frameLibs}
               github={github}
+              languages={languages}
               team={team}
               tools={tools}
+              video={video}
             />
           ) : null}
         </Content>
