@@ -3,14 +3,14 @@ import {v4 as uuidv4} from 'uuid';
 const data = {
   bio: [
     {
-      description: `I’m a Stockholm based developer drawn to working with both visual experimentation and handling data.
+      description: `I’m a Stockholm based developer drawn to working with both user interfaces and handling data, with a passion for accessibility.
        This portfolio contains selected work. See my GitHub for more work and other projects.`,
       id: uuidv4(),
     },
   ],
   contact: [
     {
-      contact: 'mail@kristofferlarberg.se',
+      contact: 'kristoffer.larberg@icloud.com',
       id: uuidv4(),
     },
   ],
