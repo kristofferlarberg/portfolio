@@ -3,8 +3,9 @@ import {v4 as uuidv4} from 'uuid';
 const data = {
   bio: [
     {
-      description: `I’m a Stockholm based developer drawn to working with both user interfaces and handling data, with a passion for accessibility.
-       This portfolio contains selected work. See my GitHub for more work and other projects.`,
+      description: `I’m a Stockholm based developer who likes building
+       interfaces and handling data for services made to play a vital role in people’s lives.
+       This portfolio contains selected work. See my GitHub for more projects.`,
       id: uuidv4(),
     },
   ],
