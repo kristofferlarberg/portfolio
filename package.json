@@ -4,7 +4,7 @@
   "private": true,
   "homepage": ".",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^1.6.0",
     "hash-router": "^0.4.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
